@@ -108,12 +108,6 @@ const Services = () => {
     }
   }, [showTally]);
 
-  const closeTally = () => {
-    setShowTally(false);
-    localStorage.setItem('tallyPopupDismissed', '1');
-    if (window.Tally) window.Tally.closePopup();
-  };
-
   const scrollToNextSection = () => {
     const hero = document.querySelector('.services-hero-section');
     if (hero) {
@@ -460,33 +454,5 @@ const Services = () => {
     </main>
   );
 };
-
-// Dropdown component for collapsible sections
-// (No longer used in section 1, but kept for other sections if needed)
-function Dropdown({ title, id, children, openByDefault }) {
-  const [open, setOpen] = React.useState(openByDefault || false);
-  return (
-    <div className="service-dropdown">
-      <button
-        className="service-dropdown-toggle"
-        aria-expanded={open}
-        aria-controls={id}
-        onClick={() => setOpen(o => !o)}
-        id={id + '-toggle'}
-        type="button"
-      >
-        {title} <span className="dropdown-arrow">{open ? '▲' : '▼'}</span>
-      </button>
-      <div
-        id={id}
-        className="service-dropdown-content"
-        style={{ display: open ? 'block' : 'none' }}
-        aria-hidden={!open}
-      >
-        {children}
-      </div>
-    </div>
-  );
-}
 
 export default Services;
