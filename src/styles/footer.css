@@ -1,0 +1,105 @@
+/* Modern, accessible footer styles */
+.footer {
+  background: linear-gradient(90deg, #eaf6ff 0%, #f2f4f8 100%);
+  color: #1a1f36;
+  padding: 2.5rem 1rem 1.2rem 1rem;
+  border-top: 2px solid #e0e7ef;
+  font-size: 1.08rem;
+  margin-top: 4rem;
+}
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2.2rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.footer-legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+  color: #7a869a;
+}
+.footer-nav a {
+  color: #2979ff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 0.18s;
+  position: relative;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #50e3c2;
+  text-decoration: underline;
+}
+.footer-legal-nav a {
+  color: #7a869a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.footer-legal-nav a:hover,
+.footer-legal-nav a:focus {
+  color: #2979ff;
+  text-decoration: underline;
+}
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px #2979ff11;
+  transition: box-shadow 0.18s, background 0.18s;
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background: #eaf6ff;
+  box-shadow: 0 4px 16px #2979ff22;
+}
+.footer-social-link svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.footer-bottom {
+  text-align: center;
+  color: #7a869a;
+  font-size: 0.98rem;
+  margin-top: 1.2rem;
+}
+@media (max-width: 700px) {
+  .footer-main {
+    gap: 1.2rem;
+  }
+  .footer-nav {
+    gap: 0.7rem 1.2rem;
+    font-size: 0.98rem;
+  }
+  .footer-social-link {
+    width: 34px;
+    height: 34px;
+  }
+  .footer-social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+}

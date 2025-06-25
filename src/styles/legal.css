@@ -1,0 +1,43 @@
+/* Legal pages styling */
+.legal-page {
+  background: var(--color-primary, #1a1f36);
+  min-height: 70vh;
+  padding: 5.5rem 1rem 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.legal-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(41,121,255,0.08);
+  max-width: 700px;
+  width: 100%;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  color: #1a1f36;
+  margin-top: 0.5rem;
+}
+.legal-section h1 {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: var(--color-accent, #2979ff);
+  margin-bottom: 1.5rem;
+}
+.legal-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+  color: #2979ff;
+}
+.legal-section ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.legal-section li {
+  margin-bottom: 0.5rem;
+}
+.legal-section a {
+  color: #2979ff;
+  text-decoration: underline;
+}
