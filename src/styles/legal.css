@@ -41,3 +41,9 @@
   color: #2979ff;
   text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+  .legal-section {
+    margin-top: 4.5rem;
+  }
+}
