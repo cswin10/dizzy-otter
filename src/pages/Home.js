@@ -101,12 +101,16 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const scrollToNextSection = () => {
-    const hero = document.querySelector('.hero-section');
+  // Bulletproof scroll to next section for hero arrow
+  const scrollToNextSection = e => {
+    const arrow = e?.target?.closest('.scroll-down-arrow');
+    const hero = arrow?.closest('section, .hero-section');
     if (hero) {
-      const next = hero.nextElementSibling;
-      if (next) {
-        next.scrollIntoView({ behavior: 'smooth' });
+      // Get all visible sections in document order
+      const sections = Array.from(document.querySelectorAll('section')).filter(s => s.offsetParent !== null);
+      const idx = sections.indexOf(hero);
+      if (idx !== -1 && idx < sections.length - 1) {
+        sections[idx + 1].scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
@@ -121,16 +125,16 @@ const Home = () => {
       React.createElement('span', { className: 'hero-typing-effect' },
         typingText
       ),
-      React.createElement('h1', { className: 'hero-title' }, 'AI Systems That Grow Your Business'),
-      React.createElement('p', { className: 'hero-subtitle' }, 'Custom AI tools and automations that save you time, cut costs, and help your business grow.'),
+      React.createElement('h1', { className: 'hero-title' }, '🦦 AI Systems & Web Design That Grow Your Business'),
+      React.createElement('p', { className: 'hero-subtitle' }, 'Custom-built websites, AI tools, and automations that save you time, reduce costs, and help your business thrive.'),
       React.createElement('div', {
         className: 'scroll-down-arrow',
         role: 'button',
         tabIndex: 0,
         'aria-label': 'Scroll to next section',
-        onClick: scrollToNextSection,
-        onKeyDown: e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(); },
-        style: { cursor: 'pointer' }
+        style: { cursor: 'pointer' },
+        onClick: e => scrollToNextSection(e),
+        onKeyDown: e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(e); }
       },
         React.createElement('span', null, '\u25bc')
       )
@@ -173,7 +177,7 @@ const Home = () => {
           React.createElement('h2', { className: 'why-title reveal' }, 'Why Dizzy Otter?'),
           React.createElement('div', { className: 'why-divider reveal' }),
           React.createElement('p', { className: 'why-desc reveal' },
-            'Dizzy Otter helps small businesses scale with smart AI systems, from lead capture to automated proposals and client dashboards. We build automation that works for you, so you can focus on growth.'
+            'Dizzy Otter helps small businesses grow by combining smart automation with modern web design. From lead capture and client dashboards to beautiful, functional websites, we build systems that work for you, so you can focus on what matters.'
           ),
           React.createElement('a', {
             href: '/services',
@@ -210,7 +214,6 @@ const Home = () => {
         ),
         React.createElement('div', { className: 'what-offer-cards' },
           React.createElement('div', { className: 'what-offer-row' },
-            // First row: 3 cards (now clickable)
             React.createElement('a', {
               href: '/services#ai-systems',
               className: 'offer-card-link',
@@ -221,7 +224,7 @@ const Home = () => {
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card1.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
                 React.createElement('h3', { className: 'offer-card-title' }, 'Complete AI Systems'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'End to end workflows that combine forms, dashboards, automation tools, and AI assistants.')
+                React.createElement('p', { className: 'offer-card-desc' }, 'End-to-end systems: forms, CRMs, AI assistants, and automations that save you days every month.')
               )
             ),
             React.createElement('a', {
@@ -234,7 +237,7 @@ const Home = () => {
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card2.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
                 React.createElement('h3', { className: 'offer-card-title' }, 'Custom AI Assistants and Bots'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'Tailored GPT tools, chatbots, and AI helpers for support, proposals, content, and more.')
+                React.createElement('p', { className: 'offer-card-desc' }, 'AI chatbots and assistants that handle FAQs, lead qualification, and more.')
               )
             ),
             React.createElement('a', {
@@ -247,12 +250,11 @@ const Home = () => {
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card3.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
                 React.createElement('h3', { className: 'offer-card-title' }, 'Automation Workflows'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'Smart connections between your tools using Zapier, n8n, and Make.')
+                React.createElement('p', { className: 'offer-card-desc' }, 'Automate repetitive tasks and connect your tools to save hours every week.')
               )
             )
           ),
           React.createElement('div', { className: 'what-offer-row' },
-            // Second row: 2 cards (now clickable)
             React.createElement('a', {
               href: '/services#web-design',
               className: 'offer-card-link',

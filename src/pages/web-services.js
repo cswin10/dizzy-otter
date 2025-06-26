@@ -71,20 +71,40 @@ const ServicesGrid = () => (
   </section>
 );
 
-const WebServicesHero = () => (
-  <div className="vhm-hero-container">
-    <img className="vhm-hero-image" src="/web-hero.jpg" alt="Web Design Hero" />
-    <div className="vhm-hero-content">
-      <h1 className="hero-title">Modern Web Design and Software Applications</h1>
-      <p className="hero-subtitle" style={{ marginTop: '2.5rem' }}>
-        Websites and dashboards that work as hard as you do. Fast, beautiful, and built for your business.
-      </p>
-      <div className="scroll-down-arrow" role="button" tabIndex={0} aria-label="Scroll to next section">
-        <span>▼</span>
+const WebServicesHero = () => {
+  // Scroll to next section (match Home)
+  const scrollToNextSection = () => {
+    const hero = document.querySelector('.vhm-hero-container');
+    if (hero) {
+      const next = hero.nextElementSibling;
+      if (next) {
+        next.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+  return (
+    <div className="vhm-hero-container" style={{ position: 'relative' }}>
+      <img className="vhm-hero-image" src="/web-hero.jpg" alt="Web Design Hero" />
+      <div className="vhm-hero-content">
+        <h1 className="hero-title">Modern Web Design and Software Applications</h1>
+        <p className="hero-subtitle" style={{ marginTop: '2.5rem' }}>
+          Websites and dashboards that work as hard as you do. Fast, beautiful, and built for your business.
+        </p>
+        <div
+          className="scroll-down-arrow"
+          role="button"
+          tabIndex={0}
+          aria-label="Scroll to next section"
+          onClick={scrollToNextSection}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(); }}
+          style={{ cursor: 'pointer' }}
+        >
+          <span>▼</span>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default function WebServices() {
   useEffect(() => {

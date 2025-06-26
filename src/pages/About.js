@@ -32,12 +32,15 @@ const About = () => {
   useScrollToTop();
   useScrollReveal();
 
-  const scrollToNextSection = () => {
-    const hero = document.querySelector('.about-hero-section');
+  // Bulletproof scroll to next section for hero arrow
+  const scrollToNextSection = e => {
+    const arrow = e?.target?.closest('.scroll-down-arrow');
+    const hero = arrow?.closest('section, .about-hero-section');
     if (hero) {
-      const next = hero.nextElementSibling;
-      if (next) {
-        next.scrollIntoView({ behavior: 'smooth' });
+      const sections = Array.from(document.querySelectorAll('section')).filter(s => s.offsetParent !== null);
+      const idx = sections.indexOf(hero);
+      if (idx !== -1 && idx < sections.length - 1) {
+        sections[idx + 1].scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
@@ -65,8 +68,8 @@ const About = () => {
           tabIndex={0}
           aria-label="Scroll to next section"
           style={{ cursor: 'pointer' }}
-          onClick={scrollToNextSection}
-          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(); }}
+          onClick={e => scrollToNextSection(e)}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(e); }}
         >
           <span>&#x25bc;</span>
         </div>

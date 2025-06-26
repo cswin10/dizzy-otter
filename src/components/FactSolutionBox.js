@@ -21,7 +21,6 @@ const FactSolutionBox = ({
       <div className="fact-source">{factSource}</div>
     </div>
     <div className="solution-section">
-      <span className="solution-badge">{solutionTitle}</span>
       <div className="solution-content">
         <span className="solution-icon">{solutionIcon}</span>
         <span className="solution-title">{solutionTitle}</span>
