@@ -94,11 +94,11 @@ const Footer = () => (
         <a href="/" aria-label="Home">
           Home
         </a>
-        <a href="/services" aria-label="AI & Automation Services">
-          AI & Automation
+        <a href="/services" aria-label="Solutions">
+          Solutions
         </a>
-        <a href="/web-services" aria-label="Web Services">
-          Web Services
+        <a href="/ai-audit" aria-label="AI Audit">
+          AI Audit
         </a>
         <a href="/about" aria-label="About">
           About
@@ -134,7 +134,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="footer-bottom">
-      <span>© 2025 Dizzy Otter. All rights reserved.</span>
+  <span>© 2025 Dizzy Otter. All rights reserved.</span>
     </div>
   </footer>
 );

@@ -10,29 +10,41 @@ function HeroSection() {
       React.createElement(
         'h1',
         { className: 'hero-title' },
-        'AI Solutions for Modern Business'
+          '👉 Welcome to Dizzy Otter'
       ),
       React.createElement(
         'p',
         { className: 'hero-subtitle' },
-        'Empowering your business with seamless AI integrations and smart automation.'
+          '👉 AI consultancy for growing businesses. We audit your workflows, design custom automations and assistants, and support you as you scale.'
       ),
       React.createElement(
         'a',
         {
-          href: '#contact',
+          href: 'https://calendly.com/dizzyotter/consultation',
           className: 'cta-button',
           tabIndex: 0,
-          onClick: e => {
-            e.preventDefault();
-            const el = document.getElementById('contact');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
           role: 'button',
-          'aria-label': 'Get Started with Dizzy Otter',
+          'aria-label': 'Book a Free Consultation',
         },
-        'Get Started'
+        '👉 Book a Free Consultation'
       )
+        ,
+        React.createElement(
+          'a',
+          {
+            href: '#ai-audit',
+            className: 'secondary-cta-button',
+            tabIndex: 0,
+            onClick: e => {
+              e.preventDefault();
+              const el = document.getElementById('ai-audit');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            },
+            role: 'button',
+            'aria-label': 'What is an AI Audit?',
+          },
+          '👉 What is an AI Audit?'
+        )
     ),
     React.createElement(
       'div',

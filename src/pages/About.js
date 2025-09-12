@@ -55,12 +55,8 @@ const About = () => {
         }}
       >
         <div className="about-hero-overlay reveal">
-          <h1 className="about-hero-title">
-            About Dizzy Otter
-          </h1>
-          <p className="about-hero-subtitle">
-            Turning ideas into powerful AI powered systems, automation tools, and smart websites that help small businesses grow.
-          </p>
+          <h1 className="about-hero-title">About Dizzy Otter</h1>
+          <p className="about-hero-subtitle">Smarter Systems for Growing Businesses</p>
         </div>
         <div
           className="scroll-down-arrow"
@@ -77,45 +73,32 @@ const About = () => {
       {/* Fun Fact Card */}
       <div className="about-funfact reveal">
         <span className="sparkle">✨</span>
-        {'  Even simple automations can save businesses 5–10 hours a week, we build systems that free up your time so you can grow. '}
-        <span className="sparkle">✨</span>
+        {'  Even simple automations can save businesses 5 to 10 hours a week. At Dizzy Otter, we design AI-powered systems that give you that time back, so you can focus on growth, not admin. ✨'}
       </div>
       {/* About Page Content */}
       <section className="about-section about-story reveal">
         <div className="about-content">
           <h2>Our Story</h2>
-          <p>Dizzy Otter was founded in late 2024 by Charlie Swinhoe, a freelance developer with a passion for helping small businesses succeed through technology. What started as a web design service focused on sleek, minimalist sites has grown into a full service AI systems company.</p>
-          <p>Today, Dizzy Otter builds intelligent digital solutions that go beyond design. We combine automation, AI tools, and seamless integrations to create systems that work for you. From the start, our goal has been to take the stress out of technology and make it work harder for small business owners.</p>
-          <p>Whether you need a lead capture system, custom AI assistant, or complete automation workflow, we design solutions that save time, reduce errors, and free you up to focus on what you do best.</p>
+          <p>Dizzy Otter was founded by Charlie Swinhoe with one clear goal: to help businesses harness the power of AI and automation without the overwhelm.</p>
+          <p>What began as a freelance project quickly evolved into a consultancy focused on creating intelligent systems that cut wasted time, capture more opportunities, and make daily operations smoother.</p>
+          <p>Today, Dizzy Otter runs as an AI consultancy. We don’t just build tools, we partner with you to audit your workflows, uncover your biggest opportunities, and deliver custom solutions that move your business forward.</p>
         </div>
         <div className="about-img-wrap">
           <img src={aboutImages[0]} alt="Dizzy Otter founder and story" className="about-img reveal" loading="lazy" />
-          {/* Animated Otter SVG */}
-          <svg className="otter-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <ellipse cx="40" cy="50" rx="28" ry="18" fill="#2979FF" opacity="0.13" />
-            <ellipse cx="40" cy="38" rx="18" ry="24" fill="#50E3C2" opacity="0.22" />
-            <ellipse cx="40" cy="38" rx="13" ry="16" fill="#2979FF" opacity="0.32" />
-            <ellipse cx="40" cy="38" rx="7" ry="8" fill="#2979FF" opacity="0.7" />
-            <circle cx="40" cy="38" r="4.5" fill="#fff" stroke="#2979FF" strokeWidth="2" />
-          </svg>
         </div>
       </section>
       <section className="about-section about-experience reveal">
         <div className="about-content">
           <h2>Our Experience</h2>
-          <p>We have had the privilege of working with a wide range of businesses from solo entrepreneurs and local service providers to multi million pound organisations. Our work includes everything from simple lead capture websites to fully integrated systems with dashboards, automation workflows, AI powered tools, and custom bots.</p>
-          <p>Here are just a few of the industries we have served:</p>
-          <details className="about-industries-dropdown">
-            <summary>Industries Served</summary>
-            <ul className="about-industries">
-              <li>Life coaches and consultants</li>
-              <li>Authors and creatives</li>
-              <li>Trades and repair services</li>
-              <li>E commerce startups</li>
-              <li>Professional services firms</li>
-            </ul>
-          </details>
-          <p>No matter the size of the business, our focus is always the same. We build solutions that work and deliver results.</p>
+          <p>We’ve worked with businesses of all sizes, from solo entrepreneurs and local service providers to multi-million pound organisations.</p>
+          <p>Our projects include:</p>
+          <ul>
+            <li>Lead capture and client onboarding systems</li>
+            <li>Custom AI assistants and chatbots</li>
+            <li>End-to-end automation workflows</li>
+            <li>Integrated dashboards and reporting tools</li>
+          </ul>
+          <p>No matter the industry, our focus is always the same, design systems that work, save time, and deliver measurable results.</p>
         </div>
         <div className="about-img-wrap">
           <img src={aboutImages[2]} alt="Experience and industries served" className="about-img" loading="lazy" />
@@ -124,8 +107,8 @@ const About = () => {
       <section className="about-section about-mission reveal">
         <div className="about-content">
           <h2>Our Mission</h2>
-          <p>Our mission is to help small businesses harness the power of AI and automation without the overwhelm. We believe in creating systems that are practical, powerful, and easy to use. Our tools work quietly in the background to move your business forward.</p>
-          <p>We are here to make smart technology accessible so you can stay focused on growing your business while we handle the technical side.</p>
+          <p>Our mission is simple, to make AI practical, powerful, and accessible. We believe technology should work quietly in the background to move your business forward, not add more stress to your day.</p>
+          <p>We handle the technical side so you and your team can stay focused on growth.</p>
         </div>
         <div className="about-img-wrap">
           <img src={aboutImages[1]} alt="Mission and values" className="about-img" loading="lazy" />
@@ -135,10 +118,10 @@ const About = () => {
         <div className="about-content">
           <h2>Why Choose Dizzy Otter</h2>
           <ul className="about-why-list">
-            <li><b>Personal service.</b> You work directly with the expert building your system. No middlemen, no confusion.</li>
-            <li><b>Tailored solutions.</b> Every system is custom built to fit your goals, tools, and workflows.</li>
-            <li><b>Clarity over complexity.</b> We explain what we are building in plain language so you stay in control.</li>
-            <li><b>Results driven.</b> We design systems that save you time, reduce errors, and help you grow.</li>
+            <li><b>Personal service</b> — you work directly with the consultant, not a faceless team.</li>
+            <li><b>Tailored solutions</b> — every system is custom built for your workflows.</li>
+            <li><b>Clarity over complexity</b> — we explain in plain language, not jargon.</li>
+            <li><b>Results driven</b> — everything we design is built to save time, reduce errors, and increase profit.</li>
           </ul>
         </div>
         <div className="about-img-wrap">
@@ -148,7 +131,9 @@ const About = () => {
       <section className="about-section about-different reveal">
         <div className="about-content">
           <h2>What Makes Us Different</h2>
-          <p>Dizzy Otter is not just a web design studio or automation agency. We sit at the intersection of design, AI, and automation. We build solutions that are as functional as they are beautiful. We do not believe in one size fits all packages. Instead, we listen, plan, and build tools that match your vision and help you scale.</p>
+          <p>Dizzy Otter isn’t a web design studio or just another automation agency. We sit at the intersection of strategy, AI, and operations.</p>
+          <p>Our process starts with an AI Audit, where we uncover where you can save the most time and money. From there, we design and implement the systems that fit your business, not a one size fits all template.</p>
+          <p>We combine creativity, technical skill, and a consultant’s mindset to deliver solutions that scale with you.</p>
         </div>
         <div className="about-img-wrap">
           <img src={aboutImages[4]} alt="What makes Dizzy Otter different" className="about-img" loading="lazy" />
@@ -157,7 +142,7 @@ const About = () => {
       <section className="about-section about-cta reveal">
         <div className="about-cta-content">
           <h2>Let’s build something smart together</h2>
-          <a href="/contact" className="about-cta-btn" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+          <a href="https://calendly.com/dizzyotter/consultation" className="about-cta-btn" aria-label="Book a Free Consultation">Book a Free Consultation</a>
         </div>
       </section>
     </main>

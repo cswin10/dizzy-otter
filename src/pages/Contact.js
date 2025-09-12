@@ -79,7 +79,7 @@ const Contact = () => {
           React.createElement('span', { style: { fontWeight: 700, fontSize: '1.4rem', marginLeft: 10, color: '#1a1f36', letterSpacing: '0.5px' } }, 'Book a Meeting')
         ),
         React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '1.2rem', fontSize: '1.08rem', color: '#444', fontWeight: 500, lineHeight: 1.6 } },
-          'Let’s talk about your goals, challenges, and ideas. Book a free, friendly call to explore how we can help you automate, grow, and thrive — no pressure, just possibilities.'
+          'Let’s talk about your workflows, challenges, and growth goals. In 30 minutes we’ll uncover where AI can save you time and increase profit. No pressure, just a clear next step.'
         ),
         React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '1.2rem' } },
           React.createElement('a', {
@@ -98,37 +98,40 @@ const Contact = () => {
             target: '_blank',
             rel: 'noopener noreferrer',
             className: 'contact-icon-link',
-            'aria-label': 'Email'
+            'aria-label': 'Email',
+            style: { margin: '0 10px', fontSize: '2rem', color: '#2979FF' }
           },
-            React.createElement('svg', { width: 44, height: 44, fill: 'none', viewBox: '0 0 32 32' },
-              React.createElement('rect', { x: 2, y: 6, width: 28, height: 20, rx: 6, fill: '#2979ff' }),
-              React.createElement('path', { d: 'M6 10l10 8 10-8', stroke: '#fff', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' })
-            )
+            React.createElement('i', { className: 'fa-solid fa-envelope' })
           ),
           React.createElement('a', {
-            href: 'https://www.instagram.com/dizzy_otter_designs/',
+            href: 'https://www.instagram.com/dizzy_otter_?igsh=MWRtamQ0Y2VhZHN6OA==',
             target: '_blank',
             rel: 'noopener noreferrer',
             className: 'contact-icon-link',
-            'aria-label': 'Instagram'
+            'aria-label': 'Instagram',
+            style: { margin: '0 10px', fontSize: '2rem', color: '#2979FF' }
           },
-            React.createElement('svg', { width: 44, height: 44, fill: 'none', viewBox: '0 0 32 32' },
-              React.createElement('rect', { x: 4, y: 4, width: 24, height: 24, rx: 8, fill: '#2979ff' }),
-              React.createElement('circle', { cx: 16, cy: 16, r: 7, fill: '#fff' }),
-              React.createElement('circle', { cx: 23, cy: 9, r: 1.7, fill: '#fff' })
-            )
+            React.createElement('i', { className: 'fa-brands fa-instagram' })
           ),
           React.createElement('a', {
-            href: 'https://www.tiktok.com/@dizzy.otter',
+            href: 'https://www.tiktok.com/@otter_labs?_t=ZN-8zeuQf6Rg6I&_r=1',
             target: '_blank',
             rel: 'noopener noreferrer',
             className: 'contact-icon-link',
-            'aria-label': 'TikTok'
+            'aria-label': 'TikTok',
+            style: { margin: '0 10px', fontSize: '2rem', color: '#2979FF' }
           },
-            React.createElement('svg', { width: 44, height: 44, fill: 'none', viewBox: '0 0 32 32' },
-              React.createElement('circle', { cx: 16, cy: 16, r: 14, fill: '#2979ff' }),
-              React.createElement('path', { d: 'M21 10v7.5a5 5 0 11-5-5', stroke: '#fff', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' })
-            )
+            React.createElement('i', { className: 'fa-brands fa-tiktok' })
+          ),
+          React.createElement('a', {
+            href: 'https://www.linkedin.com/company/dizzyotter/',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            className: 'contact-icon-link',
+            'aria-label': 'LinkedIn',
+            style: { margin: '0 10px', fontSize: '2.2rem', color: '#2979FF' }
+          },
+            React.createElement('i', { className: 'fa-brands fa-linkedin-in' })
           )
         )
       ),
@@ -168,45 +171,63 @@ const Contact = () => {
       React.createElement(
         'div',
         { className: 'contact-faq-accordion' },
-        React.createElement(FAQItem, {
-          question: 'How quickly will I get a reply?',
-          answer: 'We reply to all enquiries within 1 business day. For urgent requests, booking a free consultation call is the fastest way to connect.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'Is the consultation really free?',
-          answer: 'Yes, absolutely. Our initial consultation is always free. There’s no obligation — it’s a chance to explore your needs and see if we’re a good fit.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'Do you only work with small businesses?',
-          answer: 'While small businesses are our specialty, we also work with startups, freelancers, and larger organisations that need AI, automation, or modern web solutions.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'Can I hire you for just a small job?',
-          answer: 'Yes. We offer hourly rates for small updates, fixes, or custom work — perfect for adding a feature, fixing a bug, or tweaking your site or system.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'Do you provide ongoing support?',
-          answer: 'We offer flexible maintenance plans as well as one-off support. Whether you need us regularly or just from time to time, we can help.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'What if I don’t know what I need?',
-          answer: 'That’s normal. Part of our process is helping you figure out what systems or solutions will benefit your business most. Book a free consultation and we’ll guide you.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'How long does it take to build a website or system?',
-          answer: 'Every project is different. A small site or simple automation can be ready in as little as 1–2 days. More complex websites, dashboards, or systems typically take 2–4 weeks depending on the features and integrations required. We’ll give you a clear timeline after our initial consultation.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'Do you work with international clients?',
-          answer: 'Yes. We work with clients in the UK and globally. Everything can be handled online via video calls, email, and shared dashboards.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'What tools do you use?',
-          answer: 'We work with Notion, Zapier, n8n, Tally, OpenAI, Stripe, Calendly, Airtable, and modern web development frameworks to create seamless, smart solutions.'
-        }),
+  // ...removed outdated FAQs...
+    // ...removed outdated FAQs...
         React.createElement(FAQItem, {
           question: 'Can you help integrate tools I’m already using?',
           answer: 'Yes. Whether you already have forms, CRMs, or payment systems in place, we can help you connect them and automate your workflows.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'What is an AI Audit?',
+          answer: 'An AI Audit is a structured review of your workflows, tools, and processes. We identify the top three opportunities where AI and automation can save you time, reduce costs, and increase profit. You’ll get a written report, a 14-day quick win plan, and an ROI estimate.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'How much does an AI Audit cost?',
+          answer: 'AI Audits start from £500. For larger teams or more complex businesses, we’ll quote a custom price. The best part — 100% of your audit fee can be applied to a future implementation project.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'Why should I pay for an audit instead of going straight to a system build?',
+          answer: 'The audit saves you money. It ensures we build the right systems for your business, not just a “nice to have.” It gives you clarity, a roadmap, and an ROI projection before you commit to larger projects.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'What happens after the audit?',
+          answer: 'We present your audit findings and, if you choose, we design and implement the recommended systems. This might include automation workflows, custom AI assistants, dashboards, or integrations with your existing tools.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'Do you only work with certain industries?',
+          answer: 'No. We’ve worked with solo entrepreneurs, local service providers, and multi-million pound organisations. The principles of saving time, automating repetitive work, and improving data visibility apply across every sector.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'How long does it take to see results?',
+          answer: 'Most clients see results within the first 14 days, thanks to our quick win plan. Full implementation projects typically take 2 to 6 weeks depending on complexity.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'What tools and platforms do you use?',
+          answer: 'We work with Notion, Airtable, n8n, Zapier, Tally, Fillout, ChatGPT, and other leading AI models and automation tools. Every solution is tailored to the tools you already use or are comfortable adopting.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'Will my team need training?',
+          answer: 'Yes, but we make it simple. Every project includes handover, SOPs (step by step guides), and training so your team feels confident using the new systems.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'Do you offer ongoing support?',
+          answer: 'Yes. After implementation, many clients choose a retainer package. This includes ongoing optimisation, new automations, and monthly reporting. Retainers start from £1,000 per month.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'What if I’m not ready to spend £500 yet?',
+          answer: 'That’s fine. Start with a free 30-minute consultation. You’ll still leave the call with clear ideas on how AI could help your business, even if you don’t move forward right away.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'What makes Dizzy Otter different from other agencies?',
+          answer: 'Most agencies focus on building websites or single automations. We act as a consultancy — diagnosing first, then building the right solution. You get strategy, implementation, and support under one roof.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'Can you integrate with my existing tools?',
+          answer: 'Almost always. We specialise in connecting the tools you already use. If you’re on spreadsheets, CRMs, or cloud apps, we can automate and link them without forcing you to start from scratch.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'Do you work internationally?',
+          answer: 'Yes. We’re based in the UK but work with clients worldwide through remote consultations and online systems.'
         })
       )
     ),

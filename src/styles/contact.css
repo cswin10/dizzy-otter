@@ -291,22 +291,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f4f8fa;
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-  box-shadow: 0 2px 12px #2979ff18;
-  border: 2px solid #e3eaf5;
+  background: none;
+  border-radius: 12px;
+  width: auto;
+  height: auto;
+  padding: 0.2rem 0.5rem;
+  box-shadow: none;
+  border: none;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
 }
 .contact-icon-link:hover, .contact-icon-link:focus {
-  background: #e3eaf5;
-  transform: scale(1.12);
+  color: #50E3C2;
+  background: #f4f8fa;
+  transform: scale(1.18) translateY(-2px);
   outline: none;
-  box-shadow: 0 4px 18px #2979ff22;
+  text-decoration: none;
 }
 .contact-icon-link svg {
+  display: none;
+}
+.contact-icon-link i {
+  font-size: 2.2rem;
+  color: #2979FF;
   display: block;
   width: 44px;
   height: 44px;
+  transition: color 0.2s;
 }

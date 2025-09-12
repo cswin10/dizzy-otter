@@ -73,7 +73,7 @@ const Home = () => {
   // Typing effect for hero (looping, typing and erasing)
   const [typingText, setTypingText] = useState('');
   useEffect(() => {
-    const fullText = 'Welcome to Dizzy Otter';
+  const fullText = 'Welcome to Dizzy Otter';
     let i = 0;
     let direction = 1; // 1 = typing, -1 = erasing
     let timeout;
@@ -122,22 +122,29 @@ const Home = () => {
     React.createElement(
       'section',
       { className: 'hero-section', style: heroBg },
-      React.createElement('span', { className: 'hero-typing-effect' },
-        typingText
-      ),
-      React.createElement('h1', { className: 'hero-title' }, '🦦 AI Systems & Web Design That Grow Your Business'),
-      React.createElement('p', { className: 'hero-subtitle' }, 'Custom-built websites, AI tools, and automations that save you time, reduce costs, and help your business thrive.'),
-      React.createElement('div', {
-        className: 'scroll-down-arrow',
-        role: 'button',
+  React.createElement('h1', { className: 'hero-title hero-typing-effect' }, typingText),
+      React.createElement('p', { className: 'hero-subtitle' }, '👉 AI consultancy for growing businesses. We audit your workflows, design custom automations and assistants, and support you as you scale.'),
+      React.createElement('a', {
+        href: 'https://calendly.com/dizzyotter/consultation',
+        className: 'cta-button',
         tabIndex: 0,
-        'aria-label': 'Scroll to next section',
-        style: { cursor: 'pointer' },
-        onClick: e => scrollToNextSection(e),
-        onKeyDown: e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(e); }
-      },
-        React.createElement('span', null, '\u25bc')
-      )
+        target: '_blank',
+        rel: 'noopener noreferrer',
+        role: 'button',
+        'aria-label': 'Book a Free Consultation',
+      }, '👉 Book a Free Consultation'),
+      React.createElement('a', {
+        href: '#ai-audit',
+        className: 'secondary-cta-button',
+        tabIndex: 0,
+        onClick: e => {
+          e.preventDefault();
+          const el = document.getElementById('ai-audit');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        },
+        role: 'button',
+        'aria-label': 'What is an AI Audit?',
+      }, '👉 What is an AI Audit?'),
     ),
     // 3. Why Dizzy Otter Section
     React.createElement(
@@ -177,7 +184,7 @@ const Home = () => {
           React.createElement('h2', { className: 'why-title reveal' }, 'Why Dizzy Otter?'),
           React.createElement('div', { className: 'why-divider reveal' }),
           React.createElement('p', { className: 'why-desc reveal' },
-            'Dizzy Otter helps small businesses grow by combining smart automation with modern web design. From lead capture and client dashboards to beautiful, functional websites, we build systems that work for you, so you can focus on what matters.'
+            'Dizzy Otter helps small and mid-sized businesses grow by turning messy processes into efficient AI-powered systems. From lead capture to client onboarding and reporting, we run AI audits to uncover the biggest opportunities, then design and implement the right solutions so you can focus on running the business — not chasing admin.'
           ),
           React.createElement('a', {
             href: '/services',
@@ -210,7 +217,7 @@ const Home = () => {
       React.createElement('div', { className: 'what-offer-inner' },
         React.createElement('h2', { className: 'what-offer-title' }, '🚀 What We Offer'),
         React.createElement('p', { className: 'what-offer-intro' },
-          'Dizzy Otter delivers complete AI-powered systems, automation tools, and digital services. From lead capture and chatbots to modern websites and advanced workflows, we build technology that helps small businesses scale with ease.'
+          'Every business is different, that’s why we start with an AI Audit. From there, we design and implement the right solutions for your needs.\n\nHere are some of the systems an audit might recommend:'
         ),
         React.createElement('div', { className: 'what-offer-cards' },
           React.createElement('div', { className: 'what-offer-row' },
@@ -224,7 +231,7 @@ const Home = () => {
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card1.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
                 React.createElement('h3', { className: 'offer-card-title' }, 'Complete AI Systems'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'End-to-end systems: forms, CRMs, AI assistants, and automations that save you days every month.')
+                React.createElement('p', { className: 'offer-card-desc' }, 'End-to-end setups with forms, CRMs, AI assistants, and automations that save you days every month.')
               )
             ),
             React.createElement('a', {
@@ -236,8 +243,8 @@ const Home = () => {
             },
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card2.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
-                React.createElement('h3', { className: 'offer-card-title' }, 'Custom AI Assistants and Bots'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'AI chatbots and assistants that handle FAQs, lead qualification, and more.')
+                React.createElement('h3', { className: 'offer-card-title' }, 'Custom AI Assistants & Bots'),
+                React.createElement('p', { className: 'offer-card-desc' }, 'Chatbots and assistants that handle FAQs, lead qualification, onboarding, and more.')
               )
             ),
             React.createElement('a', {
@@ -250,7 +257,7 @@ const Home = () => {
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card3.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
                 React.createElement('h3', { className: 'offer-card-title' }, 'Automation Workflows'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'Automate repetitive tasks and connect your tools to save hours every week.')
+                React.createElement('p', { className: 'offer-card-desc' }, 'Automations that eliminate repetitive tasks and connect your tools to free up hours every week.')
               )
             )
           ),
@@ -264,8 +271,8 @@ const Home = () => {
             },
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card4.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
-                React.createElement('h3', { className: 'offer-card-title' }, 'Web Design and Dashboards'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'Modern websites and integrated Notion or Airtable dashboards that fit your systems.')
+                React.createElement('h3', { className: 'offer-card-title' }, 'Dashboards & Reporting'),
+                React.createElement('p', { className: 'offer-card-desc' }, 'Integrated Notion or Airtable dashboards that give you visibility on leads, clients, and performance.')
               )
             ),
             React.createElement('a', {
@@ -277,8 +284,8 @@ const Home = () => {
             },
               React.createElement('div', { className: 'offer-card reveal' },
                 React.createElement('img', { src: '/card5.jpg', alt: '', className: 'offer-card-img', loading: 'lazy' }),
-                React.createElement('h3', { className: 'offer-card-title' }, 'Other Services and Integrations'),
-                React.createElement('p', { className: 'offer-card-desc' }, 'Payments, bookings, analytics, reviews, and anything else you need to automate.')
+                React.createElement('h3', { className: 'offer-card-title' }, 'Other Integrations'),
+                React.createElement('p', { className: 'offer-card-desc' }, 'Payments, bookings, analytics, reviews, and custom tools to streamline your operations.')
               )
             )
           )
@@ -387,13 +394,13 @@ const Home = () => {
         'aria-label': 'Call to Action Banner'
       },
       React.createElement('div', { className: 'cta-banner-inner' },
-        React.createElement('h2', { className: 'cta-banner-title' }, 'Ready to automate your business?'),
-        React.createElement('p', { className: 'cta-banner-subtitle' }, 'Let’s build a system that works while you focus on growth.'),
+        React.createElement('h2', { className: 'cta-banner-title' }, 'Ready to discover your AI opportunities?'),
+        React.createElement('p', { className: 'cta-banner-subtitle' }, 'Start with a free consultation. We’ll uncover where AI can save you time and increase profit, then show you the best next step.'),
         React.createElement('a', {
           href: '/contact',
-          className: 'cta-banner-btn',
-          'aria-label': 'Book a Free Demo'
-        }, 'Book a Free Demo')
+          className: 'cta-banner-btn cta-button',
+          'aria-label': 'Book a Free Consultation'
+        }, 'Book a Free Consultation')
       )
     )
   );

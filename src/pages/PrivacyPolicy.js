@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
         <h1>Privacy Policy</h1>
         <p>Effective Date: June 18, 2025</p>
         <h2>1. Introduction</h2>
-        <p>Dizzy Otter Designs ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+        <p>Dizzy Otter ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
         <h2>2. Information We Collect</h2>
         <ul>
           <li>Personal Information: Name, email address, and any information you provide via our contact forms.</li>

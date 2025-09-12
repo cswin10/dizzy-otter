@@ -18,18 +18,18 @@ const TermsOfService = () => {
         <h1>Terms of Service</h1>
         <p>Effective Date: June 18, 2025</p>
         <h2>1. Acceptance of Terms</h2>
-        <p>By accessing or using Dizzy Otter Designs, you agree to these Terms of Service. If you do not agree, please do not use our website.</p>
+        <p>By accessing or using Dizzy Otter, you agree to these Terms of Service. If you do not agree, please do not use our website.</p>
         <h2>2. Use of the Website</h2>
         <ul>
           <li>You may use the website for lawful purposes only.</li>
           <li>You may not use the website to infringe on the rights of others.</li>
         </ul>
         <h2>3. Intellectual Property</h2>
-        <p>All content on this website is the property of Dizzy Otter Designs or its licensors and is protected by copyright laws.</p>
+        <p>All content on this website is the property of Dizzy Otter or its licensors and is protected by copyright laws.</p>
         <h2>4. Disclaimer</h2>
         <p>The website is provided "as is" without warranties of any kind. We do not guarantee the accuracy or completeness of any information.</p>
         <h2>5. Limitation of Liability</h2>
-        <p>Dizzy Otter Designs is not liable for any damages arising from your use of the website.</p>
+        <p>Dizzy Otter is not liable for any damages arising from your use of the website.</p>
         <h2>6. Changes to Terms</h2>
         <p>We may update these Terms of Service at any time. Changes will be posted on this page.</p>
         <h2>7. Contact</h2>

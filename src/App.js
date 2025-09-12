@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Cookies from './pages/Cookies';
-import WebServices from './pages/web-services';
+import AiAudit from './pages/ai-audit';
 import CookieBanner from './components/CookieBanner';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
       React.createElement(Route, { path: '/privacy-policy', element: React.createElement(PrivacyPolicy) }),
       React.createElement(Route, { path: '/terms-of-service', element: React.createElement(TermsOfService) }),
       React.createElement(Route, { path: '/cookies', element: React.createElement(Cookies) }),
-      React.createElement(Route, { path: '/web-services', element: React.createElement(WebServices) })
+  React.createElement(Route, { path: '/ai-audit', element: React.createElement(AiAudit) })
     ),
     React.createElement(Footer)
   );
