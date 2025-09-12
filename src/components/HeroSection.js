@@ -20,7 +20,7 @@ function HeroSection() {
       React.createElement(
         'a',
         {
-          href: 'https://calendly.com/dizzyotter/consultation',
+          href: 'https://calendly.com/studio-dizzyotter/30min',
           className: 'cta-button',
           tabIndex: 0,
           role: 'button',

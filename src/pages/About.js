@@ -142,7 +142,7 @@ const About = () => {
       <section className="about-section about-cta reveal">
         <div className="about-cta-content">
           <h2>Let’s build something smart together</h2>
-          <a href="https://calendly.com/dizzyotter/consultation" className="about-cta-btn" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+          <a href="https://calendly.com/studio-dizzyotter/30min" className="about-cta-btn" aria-label="Book a Free Consultation">Book a Free Consultation</a>
         </div>
       </section>
     </main>

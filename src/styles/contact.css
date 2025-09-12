@@ -196,7 +196,7 @@
     min-height: 420px !important;
     padding-top: 6.5rem !important;
     padding-bottom: 2.5rem !important;
-  }
+  
   .contact-hero-title {
     margin-top: 2.5rem !important;
     font-size: 2rem !important;
@@ -221,6 +221,46 @@
   .contact-tally-embed iframe {
     min-height: 320px !important;
     height: 320px !important;
+  }
+  .contact-block-icon {
+    font-size: 1.1rem !important;
+  }
+  .contact-icon-link i {
+    font-size: 1.3rem !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .contact-social-icons {
+    gap: 1.1rem !important;
+  }
+  .contact-calendly-embed, .contact-tally-embed {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow-x: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+  .contact-calendly-embed iframe,
+  .contact-tally-embed iframe {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    height: clamp(320px, 40vw, 420px) !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+  }
+  }
+  body {
+    overflow-x: hidden !important;
   }
 }
 

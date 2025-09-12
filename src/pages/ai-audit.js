@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Header';
-import Footer from '../components/Footer';
 import '../styles/home.css';
 
 function useScrollReveal() {
@@ -67,22 +66,9 @@ const AiAudit = () => {
             <h1 className="ai-audit-title hero-title reveal">Start with an AI Audit</h1>
             <p className="ai-audit-subline hero-subtitle reveal">The fastest way to uncover how AI can save you time and increase profit.</p>
             <a
-              href="https://calendly.com/dizzyotter/consultation"
+              href="https://calendly.com/studio-dizzyotter/30min"
               className="secondary-cta-button reveal"
               aria-label="Book Your Audit"
-              style={{ 
-                background: 'var(--color-accent)',
-                borderRadius: '8px',
-                padding: '0.8rem 1.5rem',
-                fontSize: '1rem',
-                fontWeight: '600',
-                color: '#fff',
-                textDecoration: 'none',
-                display: 'inline-block',
-                transition: 'background 0.3s, transform 0.3s',
-                cursor: 'pointer',
-                marginTop: '1rem'
-              }}
             >
               Book Your Audit
             </a>
@@ -221,7 +207,7 @@ const AiAudit = () => {
           <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem' }}>Ready to discover your AI opportunities?</h2>
           <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>Book your AI Audit today and get a clear roadmap for growth.</p>
           <a
-            href="https://calendly.com/dizzyotter/consultation"
+            href="https://calendly.com/studio-dizzyotter/30min"
             className="cta-button interactive-cta"
             style={{
               background: '#fff',

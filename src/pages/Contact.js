@@ -83,7 +83,7 @@ const Contact = () => {
         ),
         React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '1.2rem' } },
           React.createElement('a', {
-            href: 'https://calendly.com/contact-dizzyotterdesigns',
+            href: 'https://calendly.com/studio-dizzyotter/30min',
             style: { color: '#2979ff', textDecoration: 'underline', fontWeight: 700, fontSize: '1.18rem', letterSpacing: '0.2px' },
             target: '_blank',
             rel: 'noopener noreferrer'
@@ -124,7 +124,7 @@ const Contact = () => {
             React.createElement('i', { className: 'fa-brands fa-tiktok' })
           ),
           React.createElement('a', {
-            href: 'https://www.linkedin.com/company/dizzyotter/',
+            href: 'https://www.linkedin.com/company/106546552/admin/dashboard/',
             target: '_blank',
             rel: 'noopener noreferrer',
             className: 'contact-icon-link',
