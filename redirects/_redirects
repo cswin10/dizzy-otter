@@ -1,0 +1,26 @@
+# Old “AI & Automations” → Solutions
+/ai-and-automations        /solutions    301
+/ai-and-automations/       /solutions    301
+
+# Old “Web Services” → AI Audit
+/web-services              /ai-audit     301
+/web-services/             /ai-audit     301
+
+# Old dizzyotterdesigns.com menu → closest matches
+/about-us                  /about        301
+/about-us/                 /about        301
+/services                  /solutions    301
+/services/                 /solutions    301
+/blog                      /             301
+/blog/*                    /             301
+/home                      /             301
+/home/                     /             301
+
+# Safety: trailing-slash duplicates for common pages (optional)
+/about/                    /about        301
+/solutions/                /solutions    301
+/ai-audit/                 /ai-audit     301
+/contact/                  /contact      301
+
+# Catch-all: anything else goes to Home
+/*                         /            301

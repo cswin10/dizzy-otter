@@ -186,6 +186,21 @@ const Home = () => {
         )
       )
     ),
+    // Solutions Heading
+    React.createElement('h2', {
+      className: 'solutions-heading reveal',
+      style: { textAlign: 'center', margin: '3rem 0 0.7rem 0', fontWeight: 900, fontSize: '2.2rem', color: '#2979FF', letterSpacing: '-0.02em' }
+    }, 'Solutions'),
+    React.createElement('div', {
+      className: 'solutions-bar reveal',
+      style: {
+        width: '60px',
+        height: '6px',
+        background: 'linear-gradient(90deg, #2979FF 60%, #50E3C2 100%)',
+        borderRadius: '3px',
+        margin: '0 auto 1.5rem auto'
+      }
+    }),
     // Offer Cards Section
     React.createElement(
       'section',

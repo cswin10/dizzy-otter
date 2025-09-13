@@ -74,6 +74,14 @@
 .footer-social-link:focus {
   background: #eaf6ff;
   box-shadow: 0 4px 16px #2979ff22;
+  color: #50E3C2;
+  transform: scale(1.12) translateY(-2px);
+}
+.footer-social-link:hover i,
+.footer-social-link:focus i {
+  color: #50E3C2 !important;
+  transition: color 0.18s, transform 0.18s;
+  transform: scale(1.18) translateY(-2px);
 }
 .footer-social-link svg {
   width: 24px;
