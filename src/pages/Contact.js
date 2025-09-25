@@ -81,13 +81,30 @@ const Contact = () => {
         React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '1.2rem', fontSize: '1.08rem', color: '#444', fontWeight: 500, lineHeight: 1.6 } },
           'Let’s talk about your workflows, challenges, and growth goals. In 30 minutes we’ll uncover where AI can save you time and increase profit. No pressure, just a clear next step.'
         ),
-        React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '1.2rem' } },
+        React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '0.5rem' } },
           React.createElement('a', {
             href: 'https://calendly.com/studio-dizzyotter/30min',
             style: { color: '#2979ff', textDecoration: 'underline', fontWeight: 700, fontSize: '1.18rem', letterSpacing: '0.2px' },
             target: '_blank',
             rel: 'noopener noreferrer'
           }, 'Calendly')
+        ),
+        React.createElement('div', {
+          style: {
+            fontSize: '0.98rem',
+            color: '#666',
+            background: '#f7fbff',
+            borderRadius: '8px',
+            padding: '0.7rem 1rem',
+            marginBottom: '1.2rem',
+            marginTop: '-0.2rem',
+            fontStyle: 'italic',
+            lineHeight: 1.6
+          }
+        },
+          'This consultation is recorded and transcribed to capture notes and action items. ',
+          React.createElement('br'),
+          'By continuing, you consent to being recorded.'
         ),
         React.createElement('div', { className: 'contact-block-desc', style: { marginBottom: '0.7rem', fontWeight: 500, fontSize: '1.05rem', color: '#444' } },
           'Or reach out to us using the following:'
