@@ -116,14 +116,9 @@ const Home = () => {
         'aria-label': 'Book a Free Consultation',
       }, '👉 Book a Free Consultation'),
       React.createElement('a', {
-        href: '#ai-audit',
+        href: '/ai-audit',
         className: 'secondary-cta-button',
         tabIndex: 0,
-        onClick: e => {
-          e.preventDefault();
-          const el = document.getElementById('ai-audit');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        },
         role: 'button',
         'aria-label': 'What is an AI Audit?',
       }, '👉 What is an AI Audit?')
