@@ -233,9 +233,11 @@ a.cta-button.secondary:hover {
 }
 
 .feature img {
-  width: 60px;
-  margin-bottom: 1rem;
-  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
 }
 
 .feature h3 {
