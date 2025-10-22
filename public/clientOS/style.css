@@ -313,99 +313,6 @@ footer a {
   text-decoration: none;
 }
 
-/* Terms & Conditions */
-.terms-conditions {
-  background: var(--color-secondary);
-  padding: 4rem 2rem;
-}
-
-.terms-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.terms-conditions h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  margin-bottom: 3rem;
-}
-
-.terms-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.term-item {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  border-left: 4px solid var(--color-highlight);
-}
-
-.term-item h3 {
-  color: var(--color-accent);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.term-item p {
-  color: var(--color-primary);
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
-.term-item ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.term-item ul li {
-  color: var(--color-primary);
-  padding: 0.3rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-  line-height: 1.5;
-}
-
-.term-item ul li::before {
-  content: '✓';
-  color: var(--color-highlight);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0.3rem;
-}
-
-.terms-footer {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  text-align: center;
-  border: 2px solid var(--color-highlight);
-  margin-top: 2rem;
-}
-
-.terms-footer p {
-  margin: 0;
-  color: var(--color-primary);
-  font-weight: 500;
-}
-
-.terms-footer a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-.terms-footer a:hover {
-  text-decoration: underline;
-}
-
 /* Reveal on Scroll Animations */
 .reveal {
   opacity: 0;
@@ -511,22 +418,5 @@ footer a {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-  }
-  
-  .terms-conditions {
-    padding: 2rem 1rem;
-  }
-  
-  .terms-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .term-item {
-    padding: 1.5rem;
-  }
-  
-  .terms-conditions h2 {
-    font-size: 2rem;
   }
 }
