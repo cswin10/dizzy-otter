@@ -171,63 +171,61 @@ const Contact = () => {
       React.createElement(
         'div',
         { className: 'contact-faq-accordion' },
-  // ...removed outdated FAQs...
-    // ...removed outdated FAQs...
         React.createElement(FAQItem, {
-          question: 'Can you help integrate tools I’m already using?',
-          answer: 'Yes. Whether you already have forms, CRMs, or payment systems in place, we can help you connect them and automate your workflows.'
+          question: 'Can you help integrate tools I\'m already using?',
+          answer: 'Yes. Whether you already have forms, CRMs, or payment systems in place, we can connect them and automate your workflows so they work together seamlessly.'
         }),
         React.createElement(FAQItem, {
           question: 'What is an AI Audit?',
-          answer: 'An AI Audit is a structured review of your workflows, tools, and processes. We identify the top three opportunities where AI and automation can save you time, reduce costs, and increase profit. You’ll get a written report, a 14-day quick win plan, and an ROI estimate.'
+          answer: 'An AI Audit is a free 30-minute review of your workflows, tools, and processes. We identify the top opportunities where automation and AI can save you time, reduce costs, and increase profit. You\'ll leave with clear recommendations and a simple action plan.'
         }),
         React.createElement(FAQItem, {
           question: 'How much does an AI Audit cost?',
-          answer: 'AI Audits start from £500. For larger teams or more complex businesses, we’ll quote a custom price. The best part — 100% of your audit fee can be applied to a future implementation project.'
-        }),
-        React.createElement(FAQItem, {
-          question: 'Why should I pay for an audit instead of going straight to a system build?',
-          answer: 'The audit saves you money. It ensures we build the right systems for your business, not just a “nice to have.” It gives you clarity, a roadmap, and an ROI projection before you commit to larger projects.'
+          answer: 'Nothing — the AI Audit is completely free. After the call, if you\'d like us to implement the systems we recommend, we\'ll provide a clear quote before any work begins.'
         }),
         React.createElement(FAQItem, {
           question: 'What happens after the audit?',
-          answer: 'We present your audit findings and, if you choose, we design and implement the recommended systems. This might include automation workflows, custom AI assistants, dashboards, or integrations with your existing tools.'
+          answer: 'You\'ll receive a short summary of the audit and our recommendations. If you choose to move forward, we design and implement the automations or AI tools discussed during the call.'
+        }),
+        React.createElement(FAQItem, {
+          question: 'How much do implementation projects cost?',
+          answer: 'Every project is different, but most fall between £300–£600 for small automations and £900–£1,500 for full business systems. Ongoing optimisation retainers start from around £300 per month.'
         }),
         React.createElement(FAQItem, {
           question: 'Do you only work with certain industries?',
-          answer: 'No. We’ve worked with solo entrepreneurs, local service providers, and multi-million pound organisations. The principles of saving time, automating repetitive work, and improving data visibility apply across every sector.'
+          answer: 'No. We work with solo founders, local service businesses, and growing teams. The principles of saving time, automating repetitive work, and improving data visibility apply to every sector.'
         }),
         React.createElement(FAQItem, {
           question: 'How long does it take to see results?',
-          answer: 'Most clients see results within the first 14 days, thanks to our quick win plan. Full implementation projects typically take 2 to 6 weeks depending on complexity.'
+          answer: 'Most clients start seeing results within the first 14 days thanks to the quick-win plan we provide. Larger implementation projects typically take 2–6 weeks depending on complexity.'
         }),
         React.createElement(FAQItem, {
           question: 'What tools and platforms do you use?',
-          answer: 'We work with Notion, Airtable, n8n, Zapier, Tally, Fillout, ChatGPT, and other leading AI models and automation tools. Every solution is tailored to the tools you already use or are comfortable adopting.'
+          answer: 'We work with Notion, Airtable, n8n, Zapier, Tally, Fillout, ChatGPT, and other leading automation tools. Every build is tailored to your business and the systems you already use.'
         }),
         React.createElement(FAQItem, {
           question: 'Will my team need training?',
-          answer: 'Yes, but we make it simple. Every project includes handover, SOPs (step by step guides), and training so your team feels confident using the new systems.'
+          answer: 'We make it simple. Every project includes handover materials, SOPs, and a short training session so your team can confidently use the new systems.'
         }),
         React.createElement(FAQItem, {
           question: 'Do you offer ongoing support?',
-          answer: 'Yes. After implementation, many clients choose a retainer package. This includes ongoing optimisation, new automations, and monthly reporting. Retainers start from £1,000 per month.'
+          answer: 'Yes. After implementation, many clients choose a monthly retainer for ongoing optimisation, new automations, and reporting. Retainers typically start from £300 per month.'
         }),
         React.createElement(FAQItem, {
-          question: 'What if I’m not ready to spend £500 yet?',
-          answer: 'That’s fine. Start with a free 30-minute consultation. You’ll still leave the call with clear ideas on how AI could help your business, even if you don’t move forward right away.'
+          question: 'I\'m not sure I\'m ready to automate yet — is the audit still worth it?',
+          answer: 'Absolutely. The audit is free and gives you a clear picture of what\'s possible. Even if you don\'t move forward immediately, you\'ll leave with practical insights you can apply right away.'
         }),
         React.createElement(FAQItem, {
           question: 'What makes Dizzy Otter different from other agencies?',
-          answer: 'Most agencies focus on building websites or single automations. We act as a consultancy — diagnosing first, then building the right solution. You get strategy, implementation, and support under one roof.'
+          answer: 'Most agencies jump straight to building. We diagnose first. Our free audit identifies the right problems to solve, and our team then designs custom automations that actually save time and money.'
         }),
         React.createElement(FAQItem, {
           question: 'Can you integrate with my existing tools?',
-          answer: 'Almost always. We specialise in connecting the tools you already use. If you’re on spreadsheets, CRMs, or cloud apps, we can automate and link them without forcing you to start from scratch.'
+          answer: 'Almost always! Our free audit identifies which tools you\'re already using and how they can work better together. We specialize in connecting existing platforms without forcing you to start from scratch.'
         }),
         React.createElement(FAQItem, {
           question: 'Do you work internationally?',
-          answer: 'Yes. We’re based in the UK but work with clients worldwide through remote consultations and online systems.'
+          answer: 'Yes, we conduct free audits and work with clients globally. Thanks to modern communication tools and cloud-based platforms, we can efficiently serve businesses regardless of location.'
         })
       )
     ),

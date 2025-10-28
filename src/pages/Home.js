@@ -105,7 +105,7 @@ const Home = () => {
       'section',
       { className: 'hero-section', style: heroBg },
       React.createElement('h1', { className: 'hero-title hero-typing-effect' }, typingText),
-      React.createElement('p', { className: 'hero-subtitle' }, '👉 AI consultancy for growing businesses. We audit your workflows, design custom automations and assistants, and support you as you scale.'),
+      React.createElement('p', { className: 'hero-subtitle' }, '👉 AI consultancy for growing businesses.\nWe audit your workflows, design custom automations and AI assistants, and support you as you scale.'),
       React.createElement('a', {
   href: 'https://calendly.com/studio-dizzyotter/30min',
         className: 'cta-button',
@@ -113,15 +113,15 @@ const Home = () => {
         target: '_blank',
         rel: 'noopener noreferrer',
         role: 'button',
-        'aria-label': 'Book a Free Consultation',
-      }, '👉 Book a Free Consultation'),
+        'aria-label': 'Book Your Free AI Audit',
+      }, '👉 Book Your Free AI Audit'),
       React.createElement('a', {
         href: '/ai-audit',
         className: 'secondary-cta-button',
         tabIndex: 0,
         role: 'button',
-        'aria-label': 'What is an AI Audit?',
-      }, '👉 What is an AI Audit?')
+        'aria-label': 'How the Audit Works',
+      }, '👉 How the Audit Works')
     ),
     // Why Dizzy Otter Section
     React.createElement(
@@ -370,12 +370,12 @@ const Home = () => {
       },
       React.createElement('div', { className: 'cta-banner-inner' },
         React.createElement('h2', { className: 'cta-banner-title' }, 'Ready to discover your AI opportunities?'),
-        React.createElement('p', { className: 'cta-banner-subtitle' }, 'Start with a free consultation. We’ll uncover where AI can save you time and increase profit, then show you the best next step.'),
+        React.createElement('p', { className: 'cta-banner-subtitle' }, 'Start with a free AI audit. We\'ll uncover where AI can save you time and increase profit, then show you the best next step.'),
         React.createElement('a', {
           href: '/contact',
           className: 'cta-banner-btn cta-button',
-          'aria-label': 'Book a Free Consultation'
-        }, 'Book a Free Consultation')
+          'aria-label': 'Book a Free AI Audit'
+        }, 'Book a Free AI Audit')
       )
     )
   );

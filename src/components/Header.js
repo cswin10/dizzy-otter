@@ -131,6 +131,22 @@ function Header() {
             },
             'Contact'
           )
+        ),
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'a',
+            {
+              href: 'https://dizzyotter.com/clientos/',
+              className: 'nav-link',
+              tabIndex: 0,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+              'aria-label': 'Go to ClientOS (opens in new tab)',
+            },
+            'ClientOS'
+          )
         )
       ),
       // Mobile Slide-out Menu
@@ -168,7 +184,8 @@ function Header() {
           React.createElement('li', null, React.createElement(Link, { to: '/services', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Solutions')),
           React.createElement('li', null, React.createElement(Link, { to: '/ai-audit', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'AI Audit')),
           React.createElement('li', null, React.createElement(Link, { to: '/about', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'About')),
-          React.createElement('li', null, React.createElement(Link, { to: '/contact', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Contact'))
+          React.createElement('li', null, React.createElement(Link, { to: '/contact', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Contact')),
+          React.createElement('li', null, React.createElement('a', { href: 'https://dizzyotter.com/clientos/', className: 'nav-link', tabIndex: 0, target: '_blank', rel: 'noopener noreferrer', onClick: () => setMenuOpen(false) }, 'ClientOS'))
         ),
         React.createElement('div', { className: 'mobile-nav-social' },
           React.createElement('a', {

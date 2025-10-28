@@ -63,14 +63,14 @@ const AiAudit = () => {
       <main className="ai-audit-page" tabIndex={-1} aria-label="AI Audit Page">
         {/* Hero Section */}
           <section className="hero-section" style={heroBg}>
-            <h1 className="ai-audit-title hero-title reveal">Start with an AI Audit</h1>
-            <p className="ai-audit-subline hero-subtitle reveal">The fastest way to uncover how AI can save you time and increase profit.</p>
+            <h1 className="ai-audit-title hero-title reveal">Start with a Free AI Audit</h1>
+            <p className="ai-audit-subline hero-subtitle reveal">The fastest way to uncover how AI can save you time, reduce admin, and increase profit.</p>
             <a
               href="https://calendly.com/studio-dizzyotter/30min"
               className="secondary-cta-button reveal"
-              aria-label="Book Your Audit"
+              aria-label="Book Your Free Audit"
             >
-              Book Your Audit
+              Book Your Free Audit
             </a>
             <div
               className="scroll-down-arrow"
@@ -91,12 +91,12 @@ const AiAudit = () => {
           <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '0.7rem', color: 'var(--color-accent)' }}>🧠</div>
             <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>What is an AI Audit?</h2>
-            <p style={{ fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '1.2rem', textAlign: 'center' }}>An AI Audit is a structured review of your business processes, tools, and data flows.<br/>We uncover where AI and automation can:</p>
+            <p style={{ fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '1.2rem', textAlign: 'center' }}>An AI Audit is a structured review of your business processes, tools, and workflows.<br/>In 30 minutes, we\'ll pinpoint where automation and AI can:</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', marginTop: '1.2rem' }}>
               {[{ icon: '⏳', text: 'Eliminate repetitive admin tasks' },
                 { icon: '📈', text: 'Capture and convert more leads' },
                 { icon: '🤝', text: 'Improve client onboarding and retention' },
-                { icon: '📊', text: 'Give you visibility with clear reporting' },
+                { icon: '📊', text: 'Give you clear visibility with better reporting' },
                 { icon: '💡', text: 'Save your team hours every week' }].map(({ icon, text }) => (
                 <div key={text} style={{
                   background: 'var(--color-accent)',
@@ -131,12 +131,12 @@ const AiAudit = () => {
             <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>What You Get</h2>
             <ul style={{ fontSize: '1.15rem', color: 'var(--color-primary)', margin: '2rem auto 0 auto', paddingLeft: 0, listStyle: 'none', maxWidth: '700px' }}>
               { [
-                'Discovery session to understand your business and goals',
+                '30-minute discovery call to understand your business and goals',
                 'Review of your current tools and workflows',
-                'Identification of the top 3 AI opportunities in your business',
-                'A 14-day quick win plan',
+                'Identification of the top 3 automation opportunities',
+                'Quick-win action plan for the next 14 days',
                 'ROI estimate (hours saved, payback period)',
-                'Recorded Loom walkthrough + written report'
+                'Optional written summary after the call'
               ].map((text, idx) => (
                 <li
                   key={text}
@@ -158,6 +158,7 @@ const AiAudit = () => {
                 </li>
               )) }
             </ul>
+            <p style={{ fontSize: '1.15rem', color: 'var(--color-accent)', marginTop: '2rem', textAlign: 'center', fontWeight: '700' }}>Everything is completely free — no obligation to continue.</p>
           </div>
         </section>
         {/* Section 3: How It Works */}
@@ -166,10 +167,10 @@ const AiAudit = () => {
             <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>How It Works</h2>
             <ol style={{ fontSize: '1.15rem', color: 'var(--color-primary)', margin: '2rem auto 0 auto', paddingLeft: 0, listStyle: 'none', maxWidth: '700px' }}>
               { [
-                { label: 'Free Consultation', desc: 'a 30-minute call to understand your business.' },
-                { label: 'Audit Session', desc: 'we map your processes, tools, and pain points.' },
-                { label: 'Audit Report', desc: 'within 7 days you receive your roadmap and ROI breakdown.' },
-                { label: 'Next Steps', desc: 'if you choose, we design and implement the solutions for you.' }
+                { label: 'Book Your Free Audit', desc: 'choose a time that suits you.' },
+                { label: 'Audit Call', desc: 'we map your processes, tools, and pain points.' },
+                { label: 'Report & Plan', desc: 'you receive a simple roadmap and ROI breakdown.' },
+                { label: 'Next Steps', desc: 'if you choose, we design and implement the automations for you.' }
               ].map((step, idx) => (
                 <li
                   key={step.label}
@@ -196,16 +197,18 @@ const AiAudit = () => {
         {/* Section 4: Pricing */}
         <section className="ai-audit-section" style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', background: 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)', borderRadius: 0, boxShadow: '0 8px 32px var(--color-accent)', padding: '3.5rem 0', textAlign: 'center' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>Pricing</h2>
-            <div style={{ fontWeight: '700', fontSize: '1.15rem', marginBottom: '1rem', color: 'var(--color-accent)' }}>AI Audits start from £500.</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Tailored pricing for larger teams or complex workflows.</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>100% of your audit fee can be applied to a future implementation project.</div>
+            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>Implementation Pricing</h2>
+            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>After the audit, we\'ll give you a clear quote for any systems you\'d like us to build.</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: '700' }}>Typical projects:</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Small automations from £300 – £600</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Full business systems from £900 – £1,500</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>Optional ongoing support from £300 / month</div>
           </div>
         </section>
         {/* Final CTA Section */}
         <section className="ai-audit-final-cta-section" style={{ background: 'linear-gradient(90deg, #2979FF 0%, #50E3C2 100%)', color: '#fff', textAlign: 'center', padding: '3rem 1rem', borderRadius: '32px', maxWidth: '1100px', margin: '2.5rem auto' }}>
-          <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem' }}>Ready to discover your AI opportunities?</h2>
-          <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>Book your AI Audit today and get a clear roadmap for growth.</p>
+          <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem' }}>Ready to uncover your AI opportunities?</h2>
+          <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>Book your free audit today and get a clear roadmap for growth.</p>
           <a
             href="https://calendly.com/studio-dizzyotter/30min"
             className="cta-button interactive-cta"
@@ -239,9 +242,9 @@ const AiAudit = () => {
             onMouseUp={e => {
               e.currentTarget.style.transform = 'scale(1)';
             }}
-            aria-label="Book Your Audit"
+            aria-label="Book Your Free Audit"
           >
-            Book Your Audit
+            Book Your Free Audit
           </a>
         </section>
   </main>

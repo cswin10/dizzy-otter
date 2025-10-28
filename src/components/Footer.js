@@ -20,6 +20,9 @@ const Footer = () => (
         <a href="/contact" aria-label="Contact">
           Contact
         </a>
+        <a href="https://dizzyotter.com/clientos/" target="_blank" rel="noopener noreferrer" aria-label="ClientOS (opens in new tab)">
+          ClientOS
+        </a>
       </nav>
       <nav className="footer-legal-nav" aria-label="Legal footer navigation">
         <a href="/privacy-policy" aria-label="Privacy Policy">
