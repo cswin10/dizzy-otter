@@ -169,8 +169,8 @@ const Services = () => {
                     End-to-end setups with forms, CRMs, AI assistants, and automations that save you days every month.
                   </p>
                   <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Book a free consultation and see how a <b>smart system</b> could work for you.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+                    <span className="ai-systems-cta-text reveal">Book a free AI audit and see how a <b>smart system</b> could work for you.</span>
+                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
                   </div>
                 </div>
                 <div className="ai-systems-fullrow-img-wrap reveal">
@@ -193,7 +193,7 @@ const Services = () => {
                   </p>
                   <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
                     <span className="ai-systems-cta-text reveal">See how a custom AI assistant could save you hours every week.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
                   </div>
                 </div>
                 <div className="ai-systems-fullrow-img-wrap reveal">
@@ -215,8 +215,8 @@ const Services = () => {
                     Automations that eliminate repetitive tasks and connect your tools to free up hours every week.
                   </p>
                   <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Let’s build the workflow that fits your business.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+                    <span className="ai-systems-cta-text reveal">Let's build the workflow that fits your business.</span>
+                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
                   </div>
                 </div>
                 <div className="ai-systems-fullrow-img-wrap reveal">
@@ -238,8 +238,8 @@ const Services = () => {
                     Integrated Notion or Airtable dashboards that give you visibility on leads, clients, and performance.
                   </p>
                   <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Let’s design a digital home that works as hard as you do.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+                    <span className="ai-systems-cta-text reveal">Let's design a digital home that works as hard as you do.</span>
+                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
                   </div>
                 </div>
                 <div className="ai-systems-fullrow-img-wrap reveal">
@@ -262,7 +262,7 @@ const Services = () => {
                   </p>
                   <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
                     <span className="ai-systems-cta-text reveal">Ask us how we can connect your tools and save you time.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
                   </div>
                 </div>
                 <div className="ai-systems-fullrow-img-wrap reveal">

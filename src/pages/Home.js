@@ -372,8 +372,10 @@ const Home = () => {
         React.createElement('h2', { className: 'cta-banner-title' }, 'Ready to discover your AI opportunities?'),
         React.createElement('p', { className: 'cta-banner-subtitle' }, 'Start with a free AI audit. We\'ll uncover where AI can save you time and increase profit, then show you the best next step.'),
         React.createElement('a', {
-          href: '/contact',
+          href: 'https://calendly.com/studio-dizzyotter/30min',
           className: 'cta-banner-btn cta-button',
+          target: '_blank',
+          rel: 'noopener noreferrer',
           'aria-label': 'Book a Free AI Audit'
         }, 'Book a Free AI Audit')
       )

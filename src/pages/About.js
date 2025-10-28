@@ -141,8 +141,8 @@ const About = () => {
       </section>
       <section className="about-section about-cta reveal">
         <div className="about-cta-content">
-          <h2>Let’s build something smart together</h2>
-          <a href="https://calendly.com/studio-dizzyotter/30min" className="about-cta-btn" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+          <h2>Let's build something smart together</h2>
+          <a href="https://calendly.com/studio-dizzyotter/30min" className="about-cta-btn" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
         </div>
       </section>
     </main>

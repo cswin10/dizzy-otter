@@ -19,12 +19,13 @@
   display: inline-block;
   margin: 1rem 0.5rem 0 0.5rem;
   box-shadow: 0 4px 16px rgba(41,121,255,0.10);
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 .cta-button:hover, .cta-button:focus {
   background: linear-gradient(90deg, #50E3C2 0%, #2979FF 100%);
   color: #fff;
   box-shadow: 0 8px 32px rgba(80,227,194,0.18);
+  transform: translateY(-3px) scale(1.02);
 }
 .secondary-cta-button {
   background: #fff;
@@ -46,7 +47,7 @@
   color: #fff;
   box-shadow: 0 6px 24px rgba(41,121,255,0.14);
 }
-.home-page {}
+
 
 .hero-section {
   /* background image is set inline in the React component */
