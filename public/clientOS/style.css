@@ -222,14 +222,46 @@ a.cta-button.secondary:hover {
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.4s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  border: 2px solid var(--color-highlight)
+  border: 2px solid var(--color-highlight);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(80, 227, 194, 0.1), transparent);
+  transition: left 0.6s ease;
 }
 
 .feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-color: var(--color-accent);
+}
+
+.feature:hover::before {
+  left: 100%;
+}
+
+.feature:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.feature:hover h3 {
+  color: var(--color-primary);
+}
+
+.feature:hover p {
+  color: var(--color-primary);
 }
 
 .feature img {
@@ -238,6 +270,9 @@ a.cta-button.secondary:hover {
   object-fit: cover;
   margin-bottom: 1.5rem;
   border-radius: 15px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .feature h3 {
