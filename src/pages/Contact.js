@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import '../styles/contact.css';
-import '../styles/home.css';
 import { useScrollReveal, useScrollToTop } from '../hooks';
+
+const heroBg = {
+  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/contact-hero.jpg") center/cover no-repeat'
+};
 
 const Contact = () => {
   useScrollReveal();
@@ -26,7 +29,7 @@ const Contact = () => {
     // Hero Section
     React.createElement(
       'section',
-      { className: 'contact-hero-section hero-bg-contact' },
+      { className: 'contact-hero-section', style: heroBg },
       React.createElement('h1', { className: 'contact-hero-title reveal' }, 'Let\u2019s Build Your Smart System Together'),
       React.createElement('p', { className: 'contact-hero-subtitle reveal' }, 'Get in touch to start automating your business today.'),
       React.createElement('div', {
