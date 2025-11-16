@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/services.css';
-import '../styles/home.css';
 import { useScrollReveal, useScrollToTop } from '../hooks';
+
+const heroBg = {
+  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/services-hero.jpg") center/cover no-repeat'
+};
 
 const serviceSections = [
   { id: 'ai-systems', label: 'Complete AI Systems' },
@@ -77,7 +80,7 @@ const Services = () => {
   return (
     <main className="services-page" tabIndex={-1} aria-label="Services Page">
       {/* Hero Section */}
-      <section className="services-hero-section hero-bg-services">
+      <section className="services-hero-section" style={heroBg}>
   <h1 className="services-hero-title reveal">Solutions</h1>
   <p className="services-hero-subtitle reveal">Every business is different — these are examples of the systems we design after an AI Audit.</p>
         <div

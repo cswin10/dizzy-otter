@@ -3,6 +3,10 @@ import Navbar from '../components/Header';
 import '../styles/home.css';
 import { useScrollReveal, useScrollToTop } from '../hooks';
 
+const heroBg = {
+  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/Ai-audit-hero.jpg") center/cover no-repeat'
+};
+
 const AiAudit = () => {
   useScrollToTop();
   useScrollReveal();
@@ -23,7 +27,7 @@ const AiAudit = () => {
       <Navbar />
       <main className="ai-audit-page" tabIndex={-1} aria-label="AI Audit Page">
         {/* Hero Section */}
-          <section className="hero-section hero-bg-ai-audit">
+          <section className="hero-section" style={heroBg}>
             <h1 className="ai-audit-title hero-title reveal">Start with a Free AI Audit</h1>
             <p className="ai-audit-subline hero-subtitle reveal">The fastest way to uncover how AI can save you time, reduce admin, and increase profit.</p>
             <a

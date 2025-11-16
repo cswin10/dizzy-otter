@@ -3,6 +3,18 @@ import '../styles/home.css';
 import FactSolutionBox from '../components/FactSolutionBox';
 import { useScrollReveal, useScrollToTop } from '../hooks';
 
+const heroBg = {
+  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/hero.jpg") center/cover no-repeat'
+};
+
+const ctaBannerBg = {
+  background: 'linear-gradient(rgba(41,121,255,0.10), rgba(80,227,194,0.10)), url("/cta-wave.jpg") center/cover no-repeat',
+  width: '100%',
+  padding: 0,
+  position: 'relative',
+  border: 0
+};
+
 const testimonials = [
   {
     text: 'Dizzy Otter made the process easy, handling all the technical details and delivering a fantastic result. I highly recommend them for small businesses.',
@@ -58,7 +70,7 @@ const Home = () => {
     // Hero Section
     React.createElement(
       'section',
-      { className: 'hero-section hero-bg-home' },
+      { className: 'hero-section', style: heroBg },
       React.createElement('h1', { className: 'hero-title hero-typing-effect' }, typingText),
       React.createElement('p', { className: 'hero-subtitle' }, '👉 AI consultancy for growing businesses.\nWe audit your workflows, design custom automations and AI assistants, and support you as you scale.'),
       React.createElement('a', {
@@ -313,7 +325,8 @@ const Home = () => {
     React.createElement(
       'section',
       {
-        className: 'cta-banner-section cta-banner-bg reveal',
+        className: 'cta-banner-section reveal',
+        style: ctaBannerBg,
         'aria-label': 'Call to Action Banner'
       },
       React.createElement('div', { className: 'cta-banner-inner' },
