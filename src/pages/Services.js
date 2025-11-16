@@ -1,54 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import '../styles/services.css';
-
-// Robust Intersection Observer + MutationObserver for reveal-on-scroll
-function useScrollReveal() {
-  useEffect(() => {
-    let observer;
-    const revealEls = () => Array.from(document.querySelectorAll('.reveal:not(.revealed)'));
-    const observeAll = () => {
-      revealEls().forEach(el => observer.observe(el));
-    };
-    if ('IntersectionObserver' in window) {
-      observer = new window.IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('revealed');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.08 }
-      );
-      observeAll();
-      // Watch for new .reveal elements added to the DOM
-      const mutationObserver = new MutationObserver(() => {
-        observeAll();
-      });
-      mutationObserver.observe(document.body, { childList: true, subtree: true });
-      return () => {
-        observer.disconnect();
-        mutationObserver.disconnect();
-      };
-    } else {
-      // Fallback for old browsers
-      revealEls().forEach(el => el.classList.add('revealed'));
-    }
-  }, []);
-}
-
-function useScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-}
-
-const heroBg = {
-  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/services-hero.jpg") center/cover no-repeat'
-};
+import '../styles/home.css';
+import { useScrollReveal, useScrollToTop } from '../hooks';
 
 const serviceSections = [
   { id: 'ai-systems', label: 'Complete AI Systems' },
@@ -124,7 +77,7 @@ const Services = () => {
   return (
     <main className="services-page" tabIndex={-1} aria-label="Services Page">
       {/* Hero Section */}
-      <section className="services-hero-section" style={heroBg}>
+      <section className="services-hero-section hero-bg-services">
   <h1 className="services-hero-title reveal">Solutions</h1>
   <p className="services-hero-subtitle reveal">Every business is different — these are examples of the systems we design after an AI Audit.</p>
         <div

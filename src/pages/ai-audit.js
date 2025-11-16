@@ -1,49 +1,10 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Header';
 import '../styles/home.css';
-
-function useScrollReveal() {
-  useEffect(() => {
-    let observer;
-    const revealEls = () => Array.from(document.querySelectorAll('.reveal:not(.revealed)'));
-    const observeAll = () => {
-      revealEls().forEach(el => observer.observe(el));
-    };
-    if ('IntersectionObserver' in window) {
-      observer = new window.IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('revealed');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.05 }
-      );
-      observeAll();
-      const mutationObserver = new MutationObserver(() => {
-        observeAll();
-      });
-      mutationObserver.observe(document.body, { childList: true, subtree: true });
-      return () => {
-        observer.disconnect();
-        mutationObserver.disconnect();
-      };
-    } else {
-      revealEls().forEach(el => el.classList.add('revealed'));
-    }
-  }, []);
-}
-
-const heroBg = {
-  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/Ai-audit-hero.jpg") center/cover no-repeat'
-};
+import { useScrollReveal, useScrollToTop } from '../hooks';
 
 const AiAudit = () => {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  useScrollToTop();
   useScrollReveal();
   // Scroll to next section for hero arrow
   const scrollToNextSection = e => {
@@ -62,7 +23,7 @@ const AiAudit = () => {
       <Navbar />
       <main className="ai-audit-page" tabIndex={-1} aria-label="AI Audit Page">
         {/* Hero Section */}
-          <section className="hero-section" style={heroBg}>
+          <section className="hero-section hero-bg-ai-audit">
             <h1 className="ai-audit-title hero-title reveal">Start with a Free AI Audit</h1>
             <p className="ai-audit-subline hero-subtitle reveal">The fastest way to uncover how AI can save you time, reduce admin, and increase profit.</p>
             <a

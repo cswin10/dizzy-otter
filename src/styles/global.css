@@ -378,6 +378,32 @@ header.header.header-scrolled {
 p {
   letter-spacing: 0.04em;
 }
+
+/* Social icon link styles - used in Header and Footer */
+.social-icon-link {
+  margin: 0 0.7rem;
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  background: none;
+  border-radius: 12px;
+  width: auto;
+  height: auto;
+  padding: 0.2rem 0.5rem;
+  box-shadow: none;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  color: var(--color-highlight);
+  transform: scale(1.18) translateY(-2px);
+  outline: none;
+}
 @media (max-width: 900px) {
   .nav-links {
     display: none !important;

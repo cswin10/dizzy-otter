@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/global.css';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
-import Cookies from './pages/Cookies';
-import AiAudit from './pages/ai-audit';
 import CookieBanner from './components/CookieBanner';
+
+// Lazy load page components for better performance
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const AiAudit = React.lazy(() => import('./pages/ai-audit'));
 
 function App() {
   // Polyfill for smooth scroll in Safari
@@ -26,16 +28,20 @@ function App() {
     React.createElement(Header),
     React.createElement(CookieBanner),
     React.createElement(
-      Routes,
-      null,
-      React.createElement(Route, { path: '/', element: React.createElement(Home) }),
-      React.createElement(Route, { path: '/services', element: React.createElement(Services) }),
-      React.createElement(Route, { path: '/about', element: React.createElement(About) }),
-      React.createElement(Route, { path: '/contact', element: React.createElement(Contact) }),
-      React.createElement(Route, { path: '/privacy-policy', element: React.createElement(PrivacyPolicy) }),
-      React.createElement(Route, { path: '/terms-of-service', element: React.createElement(TermsOfService) }),
-      React.createElement(Route, { path: '/cookies', element: React.createElement(Cookies) }),
-  React.createElement(Route, { path: '/ai-audit', element: React.createElement(AiAudit) })
+      Suspense,
+      { fallback: React.createElement('div', { style: { minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' } }, 'Loading...') },
+      React.createElement(
+        Routes,
+        null,
+        React.createElement(Route, { path: '/', element: React.createElement(Home) }),
+        React.createElement(Route, { path: '/services', element: React.createElement(Services) }),
+        React.createElement(Route, { path: '/about', element: React.createElement(About) }),
+        React.createElement(Route, { path: '/contact', element: React.createElement(Contact) }),
+        React.createElement(Route, { path: '/privacy-policy', element: React.createElement(PrivacyPolicy) }),
+        React.createElement(Route, { path: '/terms-of-service', element: React.createElement(TermsOfService) }),
+        React.createElement(Route, { path: '/cookies', element: React.createElement(Cookies) }),
+        React.createElement(Route, { path: '/ai-audit', element: React.createElement(AiAudit) })
+      )
     ),
     React.createElement(Footer)
   );

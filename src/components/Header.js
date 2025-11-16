@@ -193,7 +193,7 @@ function Header() {
             target: '_blank',
             rel: 'noopener noreferrer',
             'aria-label': 'Email',
-            style: { margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }
+            className: 'social-icon-link'
           },
             React.createElement('i', { className: 'fa-solid fa-envelope' })
           ),
@@ -202,7 +202,7 @@ function Header() {
             target: '_blank',
             rel: 'noopener noreferrer',
             'aria-label': 'LinkedIn',
-            style: { margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }
+            className: 'social-icon-link'
           },
             React.createElement('i', { className: 'fa-brands fa-linkedin-in' })
           ),
@@ -211,7 +211,7 @@ function Header() {
             target: '_blank',
             rel: 'noopener noreferrer',
             'aria-label': 'Instagram',
-            style: { margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }
+            className: 'social-icon-link'
           },
             React.createElement('i', { className: 'fa-brands fa-instagram' })
           ),
@@ -220,7 +220,7 @@ function Header() {
             target: '_blank',
             rel: 'noopener noreferrer',
             'aria-label': 'TikTok',
-            style: { margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }
+            className: 'social-icon-link'
           },
             React.createElement('i', { className: 'fa-brands fa-tiktok' })
           )

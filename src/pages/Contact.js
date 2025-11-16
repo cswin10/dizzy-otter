@@ -1,33 +1,7 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import '../styles/contact.css';
-
-function useScrollReveal() {
-  useEffect(() => {
-    const reveal = () => {
-      document.querySelectorAll('.reveal').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60) {
-          el.classList.add('revealed');
-        }
-      });
-    };
-    window.addEventListener('scroll', reveal);
-    reveal();
-    return () => window.removeEventListener('scroll', reveal);
-  }, []);
-}
-
-function useScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-}
-
-const heroBg = {
-  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/contact-hero.jpg") center/cover no-repeat'
-};
+import '../styles/home.css';
+import { useScrollReveal, useScrollToTop } from '../hooks';
 
 const Contact = () => {
   useScrollReveal();
@@ -52,7 +26,7 @@ const Contact = () => {
     // Hero Section
     React.createElement(
       'section',
-      { className: 'contact-hero-section', style: heroBg },
+      { className: 'contact-hero-section hero-bg-contact' },
       React.createElement('h1', { className: 'contact-hero-title reveal' }, 'Let\u2019s Build Your Smart System Together'),
       React.createElement('p', { className: 'contact-hero-subtitle reveal' }, 'Get in touch to start automating your business today.'),
       React.createElement('div', {
