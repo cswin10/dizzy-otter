@@ -41,8 +41,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Email"
-          className="footer-social-link"
-          style={{ margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }}
+          className="social-icon-link"
         >
           <i className="fa-solid fa-envelope" />
         </a>
@@ -51,8 +50,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="footer-social-link"
-          style={{ margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }}
+          className="social-icon-link"
         >
           <i className="fa-brands fa-linkedin-in" />
         </a>
@@ -61,8 +59,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="footer-social-link"
-          style={{ margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }}
+          className="social-icon-link"
         >
           <i className="fa-brands fa-instagram" />
         </a>
@@ -71,8 +68,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="TikTok"
-          className="footer-social-link"
-          style={{ margin: '0 0.7rem', fontSize: '2.2rem', color: '#2979FF', background: 'none', borderRadius: '12px', width: 'auto', height: 'auto', padding: '0.2rem 0.5rem', boxShadow: 'none', border: 'none', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 0.2s, background 0.2s, transform 0.2s' }}
+          className="social-icon-link"
         >
           <i className="fa-brands fa-tiktok" />
         </a>

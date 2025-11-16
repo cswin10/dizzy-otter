@@ -1,52 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import '../styles/home.css';
 import FactSolutionBox from '../components/FactSolutionBox';
-
-function useScrollReveal() {
-  useEffect(() => {
-    let observer;
-    const revealEls = () => Array.from(document.querySelectorAll('.reveal:not(.revealed)'));
-    const observeAll = () => {
-      revealEls().forEach(el => observer.observe(el));
-    };
-    if ('IntersectionObserver' in window) {
-      observer = new window.IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('revealed');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.05 }
-      );
-      observeAll();
-      const mutationObserver = new MutationObserver(() => {
-        observeAll();
-      });
-      mutationObserver.observe(document.body, { childList: true, subtree: true });
-      return () => {
-        observer.disconnect();
-        mutationObserver.disconnect();
-      };
-    } else {
-      revealEls().forEach(el => el.classList.add('revealed'));
-    }
-  }, []);
-}
-
-function useScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-}
-
-const heroBg = {
-  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/hero.jpg") center/cover no-repeat'
-};
+import { useScrollReveal, useScrollToTop } from '../hooks';
 
 const testimonials = [
   {
@@ -103,7 +58,7 @@ const Home = () => {
     // Hero Section
     React.createElement(
       'section',
-      { className: 'hero-section', style: heroBg },
+      { className: 'hero-section hero-bg-home' },
       React.createElement('h1', { className: 'hero-title hero-typing-effect' }, typingText),
       React.createElement('p', { className: 'hero-subtitle' }, '👉 AI consultancy for growing businesses.\nWe audit your workflows, design custom automations and AI assistants, and support you as you scale.'),
       React.createElement('a', {
@@ -358,14 +313,7 @@ const Home = () => {
     React.createElement(
       'section',
       {
-        className: 'cta-banner-section reveal',
-        style: {
-          background: 'linear-gradient(rgba(41,121,255,0.10), rgba(80,227,194,0.10)), url("/cta-wave.jpg") center/cover no-repeat',
-          width: '100%',
-          padding: 0,
-          position: 'relative',
-          border: 0,
-        },
+        className: 'cta-banner-section cta-banner-bg reveal',
         'aria-label': 'Call to Action Banner'
       },
       React.createElement('div', { className: 'cta-banner-inner' },

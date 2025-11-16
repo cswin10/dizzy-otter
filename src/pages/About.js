@@ -1,30 +1,6 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import '../styles/about.css';
-
-// Scroll to top on route change
-function useScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-}
-
-function useScrollReveal() {
-  useEffect(() => {
-    const reveal = () => {
-      document.querySelectorAll('.reveal').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60) {
-          el.classList.add('revealed');
-        }
-      });
-    };
-    window.addEventListener('scroll', reveal);
-    reveal();
-    return () => window.removeEventListener('scroll', reveal);
-  }, []);
-}
+import { useScrollReveal, useScrollToTop } from '../hooks';
 
 const aboutImages = ['/about1.jpg', '/about2.jpg', '/about3.jpg', '/about4.jpg', '/about5.jpg'];
 
