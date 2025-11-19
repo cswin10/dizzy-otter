@@ -129,6 +129,22 @@ function Services() {
           </div>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-image">
+              <img src="/services-hero.jpg" alt="Custom AI and automation solutions" />
+            </div>
+            <div className="showcase-text">
+              <h2>Built for your business</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                Every system we build is designed around how you work. We integrate with your existing tools,
+                automate your specific workflows and deliver solutions that save time from day one.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* How it works */}
         <section className="product-section reveal">
           <h2>How it works</h2>

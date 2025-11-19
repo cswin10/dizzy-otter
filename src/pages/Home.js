@@ -136,6 +136,22 @@ function Home() {
           </div>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-text">
+              <h2>Transform your business with AI</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                From small automations that save hours each week, to complete systems that transform how you operate.
+                We build solutions that scale with your business.
+              </p>
+            </div>
+            <div className="showcase-image">
+              <img src="/services2.jpg" alt="AI and automation solutions" />
+            </div>
+          </div>
+        </section>
+
         {/* Why Dizzy Otter */}
         <section className="product-section reveal">
           <h2>Why Dizzy Otter</h2>
@@ -157,6 +173,69 @@ function Home() {
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
                 We don't build and disappear. We provide ongoing optimization, new automations and support as you grow.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="product-section reveal">
+          <h2>
+            <i className="fa-solid fa-quote-left" style={{ marginRight: '0.8rem', color: '#50E3C2' }}></i>
+            What our clients say
+          </h2>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="testimonial-stars">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <p className="testimonial-text">
+                "Dizzy Otter transformed how we handle client communications. CallFlow AI has saved us countless hours
+                and we haven't missed a call since implementation. Absolute game changer."
+              </p>
+              <div className="testimonial-author">
+                <strong>Sarah Mitchell</strong>
+                <span>Operations Director, BuildCo</span>
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-stars">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <p className="testimonial-text">
+                "The free AI audit alone paid for itself. They identified automation opportunities we never would have
+                spotted and delivered a custom system that saves us 15 hours per week."
+              </p>
+              <div className="testimonial-author">
+                <strong>James Robertson</strong>
+                <span>Founder, Peak Digital</span>
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-stars">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <p className="testimonial-text">
+                "ClientOS has become the backbone of our business. Everything from client onboarding to project tracking
+                runs smoothly. It's like having an extra team member."
+              </p>
+              <div className="testimonial-author">
+                <strong>Emma Chen</strong>
+                <span>CEO, Clarity Consulting</span>
+              </div>
             </div>
           </div>
         </section>
