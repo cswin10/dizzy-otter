@@ -81,7 +81,7 @@ const Services = () => {
     <main className="services-page" tabIndex={-1} aria-label="Services Page">
       {/* Hero Section */}
       <section className="services-hero-section" style={heroBg}>
-  <h1 className="services-hero-title reveal">Solutions</h1>
+  <h1 className="services-hero-title reveal">Our Products</h1>
   <p className="services-hero-subtitle reveal">Every business is different — these are examples of the systems we design after an AI Audit.</p>
         <div
           className="scroll-down-arrow"

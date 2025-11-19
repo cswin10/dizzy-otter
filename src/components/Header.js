@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -74,17 +75,52 @@ function Header() {
         ),
         React.createElement(
           'li',
-          null,
+          {
+            className: 'nav-dropdown',
+            onMouseEnter: () => setDropdownOpen(true),
+            onMouseLeave: () => setDropdownOpen(false)
+          },
           React.createElement(
-            Link,
+            'span',
             {
-              to: '/services',
-              className: 'nav-link',
+              className: 'nav-link dropdown-trigger',
               tabIndex: 0,
-              onClick: () => setMenuOpen(false),
-              'aria-label': 'Go to Solutions page',
+              'aria-label': 'Our Products menu',
+              'aria-expanded': dropdownOpen
             },
-            'Solutions'
+            'Our Products',
+            React.createElement('i', { className: 'fa-solid fa-chevron-down', style: { marginLeft: '0.5rem', fontSize: '0.8rem' } })
+          ),
+          React.createElement(
+            'div',
+            { className: dropdownOpen ? 'dropdown-menu show' : 'dropdown-menu' },
+            React.createElement(
+              Link,
+              {
+                to: '/clientos',
+                className: 'dropdown-item',
+                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
+              },
+              'ClientOS'
+            ),
+            React.createElement(
+              Link,
+              {
+                to: '/callflow-ai',
+                className: 'dropdown-item',
+                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
+              },
+              'CallFlow AI'
+            ),
+            React.createElement(
+              Link,
+              {
+                to: '/automation-hub',
+                className: 'dropdown-item',
+                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
+              },
+              'Automation Hub'
+            )
           )
         ),
         React.createElement(
@@ -131,22 +167,6 @@ function Header() {
             },
             'Contact'
           )
-        ),
-        React.createElement(
-          'li',
-          null,
-          React.createElement(
-            'a',
-            {
-              href: 'https://dizzyotter.com/clientos/',
-              className: 'nav-link',
-              tabIndex: 0,
-              target: '_blank',
-              rel: 'noopener noreferrer',
-              'aria-label': 'Go to ClientOS (opens in new tab)',
-            },
-            'ClientOS'
-          )
         )
       ),
       // Mobile Slide-out Menu
@@ -181,11 +201,17 @@ function Header() {
         ),
         React.createElement('ul', { className: 'mobile-nav-links' },
           React.createElement('li', null, React.createElement(Link, { to: '/', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Home')),
-          React.createElement('li', null, React.createElement(Link, { to: '/services', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Solutions')),
+          React.createElement('li', { className: 'mobile-dropdown' },
+            React.createElement('div', { className: 'mobile-dropdown-header' }, 'Our Products'),
+            React.createElement('div', { className: 'mobile-dropdown-items' },
+              React.createElement(Link, { to: '/clientos', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'ClientOS'),
+              React.createElement(Link, { to: '/callflow-ai', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'CallFlow AI'),
+              React.createElement(Link, { to: '/automation-hub', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Automation Hub')
+            )
+          ),
           React.createElement('li', null, React.createElement(Link, { to: '/ai-audit', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'AI Audit')),
           React.createElement('li', null, React.createElement(Link, { to: '/about', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'About')),
-          React.createElement('li', null, React.createElement(Link, { to: '/contact', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Contact')),
-          React.createElement('li', null, React.createElement('a', { href: 'https://dizzyotter.com/clientos/', className: 'nav-link', tabIndex: 0, target: '_blank', rel: 'noopener noreferrer', onClick: () => setMenuOpen(false) }, 'ClientOS'))
+          React.createElement('li', null, React.createElement(Link, { to: '/contact', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Contact'))
         ),
         React.createElement('div', { className: 'mobile-nav-social' },
           React.createElement('a', {

@@ -148,11 +148,11 @@ const Home = () => {
         )
       )
     ),
-    // Solutions Heading
+    // Our Products Heading
     React.createElement('h2', {
       className: 'solutions-heading reveal',
       style: { textAlign: 'center', margin: '3rem 0 0.7rem 0', fontWeight: 900, fontSize: '2.2rem', color: '#2979FF', letterSpacing: '-0.02em' }
-    }, 'Solutions'),
+    }, 'Our Products'),
     React.createElement('div', {
       className: 'solutions-bar reveal',
       style: {
