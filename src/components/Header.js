@@ -205,7 +205,7 @@ function Header() {
         ),
         React.createElement('div', { className: 'mobile-nav-social' },
           React.createElement('a', {
-            href: 'mailto:hello@dizzyotter.co.uk',
+            href: 'mailto:studio@dizzyotter.com',
             target: '_blank',
             rel: 'noopener noreferrer',
             'aria-label': 'Email',
@@ -214,25 +214,7 @@ function Header() {
             React.createElement('i', { className: 'fa-solid fa-envelope' })
           ),
           React.createElement('a', {
-            href: 'https://www.linkedin.com/company/dizzyotter/',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-            'aria-label': 'LinkedIn',
-            className: 'social-icon-link'
-          },
-            React.createElement('i', { className: 'fa-brands fa-linkedin-in' })
-          ),
-          React.createElement('a', {
-            href: 'https://www.instagram.com/dizzy_otter_?igsh=MWRtamQ0Y2VhZHN6OA==',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-            'aria-label': 'Instagram',
-            className: 'social-icon-link'
-          },
-            React.createElement('i', { className: 'fa-brands fa-instagram' })
-          ),
-          React.createElement('a', {
-            href: 'https://www.tiktok.com/@otter_labs?_t=ZN-8zeuQf6Rg6I&_r=1',
+            href: 'https://www.tiktok.com/@dizzy.otter',
             target: '_blank',
             rel: 'noopener noreferrer',
             'aria-label': 'TikTok',
