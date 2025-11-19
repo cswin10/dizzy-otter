@@ -8,8 +8,14 @@ const Footer = () => (
         <a href="/" aria-label="Home">
           Home
         </a>
-        <a href="/services" aria-label="Our Products">
-          Our Products
+        <a href="/clientos" aria-label="ClientOS">
+          ClientOS
+        </a>
+        <a href="/callflow-ai" aria-label="CallFlow AI">
+          CallFlow AI
+        </a>
+        <a href="/automation-hub" aria-label="Automation Hub">
+          Automation Hub
         </a>
         <a href="/ai-audit" aria-label="AI Audit">
           AI Audit
@@ -19,9 +25,6 @@ const Footer = () => (
         </a>
         <a href="/contact" aria-label="Contact">
           Contact
-        </a>
-        <a href="/clientos" aria-label="ClientOS">
-          ClientOS
         </a>
       </nav>
       <nav className="footer-legal-nav" aria-label="Legal footer navigation">
