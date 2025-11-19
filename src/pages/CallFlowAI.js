@@ -46,11 +46,7 @@ function CallFlowAI() {
           <div className="products-grid">
             <Link to="/clientos" className="product-card">
               <h4>ClientOS</h4>
-              <p>Your complete client management system that organises everything in one place</p>
-            </Link>
-            <Link to="/automation-hub" className="product-card">
-              <h4>Automation Hub</h4>
-              <p>Your complete automation system that runs the backend of your business for you</p>
+              <p>Your complete client management and automation system that runs the backend of your business</p>
             </Link>
           </div>
         </div>
@@ -132,9 +128,9 @@ function CallFlowAI() {
       <section className="final-cta-band">
         <h3>Start with one product, scale when you're ready</h3>
         <p>
-          Most clients begin with one product and add the others later as their business grows.
-          CallFlow AI pairs perfectly with Automation Hub to create a complete system that
-          captures leads and manages them through to completion.
+          Most clients begin with one product and add the other later as their business grows.
+          CallFlow AI pairs perfectly with ClientOS to create a complete system that captures
+          every call, manages every client and automates the entire backend of your business.
         </p>
         <Link to="/contact" className="cta-button">
           Book a call

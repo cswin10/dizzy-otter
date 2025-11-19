@@ -14,9 +14,6 @@ const Footer = () => (
         <a href="/callflow-ai" aria-label="CallFlow AI">
           CallFlow AI
         </a>
-        <a href="/automation-hub" aria-label="Automation Hub">
-          Automation Hub
-        </a>
         <a href="/ai-audit" aria-label="AI Audit">
           AI Audit
         </a>

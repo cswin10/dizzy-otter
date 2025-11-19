@@ -111,15 +111,6 @@ function Header() {
                 onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
               },
               'CallFlow AI'
-            ),
-            React.createElement(
-              Link,
-              {
-                to: '/automation-hub',
-                className: 'dropdown-item',
-                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
-              },
-              'Automation Hub'
             )
           )
         ),
@@ -205,8 +196,7 @@ function Header() {
             React.createElement('div', { className: 'mobile-dropdown-header' }, 'Our Products'),
             React.createElement('div', { className: 'mobile-dropdown-items' },
               React.createElement(Link, { to: '/clientos', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'ClientOS'),
-              React.createElement(Link, { to: '/callflow-ai', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'CallFlow AI'),
-              React.createElement(Link, { to: '/automation-hub', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Automation Hub')
+              React.createElement(Link, { to: '/callflow-ai', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'CallFlow AI')
             )
           ),
           React.createElement('li', null, React.createElement(Link, { to: '/ai-audit', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'AI Audit')),
