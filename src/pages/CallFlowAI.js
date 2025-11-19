@@ -55,58 +55,57 @@ function CallFlowAI() {
         <section className="product-section reveal">
           <h2>What it does</h2>
           <p>
-            CallFlow AI is your intelligent call assistant that never sleeps. It picks up every
-            incoming call instantly, whether you're busy, after hours, or simply can't get to the
-            phone. Unlike a traditional receptionist, it's always available, always consistent,
-            and never needs a break.
+            CallFlow AI is your intelligent call assistant that never sleeps. It picks up every incoming
+            call instantly, handles common questions, books appointments and filters out time wasters before
+            they reach you. Unlike a traditional receptionist, it's always available, always consistent, and
+            never needs a break.
           </p>
-          <ul className="feature-list">
-            <li>Answers every call instantly, even outside opening hours, so you never miss an opportunity</li>
-            <li>Handles common questions about your services, pricing, location and availability with natural conversation</li>
-            <li>Books appointments or jobs directly into your calendar based on your availability</li>
-            <li>Collects caller details including name, contact info and enquiry specifics</li>
-            <li>Filters out time wasters, spam calls and low value enquiries before they reach you</li>
-            <li>Pushes qualified leads straight into your CRM or database automatically</li>
-            <li>Provides clear call summaries so you can skim what happened in seconds</li>
-          </ul>
         </section>
 
-        {/* What you get each month */}
+        {/* Two Column Layout */}
         <section className="product-section reveal">
-          <h2>What you get each month</h2>
-          <p>
-            CallFlow AI is a fully managed service. We set it up, keep it running, and make sure
-            it gets smarter every month based on your real calls and feedback.
-          </p>
-          <ul className="feature-list">
-            <li>AI assistant trained on your business, services and frequently asked questions</li>
-            <li>Custom phone number or integration with your existing line</li>
-            <li>Unlimited incoming calls handled 24/7 throughout the month</li>
-            <li>Automatic calendar integration for seamless appointment booking</li>
-            <li>CRM integration to capture and store every lead that comes through</li>
-            <li>Call summaries and transcripts delivered after every conversation</li>
-            <li>Monthly performance reports showing calls handled, leads captured and appointments booked</li>
-            <li>Ongoing training and updates to improve responses based on real call data</li>
-          </ul>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+            {/* What it handles */}
+            <div>
+              <h3 style={{ fontSize: '1.5rem', color: '#50E3C2', marginBottom: '1rem' }}>What it handles</h3>
+              <ul className="feature-list" style={{ fontSize: '1rem' }}>
+                <li>Answers calls instantly, 24/7, even outside hours</li>
+                <li>Handles FAQs about services, pricing and availability</li>
+                <li>Books appointments directly into your calendar</li>
+                <li>Collects caller details and enquiry information</li>
+                <li>Filters out spam calls and low value enquiries</li>
+                <li>Sends confirmations and follow-up messages</li>
+              </ul>
+            </div>
+
+            {/* What you get */}
+            <div>
+              <h3 style={{ fontSize: '1.5rem', color: '#2979FF', marginBottom: '1rem' }}>What you get</h3>
+              <ul className="feature-list" style={{ fontSize: '1rem' }}>
+                <li>AI assistant trained on your business</li>
+                <li>Custom phone number or existing line integration</li>
+                <li>Unlimited calls handled throughout the month</li>
+                <li>Calendar and CRM integration</li>
+                <li>Call summaries and transcripts</li>
+                <li>Monthly performance reports and updates</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* Why businesses pay for this */}
         <section className="product-section reveal">
           <h2>Why businesses pay for this</h2>
           <p>
-            CallFlow AI costs a fraction of hiring a receptionist, and it never gets sick, never
-            takes a day off, and never lets a call go to voicemail. For most businesses, it pays
-            for itself by capturing just two or three jobs per month that would have otherwise
-            slipped through.
+            CallFlow AI costs a fraction of hiring a receptionist and never gets sick, never takes a day
+            off, and never lets a call go to voicemail. For most businesses, it pays for itself by capturing
+            just two or three jobs per month that would have otherwise slipped through.
           </p>
           <ul className="feature-list">
             <li>Captures revenue from calls you'd normally miss during evenings, weekends or when you're busy</li>
             <li>Saves hours every week by handling repetitive enquiries automatically</li>
             <li>Filters out low value calls so you only speak to serious prospects</li>
-            <li>Delivers a professional first impression every single time, no matter when someone calls</li>
-            <li>Costs less than minimum wage for a part-time receptionist but works full-time</li>
-            <li>Scales with your business without needing to hire, train or manage staff</li>
-            <li>Provides data on call patterns, common questions and lead quality to inform your marketing</li>
+            <li>Costs less than minimum wage but works full-time, 24/7</li>
           </ul>
         </section>
 
@@ -114,8 +113,8 @@ function CallFlowAI() {
         <section className="product-cta reveal">
           <h3>Ready to capture every call?</h3>
           <p>
-            Book a call to see CallFlow AI in action. We'll show you how it works, answer your
-            questions, and set up a demo tailored to your business.
+            Book a call to see CallFlow AI in action. We'll show you how it works and set up a demo
+            tailored to your business.
           </p>
           <Link to="/contact" className="cta-button">
             Book a call
