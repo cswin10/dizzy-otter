@@ -37,7 +37,7 @@ const Footer = () => (
       </nav>
       <div className="footer-social">
         <a
-          href="mailto:hello@dizzyotter.co.uk"
+          href="mailto:studio@dizzyotter.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Email"
@@ -46,16 +46,7 @@ const Footer = () => (
           <i className="fa-solid fa-envelope" />
         </a>
         <a
-          href="https://www.linkedin.com/company/dizzyotter/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          className="social-icon-link"
-        >
-          <i className="fa-brands fa-linkedin-in" />
-        </a>
-        <a
-          href="https://www.instagram.com/dizzy_otter_?igsh=MWRtamQ0Y2VhZHN6OA=="
+          href="https://www.instagram.com/dizzy_otter_designs/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -64,7 +55,7 @@ const Footer = () => (
           <i className="fa-brands fa-instagram" />
         </a>
         <a
-          href="https://www.tiktok.com/@otter_labs?_t=ZN-8zeuQf6Rg6I&_r=1"
+          href="https://www.tiktok.com/@dizzy.otter"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="TikTok"
