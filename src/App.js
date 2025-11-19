@@ -16,7 +16,6 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const AiAudit = React.lazy(() => import('./pages/ai-audit'));
 const ClientOS = React.lazy(() => import('./pages/ClientOS'));
 const CallFlowAI = React.lazy(() => import('./pages/CallFlowAI'));
-const AutomationHub = React.lazy(() => import('./pages/AutomationHub'));
 
 function App() {
   // Polyfill for smooth scroll in Safari
@@ -40,7 +39,6 @@ function App() {
         React.createElement(Route, { path: '/services', element: React.createElement(Services) }),
         React.createElement(Route, { path: '/clientos', element: React.createElement(ClientOS) }),
         React.createElement(Route, { path: '/callflow-ai', element: React.createElement(CallFlowAI) }),
-        React.createElement(Route, { path: '/automation-hub', element: React.createElement(AutomationHub) }),
         React.createElement(Route, { path: '/about', element: React.createElement(About) }),
         React.createElement(Route, { path: '/contact', element: React.createElement(Contact) }),
         React.createElement(Route, { path: '/privacy-policy', element: React.createElement(PrivacyPolicy) }),
