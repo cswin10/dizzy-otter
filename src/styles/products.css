@@ -4,7 +4,13 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #1A1F36 0%, #2C3454 50%, #1A1F36 100%);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* Ensure images never overflow on mobile */
+.product-page img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Animated Background Elements */
@@ -120,6 +126,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 /* Section Cards */
@@ -133,6 +141,8 @@
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .product-section::before {
@@ -465,9 +475,16 @@
 /* Testimonials */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .testimonial-card {
@@ -553,9 +570,16 @@
 /* Image Showcase */
 .image-showcase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .image-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .showcase-image {
@@ -613,6 +637,21 @@
 @media (max-width: 600px) {
   .showcase-text h2 {
     font-size: 1.8rem;
+    word-break: break-word;
+  }
+
+  .showcase-text p {
+    word-break: break-word;
+  }
+
+  .showcase-image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .showcase-image img {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -799,6 +838,7 @@ html {
     font-size: 2.2rem;
     letter-spacing: -1px;
     line-height: 1.2;
+    word-break: break-word;
   }
 
   .icon-wrapper {
@@ -806,6 +846,10 @@ html {
   }
 
   /* Better spacing on mobile */
+  .product-content {
+    padding: 1rem;
+  }
+
   .product-section {
     padding: 1.5rem 1rem;
     margin-bottom: 1.5rem;
@@ -814,6 +858,15 @@ html {
   .product-section h2 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  .product-section h3 {
+    word-break: break-word;
+  }
+
+  .product-section p {
+    word-break: break-word;
   }
 
   /* Optimize cards for mobile */
@@ -824,6 +877,7 @@ html {
   .testimonial-text {
     font-size: 1rem;
     line-height: 1.6;
+    word-break: break-word;
   }
 
   /* Better CTA visibility on mobile */
@@ -833,10 +887,12 @@ html {
 
   .product-cta h3 {
     font-size: 1.6rem;
+    word-break: break-word;
   }
 
   .product-cta p {
     font-size: 1rem;
+    word-break: break-word;
   }
 
   /* Final CTA band mobile optimization */
@@ -846,16 +902,19 @@ html {
 
   .final-cta-band h3 {
     font-size: 1.8rem;
+    word-break: break-word;
   }
 
   .final-cta-band p {
     font-size: 1rem;
+    word-break: break-word;
   }
 
   /* Feature list mobile optimization */
   .feature-list li {
     font-size: 0.95rem;
     padding: 0.7rem 1rem;
+    word-break: break-word;
   }
 
   /* View other products mobile */
@@ -870,6 +929,19 @@ html {
 
   .icon-wrapper {
     animation: float 4s ease-in-out infinite;
+  }
+
+  /* Product cards on mobile */
+  .product-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .product-card h3, .product-card h4 {
+    word-break: break-word;
+  }
+
+  .product-card p {
+    word-break: break-word;
   }
 }
 
@@ -950,19 +1022,30 @@ html {
 }
 
 @media (max-width: 600px) {
+  .faq-container {
+    gap: 0.8rem;
+  }
+
+  .faq-item {
+    border-radius: 8px;
+  }
+
   .faq-question {
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   .faq-question h3 {
     font-size: 1.05rem;
+    word-break: break-word;
+    padding-right: 0.5rem;
   }
 
   .faq-answer {
-    padding: 0 1.2rem 1.2rem 1.2rem;
+    padding: 0 1rem 1rem 1rem;
   }
 
   .faq-answer p {
     font-size: 0.95rem;
+    word-break: break-word;
   }
 }
