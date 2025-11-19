@@ -1,237 +1,177 @@
-import React, { useEffect, useState } from 'react';
-import '../styles/services.css';
-import { useScrollReveal, useScrollToTop } from '../hooks';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/products.css';
 
-const heroBg = {
-  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/services-hero.jpg") center/cover no-repeat'
-};
-
-const serviceSections = [
-  { id: 'ai-systems', label: 'Complete AI Systems' },
-  { id: 'ai-bots', label: 'Custom AI Assistants and Bots' },
-  { id: 'automation', label: 'Automation Workflows' },
-  { id: 'web-design', label: 'Dashboards and Reporting' },
-  { id: 'other-services', label: 'Other Integrations' }
-];
-
-const Services = () => {
-  useScrollToTop();
-  useScrollReveal();
-  const [showTally, setShowTally] = useState(false);
-
+function Services() {
   useEffect(() => {
-    // Only show popup if not previously dismissed
-    const dismissed = localStorage.getItem('tallyPopupDismissed');
-    if (!dismissed) {
-      const timer = setTimeout(() => setShowTally(true), 800);
-      return () => clearTimeout(timer);
-    }
-  }, []);
+    window.scrollTo(0, 0);
 
-  useEffect(() => {
-    if (showTally && window.Tally) {
-      window.Tally.openPopup('wbEW5e', {
-        layout: 'modal',
-        width: 420,
-        autoClose: true,
-        onClose: () => {
-          setShowTally(false);
-          localStorage.setItem('tallyPopupDismissed', '1');
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
         }
       });
-    } else if (showTally) {
-      // If Tally is not loaded yet, wait for the script to load
-      const onScriptLoad = () => {
-        if (window.Tally) {
-          window.Tally.openPopup('wbEW5e', {
-            layout: 'modal',
-            width: 420,
-            autoClose: true,
-            onClose: () => {
-              setShowTally(false);
-              localStorage.setItem('tallyPopupDismissed', '1');
-            }
-          });
-        }
-      };
-      const script = document.querySelector('script[src*="tally.so/widgets/embed.js"]');
-      if (script) {
-        script.addEventListener('load', onScriptLoad, { once: true });
-      }
-      return () => {
-        if (script) script.removeEventListener('load', onScriptLoad);
-      };
-    }
-  }, [showTally]);
+    }, { threshold: 0.1 });
 
-  // Bulletproof scroll to next section for hero arrow
-  const scrollToNextSection = e => {
-    const arrow = e?.target?.closest('.scroll-down-arrow');
-    const hero = arrow?.closest('section, .services-hero-section');
-    if (hero) {
-      const sections = Array.from(document.querySelectorAll('section')).filter(s => s.offsetParent !== null);
-      const idx = sections.indexOf(hero);
-      if (idx !== -1 && idx < sections.length - 1) {
-        sections[idx + 1].scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+    reveals.forEach(reveal => observer.observe(reveal));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <main className="services-page" tabIndex={-1} aria-label="Services Page">
+    <div className="product-page">
       {/* Hero Section */}
-      <section className="services-hero-section" style={heroBg}>
-  <h1 className="services-hero-title reveal">Our Products</h1>
-  <p className="services-hero-subtitle reveal">Every business is different — these are examples of the systems we design after an AI Audit.</p>
-        <div
-          className="scroll-down-arrow"
-          role="button"
-          tabIndex={0}
-          aria-label="Scroll to next section"
-          style={{ cursor: 'pointer' }}
-          onClick={e => scrollToNextSection(e)}
-          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(e); }}
-        >
-          <span>&#x25bc;</span>
+      <section className="product-hero">
+        <div className="icon-wrapper">
+          <i className="fa-solid fa-screwdriver-wrench"></i>
         </div>
+        <h1>Our Products</h1>
+        <p className="subtitle">
+          Every business is different. These are examples of the systems we design after an AI Audit.
+        </p>
       </section>
-      {/* Top Navigation for Service Sections */}
-      <nav className="services-topnav" aria-label="Service Sections">
-        {serviceSections.map(section => (
-          <a key={section.id} href={`#${section.id}`} className="services-topnav-link">
-            {section.label}
-          </a>
-        ))}
-      </nav>
-      {/* Service Sections */}
-      {serviceSections.map((section, idx) => {
-        const images = [
-          '/services1.jpg',
-          '/services2.jpg',
-          '/services3.jpg',
-          '/services4.jpg',
-          '/services5.jpg'
-        ];
-        const isReverse = idx % 2 === 1;
-        // Section 1: Complete AI Systems
-        if (idx === 0) {
-          return (
-            <section key={section.id} id={section.id} className={`ai-systems-fullrow ai-systems-featured-bg reveal`}>
-              <div className={`ai-systems-fullrow-flex${isReverse ? ' reverse-flex' : ''} reveal`}>
-                <div className={`ai-systems-fullrow-content ai-systems-featured-content ai-systems-dropdown-space${isReverse ? ' ai-systems-content-left' : ''} reveal`}>
-                  <span className="ai-systems-badge reveal">🚀 Most Popular</span>
-                  <h2 className="ai-systems-title reveal">Complete AI Systems</h2>
-                  <p className="ai-systems-desc reveal">
-                    End-to-end setups with forms, CRMs, AI assistants, and automations that save you days every month.
-                  </p>
-                  <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Book a free AI audit and see how a <b>smart system</b> could work for you.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
-                  </div>
-                </div>
-                <div className="ai-systems-fullrow-img-wrap reveal">
-                  <img src={images[idx]} alt="Complete AI Systems illustration" className="ai-systems-fullrow-img reveal" loading="lazy" />
-                </div>
+
+      {/* Main Content */}
+      <div className="product-content">
+
+        {/* Subscription Products */}
+        <section className="product-section reveal">
+          <h2>
+            <i className="fa-solid fa-box-open" style={{ marginRight: '0.8rem', color: '#50E3C2' }}></i>
+            Subscription Products
+          </h2>
+          <p style={{ marginBottom: '2rem' }}>
+            Managed services that run continuously, designed to save time, capture revenue and automate operations.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <Link to="/clientos" className="product-card">
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+                <i className="fa-solid fa-users-gear"></i>
               </div>
-            </section>
-          );
-        }
-        // Section 2: Custom AI Assistants and Bots
-        if (idx === 1) {
-          return (
-            <section key={section.id} id={section.id} className={`ai-systems-fullrow ai-systems-featured-bg reveal`}>
-              <div className={`ai-systems-fullrow-flex${isReverse ? ' reverse-flex' : ''} reveal`}>
-                <div className="ai-systems-fullrow-content ai-systems-featured-content ai-systems-content-left reveal">
-                  <span className="ai-systems-badge reveal">✨ New for 2025</span>
-                  <h2 className="ai-systems-title reveal">Custom AI Assistants & Bots</h2>
-                  <p className="ai-systems-desc reveal">
-                    Chatbots and assistants that handle FAQs, lead qualification, onboarding, and more.
-                  </p>
-                  <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">See how a custom AI assistant could save you hours every week.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
-                  </div>
-                </div>
-                <div className="ai-systems-fullrow-img-wrap reveal">
-                  <img src={images[idx]} alt="Custom AI Assistants and Bots illustration" className="ai-systems-fullrow-img reveal" loading="lazy" />
-                </div>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>ClientOS</h3>
+              <p>Complete client management and automation system. Manage clients, automate workflows and track everything in one place.</p>
+              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>From £499/month →</div>
+            </Link>
+
+            <Link to="/callflow-ai" className="product-card">
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+                <i className="fa-solid fa-phone-volume"></i>
               </div>
-            </section>
-          );
-        }
-        // Section 3: Automation Workflows
-        if (idx === 2) {
-          return (
-            <section key={section.id} id={section.id} className={`ai-systems-fullrow ai-systems-featured-bg reveal`}>
-              <div className={`ai-systems-fullrow-flex${isReverse ? ' reverse-flex' : ''} reveal`}>
-                <div className="ai-systems-fullrow-content ai-systems-featured-content reveal">
-                  <span className="ai-systems-badge reveal">✨ Automation</span>
-                  <h2 className="ai-systems-title reveal">Automation Workflows</h2>
-                  <p className="ai-systems-desc reveal">
-                    Automations that eliminate repetitive tasks and connect your tools to free up hours every week.
-                  </p>
-                  <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Let's build the workflow that fits your business.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
-                  </div>
-                </div>
-                <div className="ai-systems-fullrow-img-wrap reveal">
-                  <img src={images[idx]} alt="Automation Workflows illustration" className="ai-systems-fullrow-img reveal" loading="lazy" />
-                </div>
-              </div>
-            </section>
-          );
-        }
-  // Section 4: Dashboards and Reporting
-        if (idx === 3) {
-          return (
-            <section key={section.id} id={section.id} className={`ai-systems-fullrow ai-systems-featured-bg reveal`}>
-              <div className={`ai-systems-fullrow-flex${isReverse ? ' reverse-flex' : ''} reveal`}>
-                <div className="ai-systems-fullrow-content ai-systems-featured-content ai-systems-content-left reveal">
-                  <span className="ai-systems-badge reveal">✨ Web & Dashboards</span>
-                  <h2 className="ai-systems-title reveal">Dashboards & Reporting</h2>
-                  <p className="ai-systems-desc reveal">
-                    Integrated Notion or Airtable dashboards that give you visibility on leads, clients, and performance.
-                  </p>
-                  <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Let's design a digital home that works as hard as you do.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
-                  </div>
-                </div>
-                <div className="ai-systems-fullrow-img-wrap reveal">
-                  <img src={images[idx]} alt="Dashboards and Reporting illustration" className="ai-systems-fullrow-img reveal" loading="lazy" />
-                </div>
-              </div>
-            </section>
-          );
-        }
-  // Section 5: Other Integrations
-        if (idx === 4) {
-          return (
-            <section key={section.id} id={section.id} className={`ai-systems-fullrow ai-systems-featured-bg reveal`}>
-              <div className={`ai-systems-fullrow-flex${isReverse ? ' reverse-flex' : ''} reveal`}>
-                <div className="ai-systems-fullrow-content ai-systems-featured-content reveal">
-                  <span className="ai-systems-badge reveal">✨ Integrations</span>
-                  <h2 className="ai-systems-title reveal">Other Integrations</h2>
-                  <p className="ai-systems-desc reveal">
-                    Payments, bookings, analytics, reviews, and custom tools to streamline your operations.
-                  </p>
-                  <div className="ai-systems-cta-row reveal" style={{ marginBottom: '2.2rem' }}>
-                    <span className="ai-systems-cta-text reveal">Ask us how we can connect your tools and save you time.</span>
-                    <a href="https://calendly.com/studio-dizzyotter/30min" className="ai-systems-cta-btn ai-systems-cta-btn-lg reveal" aria-label="Book a Free AI Audit">Book a Free AI Audit</a>
-                  </div>
-                </div>
-                <div className="ai-systems-fullrow-img-wrap reveal">
-                  <img src={images[idx]} alt="Other Integrations illustration" className="ai-systems-fullrow-img reveal" loading="lazy" />
-                </div>
-              </div>
-            </section>
-          );
-        }
-        return null;
-      })}
-    </main>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>CallFlow AI</h3>
+              <p>AI call assistant that answers calls 24/7, books appointments, collects details and filters time wasters.</p>
+              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>From £499/month →</div>
+            </Link>
+          </div>
+        </section>
+
+        {/* Custom Solutions */}
+        <section className="product-section reveal">
+          <h2>
+            <i className="fa-solid fa-wand-magic-sparkles" style={{ marginRight: '0.8rem', color: '#2979FF' }}></i>
+            Custom Solutions
+          </h2>
+          <p style={{ marginBottom: '2rem' }}>
+            Bespoke systems built for your specific needs, workflows and tools. Pricing depends on scope and complexity.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-robot" style={{ marginRight: '0.5rem' }}></i>
+                AI Assistants & Bots
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                Custom AI assistants, chatbots and intelligent agents that integrate with your systems and handle specific tasks.
+              </p>
+            </div>
+
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-diagram-project" style={{ marginRight: '0.5rem' }}></i>
+                Automation Workflows
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                Connect tools, automate repetitive tasks and build workflows that save hours using platforms like Zapier, n8n and Make.
+              </p>
+            </div>
+
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-chart-mixed" style={{ marginRight: '0.5rem' }}></i>
+                Dashboards & Reporting
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                Real-time dashboards built with Airtable, Notion or custom solutions that give you visibility into your business.
+              </p>
+            </div>
+
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-database" style={{ marginRight: '0.5rem' }}></i>
+                CRM & Database Systems
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                Custom CRM and database solutions using Airtable, Notion or other platforms tailored to your workflow.
+              </p>
+            </div>
+
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-plug" style={{ marginRight: '0.5rem' }}></i>
+                Tool Integrations
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                Connect your existing tools and platforms to work together seamlessly, eliminating manual data entry.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* How it works */}
+        <section className="product-section reveal">
+          <h2>How it works</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+            <div>
+              <div style={{ fontSize: '2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>1</div>
+              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>Free AI Audit</h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                30-minute review of your workflows. We identify opportunities and provide actionable recommendations.
+              </p>
+            </div>
+            <div>
+              <div style={{ fontSize: '2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>2</div>
+              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>Clear proposal</h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                Fixed-price quote with clear deliverables and timelines. No surprises, no hidden costs.
+              </p>
+            </div>
+            <div>
+              <div style={{ fontSize: '2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>3</div>
+              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>Build & deliver</h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>
+                We design, build and implement the system. You get training, documentation and ongoing support.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="product-cta reveal">
+          <h3>Not sure what you need?</h3>
+          <p>
+            Book a free AI audit. We'll review your workflows, identify opportunities and recommend the
+            best solution for your business.
+          </p>
+          <Link to="/ai-audit" className="cta-button">
+            Book your free audit
+            <i className="fa-solid fa-arrow-right" style={{ marginLeft: '0.8rem' }}></i>
+          </Link>
+        </section>
+      </div>
+    </div>
   );
-};
+}
 
 export default Services;
