@@ -1,220 +1,198 @@
-import React from 'react';
-import Navbar from '../components/Header';
-import '../styles/home.css';
-import { useScrollReveal, useScrollToTop } from '../hooks';
+import React, { useEffect } from 'react';
+import '../styles/products.css';
 
-const heroBg = {
-  background: 'linear-gradient(rgba(26,31,54,0.18), rgba(26,31,54,0.18)), url("/Ai-audit-hero.jpg") center/cover no-repeat'
-};
+function AIAudit() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-const AiAudit = () => {
-  useScrollToTop();
-  useScrollReveal();
-  // Scroll to next section for hero arrow
-  const scrollToNextSection = e => {
-    const arrow = e?.target?.closest('.scroll-down-arrow');
-    const hero = arrow?.closest('section, .ai-audit-hero-section');
-    if (hero) {
-      const sections = Array.from(document.querySelectorAll('section')).filter(s => s.offsetParent !== null);
-      const idx = sections.indexOf(hero);
-      if (idx !== -1 && idx < sections.length - 1) {
-        sections[idx + 1].scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(reveal => observer.observe(reveal));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <>
-      <Navbar />
-      <main className="ai-audit-page" tabIndex={-1} aria-label="AI Audit Page">
-        {/* Hero Section */}
-          <section className="hero-section" style={heroBg}>
-            <h1 className="ai-audit-title hero-title reveal">Start with a Free AI Audit</h1>
-            <p className="ai-audit-subline hero-subtitle reveal">The fastest way to uncover how AI can save you time, reduce admin, and increase profit.</p>
-            <a
-              href="https://calendly.com/studio-dizzyotter/30min"
-              className="secondary-cta-button reveal"
-              aria-label="Book Your Free Audit"
-            >
-              Book Your Free Audit
-            </a>
-            <div
-              className="scroll-down-arrow"
-              role="button"
-              tabIndex={0}
-              aria-label="Scroll to next section"
-              style={{ cursor: 'pointer' }}
-              onClick={scrollToNextSection}
-              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') scrollToNextSection(e); }}
-            >
-              <span>&#x25bc;</span>
+    <div className="product-page">
+      {/* Hero Section */}
+      <section className="product-hero">
+        <div className="icon-wrapper">
+          <i className="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <h1>Free AI Audit</h1>
+        <p className="subtitle">
+          30-minute review of your workflows, tools and processes. We identify opportunities where AI and
+          automation can save time, reduce costs and increase profit.
+        </p>
+        <a
+          href="https://calendly.com/studio-dizzyotter/30min"
+          className="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginTop: '1rem' }}
+        >
+          Book your free audit
+          <i className="fa-solid fa-calendar-check" style={{ marginLeft: '0.8rem' }}></i>
+        </a>
+      </section>
+
+      {/* Main Content */}
+      <div className="product-content">
+
+        {/* What happens */}
+        <section className="product-section reveal">
+          <h2>What happens in an AI audit</h2>
+          <p style={{ marginBottom: '2rem' }}>
+            We review your current workflows, identify bottlenecks and show you exactly where AI and automation
+            can make the biggest impact. You'll leave with clear recommendations and an action plan.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Review your workflows</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)' }}>
+                We walk through your current processes, tools and pain points. Where are you wasting time?
+                What's costing you money?
+              </p>
             </div>
-          </section>
-        {/* Section 1: What is an AI Audit? */}
-        <section className="ai-audit-section reveal" style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', background: 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)', borderRadius: 0, boxShadow: '0 8px 32px var(--color-accent)', padding: '3.5rem 0', transition: 'background 0.3s' }}
-          onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(120deg, #fff 40%, var(--color-highlight) 100%)'}
-          onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)'}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '0.7rem', color: 'var(--color-accent)' }}>🧠</div>
-            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>What is an AI Audit?</h2>
-            <p style={{ fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '1.2rem', textAlign: 'center' }}>An AI Audit is a structured review of your business processes, tools, and workflows.<br/>In 30 minutes, we\'ll pinpoint where automation and AI can:</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', marginTop: '1.2rem' }}>
-              {[{ icon: '⏳', text: 'Eliminate repetitive admin tasks' },
-                { icon: '📈', text: 'Capture and convert more leads' },
-                { icon: '🤝', text: 'Improve client onboarding and retention' },
-                { icon: '📊', text: 'Give you clear visibility with better reporting' },
-                { icon: '💡', text: 'Save your team hours every week' }].map(({ icon, text }) => (
-                <div key={text} style={{
-                  background: 'var(--color-accent)',
-                  borderRadius: '18px',
-                  boxShadow: '0 2px 8px var(--color-accent)',
-                  padding: '1.2rem 1.5rem',
-                  minWidth: 180,
-                  textAlign: 'center',
-                  fontSize: '1.08rem',
-                  fontWeight: 700,
-                  color: '#fff',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  gap: '0.7rem',
-                  transition: 'background 0.2s, color 0.2s',
-                  cursor: 'pointer'
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--color-accent)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'var(--color-accent)'; e.currentTarget.style.color = '#fff'; }}
-                >
-                  <span style={{ fontSize: '2rem' }}>{icon}</span>
-                  {text}
-                </div>
-              ))}
+            <div>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Identify opportunities</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)' }}>
+                We highlight the top 3-5 areas where AI and automation can save hours, reduce errors and
+                improve outcomes.
+              </p>
+            </div>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Get actionable recommendations</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)' }}>
+                You'll receive clear recommendations prioritised by impact and effort, so you know exactly
+                what to do next.
+              </p>
             </div>
           </div>
         </section>
-        {/* Section 2: What You Get */}
-        <section className="ai-audit-section reveal interactive-section" style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', background: 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)', borderRadius: 0, boxShadow: '0 8px 32px var(--color-accent)', padding: '3.5rem 0' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>What You Get</h2>
-            <ul style={{ fontSize: '1.15rem', color: 'var(--color-primary)', margin: '2rem auto 0 auto', paddingLeft: 0, listStyle: 'none', maxWidth: '700px' }}>
-              { [
-                '30-minute discovery call to understand your business and goals',
-                'Review of your current tools and workflows',
-                'Identification of the top 3 automation opportunities',
-                'Quick-win action plan for the next 14 days',
-                'ROI estimate (hours saved, payback period)',
-                'Optional written summary after the call'
-              ].map((text, idx) => (
-                <li
-                  key={text}
-                  className="reveal"
-                  style={{
-                    marginBottom: '1.1rem',
-                    padding: '0.7rem 1.2rem',
-                    background: '#fff',
-                    borderRadius: '12px',
-                    boxShadow: '0 2px 8px var(--color-accent, #2979ff)',
-                    transition: 'background 0.2s, color 0.2s',
-                    cursor: 'pointer',
-                    color: 'var(--color-primary)'
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'var(--color-accent)'; e.currentTarget.style.color = '#fff'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--color-primary)'; }}
-                >
-                  {text}
-                </li>
-              )) }
+
+        {/* What we look at */}
+        <section className="product-section reveal">
+          <h2>What we look at</h2>
+          <ul className="feature-list">
+            <li>Repetitive tasks that could be automated to save hours every week</li>
+            <li>Manual data entry between systems that could be connected</li>
+            <li>Customer communication that could be handled by AI assistants</li>
+            <li>Reporting and dashboards that could be built automatically</li>
+            <li>Lead capture and follow-up processes that could be streamlined</li>
+            <li>Tools you're using inefficiently or paying for but not maximising</li>
+          </ul>
+        </section>
+
+        {/* Who it's for */}
+        <section className="product-section reveal">
+          <h2>Who it's for</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.5rem' }}>
+                <i className="fa-solid fa-user-tie" style={{ marginRight: '0.5rem' }}></i>
+                Solo founders
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
+                Wearing too many hats and drowning in admin. We help you automate the repetitive work so you
+                can focus on growth.
+              </p>
+            </div>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.5rem' }}>
+                <i className="fa-solid fa-store" style={{ marginRight: '0.5rem' }}></i>
+                Local service businesses
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
+                Managing bookings, invoices and customers manually. We show you how to systemise and scale
+                without hiring.
+              </p>
+            </div>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.5rem' }}>
+                <i className="fa-solid fa-users" style={{ marginRight: '0.5rem' }}></i>
+                Growing teams
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
+                Processes breaking down as you scale. We identify bottlenecks and build systems that grow
+                with you.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* What happens after */}
+        <section className="product-section reveal">
+          <h2>What happens after the audit</h2>
+          <p style={{ marginBottom: '2rem' }}>
+            After the call, you'll receive a short summary with our recommendations. If you choose to move
+            forward, we'll provide a clear quote and build the systems we discussed.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>No obligation</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
+                The audit is completely free. Use the recommendations however you like, with no pressure to work with us.
+              </p>
+            </div>
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Clear pricing</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
+                If you want us to build the systems, we provide transparent, fixed-price quotes before any work begins.
+              </p>
+            </div>
+            <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Fast results</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
+                Most clients start seeing results within the first 14 days thanks to the quick-win plan we provide.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Investment */}
+        <section className="product-section reveal">
+          <h2>Investment</h2>
+          <p style={{ marginBottom: '1.5rem' }}>
+            After the audit, we'll give you a clear quote for any systems you'd like us to build.
+          </p>
+          <div style={{ background: 'rgba(80,227,194,0.1)', padding: '2rem', borderRadius: '16px', border: '2px solid rgba(80,227,194,0.3)' }}>
+            <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '1rem' }}>We offer flexible pricing tailored to your needs:</h3>
+            <ul className="feature-list" style={{ marginBottom: 0 }}>
+              <li>Small automation projects to get you started</li>
+              <li>Complete business systems that transform operations</li>
+              <li>Ongoing support and management</li>
             </ul>
-            <p style={{ fontSize: '1.15rem', color: 'var(--color-accent)', marginTop: '2rem', textAlign: 'center', fontWeight: '700' }}>Everything is completely free — no obligation to continue.</p>
           </div>
         </section>
-        {/* Section 3: How It Works */}
-        <section className="ai-audit-section reveal interactive-section" style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', background: 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)', borderRadius: 0, boxShadow: '0 8px 32px var(--color-accent)', padding: '3.5rem 0' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>How It Works</h2>
-            <ol style={{ fontSize: '1.15rem', color: 'var(--color-primary)', margin: '2rem auto 0 auto', paddingLeft: 0, listStyle: 'none', maxWidth: '700px' }}>
-              { [
-                { label: 'Book Your Free Audit', desc: 'choose a time that suits you.' },
-                { label: 'Audit Call', desc: 'we map your processes, tools, and pain points.' },
-                { label: 'Report & Plan', desc: 'you receive a simple roadmap and ROI breakdown.' },
-                { label: 'Next Steps', desc: 'if you choose, we design and implement the automations for you.' }
-              ].map((step, idx) => (
-                <li
-                  key={step.label}
-                  className="reveal"
-                  style={{
-                    marginBottom: '1.1rem',
-                    padding: '0.7rem 1.2rem',
-                    background: '#fff',
-                    borderRadius: '12px',
-                    boxShadow: '0 2px 8px var(--color-accent, #2979ff)',
-                    transition: 'background 0.2s, color 0.2s',
-                    cursor: 'pointer',
-                    color: 'var(--color-primary)'
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'var(--color-accent)'; e.currentTarget.style.color = '#fff'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--color-primary)'; }}
-                >
-                  <b>{step.label}</b> – {step.desc}
-                </li>
-              )) }
-            </ol>
-          </div>
-        </section>
-        {/* Section 4: Pricing */}
-        <section className="ai-audit-section" style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', background: 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)', borderRadius: 0, boxShadow: '0 8px 32px var(--color-accent)', padding: '3.5rem 0', textAlign: 'center' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>Implementation Pricing</h2>
-            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>After the audit, we\'ll give you a clear quote for any systems you\'d like us to build.</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: '700' }}>Typical projects:</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Small automations from £300 – £600</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Full business systems from £900 – £1,500</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>Optional ongoing support from £300 / month</div>
-          </div>
-        </section>
-        {/* Final CTA Section */}
-        <section className="ai-audit-final-cta-section" style={{ background: 'linear-gradient(90deg, #2979FF 0%, #50E3C2 100%)', color: '#fff', textAlign: 'center', padding: '3rem 1rem', borderRadius: '32px', maxWidth: '1100px', margin: '2.5rem auto' }}>
-          <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem' }}>Ready to uncover your AI opportunities?</h2>
-          <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>Book your free audit today and get a clear roadmap for growth.</p>
+
+        {/* CTA Section */}
+        <section className="product-cta reveal">
+          <h3>Ready to uncover your AI opportunities?</h3>
+          <p>
+            Book your free audit today and get a clear roadmap for growth.
+          </p>
           <a
             href="https://calendly.com/studio-dizzyotter/30min"
-            className="cta-button interactive-cta"
-            style={{
-              background: '#fff',
-              color: '#2979FF',
-              fontWeight: '700',
-              fontSize: '1.15rem',
-              padding: '1rem 2.5rem',
-              borderRadius: '32px',
-              textDecoration: 'none',
-              display: 'inline-block',
-              marginTop: '1rem',
-              boxShadow: '0 2px 12px #2979ff33',
-              transition: 'background 0.2s, color 0.2s, box-shadow 0.2s',
-              cursor: 'pointer'
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = '#2979FF';
-              e.currentTarget.style.color = '#fff';
-              e.currentTarget.style.boxShadow = '0 4px 24px #2979ff66';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = '#fff';
-              e.currentTarget.style.color = '#2979FF';
-              e.currentTarget.style.boxShadow = '0 2px 12px #2979ff33';
-            }}
-            onMouseDown={e => {
-              e.currentTarget.style.transform = 'scale(0.97)';
-            }}
-            onMouseUp={e => {
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
-            aria-label="Book Your Free Audit"
+            className="cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Book Your Free Audit
+            Book your free audit
+            <i className="fa-solid fa-arrow-right" style={{ marginLeft: '0.8rem' }}></i>
           </a>
         </section>
-  </main>
-    </>
+      </div>
+    </div>
   );
-};
+}
 
-export default AiAudit;
+export default AIAudit;
