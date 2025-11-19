@@ -193,12 +193,10 @@ function Home() {
                 <i className="fa-solid fa-star"></i>
               </div>
               <p className="testimonial-text">
-                "Dizzy Otter transformed how we handle client communications. CallFlow AI has saved us countless hours
-                and we haven't missed a call since implementation. Absolute game changer."
+                "Dizzy Otter made the process easy, handling all the technical details and delivering a fantastic result. I highly recommend them for small businesses."
               </p>
               <div className="testimonial-author">
-                <strong>Sarah Mitchell</strong>
-                <span>Operations Director, BuildCo</span>
+                <strong>Paul Streeter</strong>
               </div>
             </div>
 
@@ -211,12 +209,10 @@ function Home() {
                 <i className="fa-solid fa-star"></i>
               </div>
               <p className="testimonial-text">
-                "The free AI audit alone paid for itself. They identified automation opportunities we never would have
-                spotted and delivered a custom system that saves us 15 hours per week."
+                "Dizzy Otter took the time to understand our vision and delivered a sleek, user-friendly system that exceeded our expectations."
               </p>
               <div className="testimonial-author">
-                <strong>James Robertson</strong>
-                <span>Founder, Peak Digital</span>
+                <strong>Jo Marshall</strong>
               </div>
             </div>
 
@@ -229,12 +225,10 @@ function Home() {
                 <i className="fa-solid fa-star"></i>
               </div>
               <p className="testimonial-text">
-                "ClientOS has become the backbone of our business. Everything from client onboarding to project tracking
-                runs smoothly. It's like having an extra team member."
+                "Working with Dizzy Otter was a dream. They brought creativity, efficiency, and flair to the project. Highly recommended."
               </p>
               <div className="testimonial-author">
-                <strong>Emma Chen</strong>
-                <span>CEO, Clarity Consulting</span>
+                <strong>M.J Powell</strong>
               </div>
             </div>
           </div>
