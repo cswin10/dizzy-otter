@@ -166,7 +166,7 @@ const Contact = () => {
         }),
         React.createElement(FAQItem, {
           question: 'How much do implementation projects cost?',
-          answer: 'Every project is different, but most fall between £300–£600 for small automations and £900–£1,500 for full business systems. Ongoing optimisation retainers start from around £300 per month.'
+          answer: 'Every project is different. We provide transparent, fixed-price quotes after the audit so you know exactly what you\'re investing in before any work begins. Pricing depends on scope, complexity and the specific tools involved.'
         }),
         React.createElement(FAQItem, {
           question: 'Do you only work with certain industries?',
@@ -186,7 +186,7 @@ const Contact = () => {
         }),
         React.createElement(FAQItem, {
           question: 'Do you offer ongoing support?',
-          answer: 'Yes. After implementation, many clients choose a monthly retainer for ongoing optimisation, new automations, and reporting. Retainers typically start from £300 per month.'
+          answer: 'Yes. After implementation, many clients choose a monthly retainer for ongoing optimisation, new automations, and reporting. We offer flexible support packages tailored to your needs.'
         }),
         React.createElement(FAQItem, {
           question: 'I\'m not sure I\'m ready to automate yet — is the audit still worth it?',

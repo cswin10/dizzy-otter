@@ -162,12 +162,12 @@ const AiAudit = () => {
         {/* Section 4: Pricing */}
         <section className="ai-audit-section" style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', background: 'linear-gradient(120deg, #fff 60%, var(--color-accent) 100%)', borderRadius: 0, boxShadow: '0 8px 32px var(--color-accent)', padding: '3.5rem 0', textAlign: 'center' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>Implementation Pricing</h2>
+            <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--color-accent)', marginBottom: '1.1rem', textAlign: 'center', letterSpacing: '-0.02em' }}>Investment</h2>
             <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>After the audit, we\'ll give you a clear quote for any systems you\'d like us to build.</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: '700' }}>Typical projects:</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Small automations from £300 – £600</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Full business systems from £900 – £1,500</div>
-            <div style={{ fontSize: '1.08rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>Optional ongoing support from £300 / month</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: '700' }}>We offer flexible pricing tailored to your needs:</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Small automation projects to get you started</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Complete business systems that transform operations</div>
+            <div style={{ fontSize: '1.08rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>Optional ongoing support and management</div>
           </div>
         </section>
         {/* Final CTA Section */}
