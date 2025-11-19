@@ -104,6 +104,22 @@ function Contact() {
           </div>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-image">
+              <img src="/contact-hero.jpg" alt="Get in touch with Dizzy Otter" />
+            </div>
+            <div className="showcase-text">
+              <h2>Let's talk about your business</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                Whether you're looking for a quick win or a complete transformation, we're here to help.
+                Book a free audit and let's explore what's possible.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQs */}
         <section className="product-section reveal">
           <h2>Frequently Asked Questions</h2>

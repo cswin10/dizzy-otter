@@ -62,6 +62,22 @@ function CallFlowAI() {
           </p>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-image">
+              <img src="/services4.jpg" alt="CallFlow AI call assistant" />
+            </div>
+            <div className="showcase-text">
+              <h2>Never miss a call again</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                Your AI assistant picks up instantly, every time. Day or night, busy or free, every call
+                is answered professionally and every opportunity is captured.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Two Column Layout */}
         <section className="product-section reveal">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>

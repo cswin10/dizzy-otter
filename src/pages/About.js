@@ -74,6 +74,22 @@ function About() {
           </div>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-text">
+              <h2>Real solutions, real results</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                From automating quote requests to building complete client management systems, we deliver solutions
+                that make a measurable difference to your bottom line.
+              </p>
+            </div>
+            <div className="showcase-image">
+              <img src="/about-hero.jpg" alt="AI solutions for growing businesses" />
+            </div>
+          </div>
+        </section>
+
         {/* Who we work with */}
         <section className="product-section reveal">
           <h2>Who we work with</h2>

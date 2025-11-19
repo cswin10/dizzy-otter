@@ -24,6 +24,49 @@ function App() {
       import('smoothscroll-polyfill').then(mod => mod.polyfill());
     }
   }, []);
+
+  // Custom cursor effect
+  React.useEffect(() => {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    const cursorGlow = document.createElement('div');
+    cursorGlow.className = 'custom-cursor-glow';
+    document.body.appendChild(cursorGlow);
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let glowX = 0, glowY = 0;
+
+    const handleMouseMove = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
+    const animateCursor = () => {
+      // Smooth following effect
+      cursorX += (mouseX - cursorX) * 0.2;
+      cursorY += (mouseY - cursorY) * 0.2;
+      glowX += (mouseX - glowX) * 0.1;
+      glowY += (mouseY - glowY) * 0.1;
+
+      cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+      cursorGlow.style.transform = `translate(${glowX}px, ${glowY}px)`;
+
+      requestAnimationFrame(animateCursor);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    animateCursor();
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
+      if (cursorGlow.parentNode) cursorGlow.parentNode.removeChild(cursorGlow);
+    };
+  }, []);
+
   return React.createElement(
     Router,
     null,

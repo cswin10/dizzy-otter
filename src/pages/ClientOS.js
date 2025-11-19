@@ -62,6 +62,22 @@ function ClientOS() {
           </p>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-text">
+              <h2>Everything in one place</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                Stop juggling spreadsheets, emails and sticky notes. ClientOS brings your entire business
+                together in one organised, automated system.
+              </p>
+            </div>
+            <div className="showcase-image">
+              <img src="/services3.jpg" alt="ClientOS client management system" />
+            </div>
+          </div>
+        </section>
+
         {/* Three Columns - Clients, Workflows, Reporting */}
         <section className="product-section reveal">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>

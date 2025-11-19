@@ -92,6 +92,22 @@ function AIAudit() {
           </ul>
         </section>
 
+        {/* Image Showcase */}
+        <section className="product-section reveal">
+          <div className="image-showcase-grid">
+            <div className="showcase-text">
+              <h2>Find your opportunities</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
+                Most businesses have dozens of opportunities to automate, streamline and optimise. The hard
+                part is knowing where to start. That's what we do.
+              </p>
+            </div>
+            <div className="showcase-image">
+              <img src="/services5.jpg" alt="AI audit opportunities" />
+            </div>
+          </div>
+        </section>
+
         {/* Who it's for */}
         <section className="product-section reveal">
           <h2>Who it's for</h2>
