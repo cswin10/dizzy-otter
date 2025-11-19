@@ -92,24 +92,6 @@ function Contact() {
 
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '2.5rem', color: '#50E3C2', marginBottom: '1rem' }}>
-                <i className="fa-brands fa-instagram"></i>
-              </div>
-              <h3 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>Instagram</h3>
-              <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1rem' }}>
-                Follow us for updates, tips and behind-the-scenes content.
-              </p>
-              <a
-                href="https://www.instagram.com/dizzy_otter_designs/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#50E3C2', textDecoration: 'none', fontWeight: '600' }}
-              >
-                @dizzy_otter_designs →
-              </a>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2.5rem', color: '#50E3C2', marginBottom: '1rem' }}>
                 <i className="fa-brands fa-tiktok"></i>
               </div>
               <h3 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>TikTok</h3>
