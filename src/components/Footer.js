@@ -8,8 +8,8 @@ const Footer = () => (
         <a href="/" aria-label="Home">
           Home
         </a>
-        <a href="/services" aria-label="Solutions">
-          Solutions
+        <a href="/services" aria-label="Our Products">
+          Our Products
         </a>
         <a href="/ai-audit" aria-label="AI Audit">
           AI Audit
@@ -20,7 +20,7 @@ const Footer = () => (
         <a href="/contact" aria-label="Contact">
           Contact
         </a>
-        <a href="https://dizzyotter.com/clientos/" target="_blank" rel="noopener noreferrer" aria-label="ClientOS (opens in new tab)">
+        <a href="/clientos" aria-label="ClientOS">
           ClientOS
         </a>
       </nav>
