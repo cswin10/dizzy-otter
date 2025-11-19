@@ -46,15 +46,6 @@ const Footer = () => (
           <i className="fa-solid fa-envelope" />
         </a>
         <a
-          href="https://www.instagram.com/dizzy_otter_designs/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          className="social-icon-link"
-        >
-          <i className="fa-brands fa-instagram" />
-        </a>
-        <a
           href="https://www.tiktok.com/@dizzy.otter"
           target="_blank"
           rel="noopener noreferrer"
