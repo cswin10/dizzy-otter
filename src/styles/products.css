@@ -4,7 +4,6 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #1A1F36 0%, #2C3454 50%, #1A1F36 100%);
   position: relative;
-  overflow-x: hidden;
 }
 
 /* Ensure images never overflow on mobile */
@@ -126,7 +125,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  overflow-x: hidden;
   word-wrap: break-word;
 }
 
