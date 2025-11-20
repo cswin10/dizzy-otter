@@ -1,9 +1,9 @@
 /* Products Pages - Gorgeous Styling */
 
 .product-page {
-  min-height: 100vh;
   background: linear-gradient(135deg, #1A1F36 0%, #2C3454 50%, #1A1F36 100%);
   position: relative;
+  padding-bottom: 0;
 }
 
 /* Ensure images never overflow on mobile */
@@ -232,7 +232,7 @@
 /* CTA Section */
 .product-cta {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0 2rem;
   position: relative;
   z-index: 10;
 }
@@ -372,11 +372,11 @@
   background: linear-gradient(135deg, rgba(80, 227, 194, 0.2) 0%, rgba(41, 121, 255, 0.2) 100%);
   border-top: 2px solid rgba(80, 227, 194, 0.3);
   border-bottom: 2px solid rgba(41, 121, 255, 0.3);
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0 2rem;
   text-align: center;
   position: relative;
   z-index: 10;
-  margin-top: 4rem;
+  margin-top: 0;
 }
 
 .final-cta-band h3 {
@@ -884,7 +884,7 @@ html {
 
   /* Better CTA visibility on mobile */
   .product-cta {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1rem 0 1rem;
   }
 
   .product-cta h3 {
@@ -899,7 +899,7 @@ html {
 
   /* Final CTA band mobile optimization */
   .final-cta-band {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1rem 0 1rem;
   }
 
   .final-cta-band h3 {
