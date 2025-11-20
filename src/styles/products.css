@@ -124,7 +124,7 @@
   z-index: 10;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   word-wrap: break-word;
 }
 
@@ -141,6 +141,10 @@
   overflow: hidden;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.product-section:last-child {
+  margin-bottom: 0;
 }
 
 .product-section::before {
