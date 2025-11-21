@@ -28,7 +28,7 @@ function Home() {
         <div className="icon-wrapper">
           <i className="fa-solid fa-rocket"></i>
         </div>
-        <h1>Software & Automation Company in Exeter</h1>
+        <h1>Dizzy Otter</h1>
         <p className="subtitle">
           Dizzy Otter is a software and automation company helping growing businesses transform operations
           through AI, bespoke SaaS products, and intelligent automation. We audit your workflows, design custom
