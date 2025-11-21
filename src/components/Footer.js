@@ -8,11 +8,8 @@ const Footer = () => (
         <a href="/" aria-label="Home">
           Home
         </a>
-        <a href="/clientos" aria-label="ClientOS">
-          ClientOS
-        </a>
-        <a href="/callflow-ai" aria-label="CallFlow AI">
-          CallFlow AI
+        <a href="/services" aria-label="Services">
+          Services
         </a>
         <a href="/ai-audit" aria-label="AI Audit">
           AI Audit
