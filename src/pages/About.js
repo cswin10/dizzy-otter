@@ -29,7 +29,8 @@ function About() {
         </div>
         <h1>About Dizzy Otter</h1>
         <p className="subtitle">
-          We help growing businesses save time, reduce costs and scale efficiently through AI and automation.
+          An Exeter-based software and automation company helping growing businesses save time, reduce costs,
+          and scale efficiently through custom software, AI solutions, and intelligent automation.
         </p>
       </section>
 
@@ -40,8 +41,10 @@ function About() {
         <section className="product-section reveal">
           <h2>What we do</h2>
           <p>
-            Most agencies jump straight to building. We diagnose first. Our free AI audits identify the right
-            problems to solve, and our custom systems deliver real results that save time and money.
+            As a software and automation company in Exeter, we specialize in creating bespoke SaaS products, custom
+            websites with SEO optimization, and mobile app development. Most agencies jump straight to building.
+            We diagnose first. Our free AI audits identify the right problems to solve, and our custom software
+            solutions deliver real results that save time and money.
           </p>
           <p style={{ marginTop: '1.5rem' }}>
             We work with solo founders, local service businesses and growing teams who want to automate the

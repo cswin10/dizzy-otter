@@ -37,11 +37,11 @@ const PrivacyPolicy = () => {
         <h2>6. Data Security</h2>
         <p>We implement reasonable measures to protect your information but cannot guarantee absolute security.</p>
         <h2>7. Your Rights</h2>
-        <p>You may request access, correction, or deletion of your personal data by contacting us at contact@dizzyotterdesigns.com.</p>
+        <p>You may request access, correction, or deletion of your personal data by contacting us at studio@dizzyotter.com.</p>
         <h2>8. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
         <h2>9. Contact</h2>
-        <p>If you have questions, contact us at <a href="mailto:contact@dizzyotterdesigns.com">contact@dizzyotterdesigns.com</a>.</p>
+        <p>If you have questions, contact us at <a href="mailto:studio@dizzyotter.com">studio@dizzyotter.com</a>.</p>
       </section>
     </main>
   );

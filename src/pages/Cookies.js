@@ -30,7 +30,7 @@ const Cookies = () => {
         <h2>4. Changes to This Policy</h2>
         <p>We may update this Cookies Policy from time to time. Changes will be posted on this page.</p>
         <h2>5. Contact</h2>
-        <p>If you have questions, contact us at <a href="mailto:contact@dizzyotterdesigns.com">contact@dizzyotterdesigns.com</a>.</p>
+        <p>If you have questions, contact us at <a href="mailto:studio@dizzyotter.com">studio@dizzyotter.com</a>.</p>
       </section>
     </main>
   );

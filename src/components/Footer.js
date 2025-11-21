@@ -32,6 +32,15 @@ const Footer = () => (
           Cookies
         </a>
       </nav>
+      <div className="footer-contact">
+        <p>
+          <a href="mailto:studio@dizzyotter.com">studio@dizzyotter.com</a>
+        </p>
+        <p>
+          <a href="tel:+441392542251">01392 542251</a>
+        </p>
+        <p>Monday - Friday: 8am - 6pm</p>
+      </div>
       <div className="footer-social">
         <a
           href="mailto:studio@dizzyotter.com"
@@ -41,6 +50,33 @@ const Footer = () => (
           className="social-icon-link"
         >
           <i className="fa-solid fa-envelope" />
+        </a>
+        <a
+          href="https://www.instagram.com/dizzy_otter_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          className="social-icon-link"
+        >
+          <i className="fa-brands fa-instagram" />
+        </a>
+        <a
+          href="https://uk.pinterest.com/otterautomation/?actingBusinessId=898468331819145978"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pinterest"
+          className="social-icon-link"
+        >
+          <i className="fa-brands fa-pinterest" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/106546552"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="social-icon-link"
+        >
+          <i className="fa-brands fa-linkedin" />
         </a>
         <a
           href="https://www.tiktok.com/@dizzy.otter"

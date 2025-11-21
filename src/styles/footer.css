@@ -53,6 +53,26 @@
   color: #2979ff;
   text-decoration: underline;
 }
+.footer-contact {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.footer-contact p {
+  margin: 0.4rem 0;
+  color: #1a1f36;
+  font-size: 1rem;
+}
+.footer-contact a {
+  color: #2979ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.footer-contact a:hover,
+.footer-contact a:focus {
+  color: #50e3c2;
+  text-decoration: underline;
+}
 .footer-social {
   display: flex;
   gap: 1.2rem;

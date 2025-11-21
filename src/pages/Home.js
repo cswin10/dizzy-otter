@@ -28,10 +28,11 @@ function Home() {
         <div className="icon-wrapper">
           <i className="fa-solid fa-rocket"></i>
         </div>
-        <h1>Welcome to Dizzy Otter</h1>
+        <h1>Software & Automation Company in Exeter</h1>
         <p className="subtitle">
-          AI consultancy for growing businesses. We audit your workflows, design custom automations
-          and AI assistants, and support you as you scale.
+          Dizzy Otter is a software and automation company helping growing businesses transform operations
+          through AI, bespoke SaaS products, and intelligent automation. We audit your workflows, design custom
+          software solutions, and support you as you scale.
         </p>
         <a
           href="https://calendly.com/studio-dizzyotter/30min"
@@ -52,9 +53,10 @@ function Home() {
         <section className="product-section reveal">
           <h2>What we do</h2>
           <p>
-            We help growing businesses save time, reduce costs and scale efficiently through AI and automation.
-            From free audits that identify opportunities, to custom systems that transform operations, we're with
-            you at every step.
+            As a software and automation company based in Exeter, we help growing businesses save time, reduce costs,
+            and scale efficiently through AI, custom software development, and intelligent automation. From free audits
+            that identify opportunities, to bespoke SaaS products and custom systems that transform operations, we're
+            with you at every step.
           </p>
         </section>
 
@@ -65,6 +67,15 @@ function Home() {
             Our Products
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+            <Link to="/ai-audit" className="product-card">
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+                <i className="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>AI Audit</h3>
+              <p>Free 30-minute review of your workflows to identify opportunities where AI and automation can save time and reduce costs</p>
+              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>Free consultation →</div>
+            </Link>
+
             <Link to="/clientos" className="product-card">
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
                 <i className="fa-solid fa-users-gear"></i>
@@ -88,32 +99,18 @@ function Home() {
         {/* Services */}
         <section className="product-section reveal">
           <h2>
-            <i className="fa-solid fa-screwdriver-wrench" style={{ marginRight: '0.8rem', color: '#2979FF' }}></i>
-            Services
+            <i className="fa-solid fa-code" style={{ marginRight: '0.8rem', color: '#2979FF' }}></i>
+            Software Development Services
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
             <div>
               <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
-                <i className="fa-solid fa-magnifying-glass-chart" style={{ marginRight: '0.5rem' }}></i>
-                AI Audit
+                <i className="fa-solid fa-laptop-code" style={{ marginRight: '0.5rem' }}></i>
+                Bespoke SaaS Products
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Free 30-minute review of your workflows. We identify opportunities where AI and automation
-                can save time, reduce costs and increase profit.
-              </p>
-              <Link to="/ai-audit" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
-                Learn more →
-              </Link>
-            </div>
-
-            <div>
-              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
-                <i className="fa-solid fa-wand-magic-sparkles" style={{ marginRight: '0.5rem' }}></i>
-                Custom AI Systems
-              </h3>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Bespoke AI assistants, chatbots and intelligent systems built specifically for your business
-                and integrated with your existing tools.
+                Custom software-as-a-service solutions built specifically for your business. From client management
+                systems to specialized business tools, we create scalable SaaS products that grow with you.
               </p>
               <Link to="/services" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
                 Learn more →
@@ -122,12 +119,26 @@ function Home() {
 
             <div>
               <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
-                <i className="fa-solid fa-diagram-project" style={{ marginRight: '0.5rem' }}></i>
-                Automation Workflows
+                <i className="fa-solid fa-globe" style={{ marginRight: '0.5rem' }}></i>
+                Websites including SEO
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Connect your tools, automate repetitive tasks and build workflows that save hours every
-                week without writing a single line of code.
+                Professional websites optimized for search engines and conversions. We build fast, responsive sites
+                with built-in SEO best practices to help your business get found online.
+              </p>
+              <Link to="/services" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
+                Learn more →
+              </Link>
+            </div>
+
+            <div>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-mobile-screen" style={{ marginRight: '0.5rem' }}></i>
+                App Development
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
+                Custom mobile and web applications tailored to your specific needs. We develop intuitive, powerful
+                apps that solve real business problems and delight your users.
               </p>
               <Link to="/services" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
                 Learn more →
