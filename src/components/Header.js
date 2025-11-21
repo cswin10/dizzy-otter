@@ -97,6 +97,15 @@ function Header() {
             React.createElement(
               Link,
               {
+                to: '/ai-audit',
+                className: 'dropdown-item',
+                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
+              },
+              'AI Audit'
+            ),
+            React.createElement(
+              Link,
+              {
                 to: '/clientos',
                 className: 'dropdown-item',
                 onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
@@ -120,13 +129,13 @@ function Header() {
           React.createElement(
             Link,
             {
-              to: '/ai-audit',
+              to: '/services',
               className: 'nav-link',
               tabIndex: 0,
               onClick: () => setMenuOpen(false),
-              'aria-label': 'Go to AI Audit page',
+              'aria-label': 'Go to Services page',
             },
-            'AI Audit'
+            'Services'
           )
         ),
         React.createElement(
@@ -195,11 +204,12 @@ function Header() {
           React.createElement('li', { className: 'mobile-dropdown' },
             React.createElement('div', { className: 'mobile-dropdown-header' }, 'Our Products'),
             React.createElement('div', { className: 'mobile-dropdown-items' },
+              React.createElement(Link, { to: '/ai-audit', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'AI Audit'),
               React.createElement(Link, { to: '/clientos', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'ClientOS'),
               React.createElement(Link, { to: '/callflow-ai', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'CallFlow AI')
             )
           ),
-          React.createElement('li', null, React.createElement(Link, { to: '/ai-audit', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'AI Audit')),
+          React.createElement('li', null, React.createElement(Link, { to: '/services', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Services')),
           React.createElement('li', null, React.createElement(Link, { to: '/about', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'About')),
           React.createElement('li', null, React.createElement(Link, { to: '/contact', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Contact'))
         ),
@@ -212,6 +222,33 @@ function Header() {
             className: 'social-icon-link'
           },
             React.createElement('i', { className: 'fa-solid fa-envelope' })
+          ),
+          React.createElement('a', {
+            href: 'https://www.instagram.com/dizzy_otter_/',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            'aria-label': 'Instagram',
+            className: 'social-icon-link'
+          },
+            React.createElement('i', { className: 'fa-brands fa-instagram' })
+          ),
+          React.createElement('a', {
+            href: 'https://uk.pinterest.com/otterautomation/?actingBusinessId=898468331819145978',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            'aria-label': 'Pinterest',
+            className: 'social-icon-link'
+          },
+            React.createElement('i', { className: 'fa-brands fa-pinterest' })
+          ),
+          React.createElement('a', {
+            href: 'https://www.linkedin.com/company/106546552',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            'aria-label': 'LinkedIn',
+            className: 'social-icon-link'
+          },
+            React.createElement('i', { className: 'fa-brands fa-linkedin' })
           ),
           React.createElement('a', {
             href: 'https://www.tiktok.com/@dizzy.otter',

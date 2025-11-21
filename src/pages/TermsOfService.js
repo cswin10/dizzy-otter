@@ -33,7 +33,7 @@ const TermsOfService = () => {
         <h2>6. Changes to Terms</h2>
         <p>We may update these Terms of Service at any time. Changes will be posted on this page.</p>
         <h2>7. Contact</h2>
-        <p>If you have questions, contact us at <a href="mailto:contact@dizzyotterdesigns.com">contact@dizzyotterdesigns.com</a>.</p>
+        <p>If you have questions, contact us at <a href="mailto:studio@dizzyotter.com">studio@dizzyotter.com</a>.</p>
       </section>
     </main>
   );
