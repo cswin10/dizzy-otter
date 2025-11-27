@@ -24,15 +24,12 @@ function Home() {
   return (
     <div className="product-page">
       {/* Hero Section */}
-      <section className="product-hero">
-        <div className="icon-wrapper">
-          <i className="fa-solid fa-rocket"></i>
-        </div>
+      <section className="product-hero hero-home">
         <h1>Dizzy Otter</h1>
+        <p className="tagline">Impossible tech at unthinkable speed</p>
         <p className="subtitle">
-          Dizzy Otter is a software and automation company helping growing businesses transform operations
-          through AI, bespoke SaaS products, and intelligent automation. We audit your workflows, design custom
-          software solutions, and support you as you scale.
+          We're a software studio that builds beautiful, powerful software.
+          From concept to launch, we craft digital experiences that feel like magic.
         </p>
         <a
           href="https://calendly.com/studio-dizzyotter/30min"
@@ -41,8 +38,8 @@ function Home() {
           rel="noopener noreferrer"
           style={{ marginTop: '1rem' }}
         >
-          Book your free AI audit
-          <i className="fa-solid fa-calendar-check" style={{ marginLeft: '0.8rem' }}></i>
+          Book a free consultation
+          <i className="fa-solid fa-arrow-right" style={{ marginLeft: '0.8rem' }}></i>
         </a>
       </section>
 
@@ -51,47 +48,52 @@ function Home() {
 
         {/* What we do */}
         <section className="product-section reveal">
-          <h2>What we do</h2>
+          <h2>What We Build</h2>
           <p>
-            As a software and automation company based in Exeter, we help growing businesses save time, reduce costs,
-            and scale efficiently through AI, custom software development, and intelligent automation. From free audits
-            that identify opportunities, to bespoke SaaS products and custom systems that transform operations, we're
-            with you at every step.
+            We're the studio you call when you need software that doesn't exist yet.
+            Web apps, mobile apps, SaaS products — if you can dream it, we can build it.
+            And we'll do it faster than you thought possible.
           </p>
         </section>
 
-        {/* Our Products */}
+        {/* Featured Work */}
         <section className="product-section reveal">
           <h2>
-            <i className="fa-solid fa-box-open" style={{ marginRight: '0.8rem', color: '#50E3C2' }}></i>
-            Our Products
+            <i className="fa-solid fa-sparkles" style={{ marginRight: '0.8rem', color: '#50E3C2' }}></i>
+            Recent Work
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-            <Link to="/ai-audit" className="product-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                <i className="fa-solid fa-magnifying-glass-chart"></i>
+            <a href="https://www.hellonavi.io/" target="_blank" rel="noopener noreferrer" className="product-card">
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#50E3C2' }}>
+                <i className="fa-solid fa-compass"></i>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>AI Audit</h3>
-              <p>Free 30-minute review of your workflows to identify opportunities where AI and automation can save time and reduce costs</p>
-              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>Free consultation →</div>
-            </Link>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>HelloNavi</h3>
+              <p>A revolutionary navigation platform with intuitive design and seamless user experience.</p>
+              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
+            </a>
 
-            <Link to="/clientos" className="product-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                <i className="fa-solid fa-users-gear"></i>
+            <a href="https://gosynq.io/" target="_blank" rel="noopener noreferrer" className="product-card">
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#2979FF' }}>
+                <i className="fa-solid fa-arrows-rotate"></i>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>ClientOS</h3>
-              <p>Your complete client management and automation system that runs the backend of your business</p>
-              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>From £499/month →</div>
-            </Link>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>GoSynq</h3>
+              <p>Powerful synchronization software that keeps your data connected across platforms.</p>
+              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
+            </a>
 
-            <Link to="/callflow-ai" className="product-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                <i className="fa-solid fa-phone-volume"></i>
+            <a href="https://brickie-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="product-card">
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#FF6B6B' }}>
+                <i className="fa-solid fa-cubes"></i>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>CallFlow AI</h3>
-              <p>Your AI call assistant that answers every call, books work and filters out time wasters</p>
-              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>From £499/month →</div>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Brickie</h3>
+              <p>A modern web application showcasing beautiful interfaces and robust functionality.</p>
+              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
+            </a>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link to="/projects" className="cta-button" style={{ background: 'transparent', border: '2px solid #50E3C2', color: '#50E3C2' }}>
+              View all projects
+              <i className="fa-solid fa-arrow-right" style={{ marginLeft: '0.8rem' }}></i>
             </Link>
           </div>
         </section>
@@ -100,49 +102,40 @@ function Home() {
         <section className="product-section reveal">
           <h2>
             <i className="fa-solid fa-code" style={{ marginRight: '0.8rem', color: '#2979FF' }}></i>
-            Software Development Services
+            What We Do
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
             <div>
               <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
                 <i className="fa-solid fa-laptop-code" style={{ marginRight: '0.5rem' }}></i>
-                Bespoke SaaS Products
+                Web Applications
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Custom software-as-a-service solutions built specifically for your business. From client management
-                systems to specialized business tools, we create scalable SaaS products that grow with you.
+                Full-stack web applications with stunning interfaces and seamless performance.
+                React, Node, Python — whatever the tech, we've mastered it.
               </p>
-              <Link to="/services" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
-                Learn more →
-              </Link>
-            </div>
-
-            <div>
-              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
-                <i className="fa-solid fa-globe" style={{ marginRight: '0.5rem' }}></i>
-                Websites including SEO
-              </h3>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Professional websites optimized for search engines and conversions. We build fast, responsive sites
-                with built-in SEO best practices to help your business get found online.
-              </p>
-              <Link to="/services" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
-                Learn more →
-              </Link>
             </div>
 
             <div>
               <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
                 <i className="fa-solid fa-mobile-screen" style={{ marginRight: '0.5rem' }}></i>
-                App Development
+                Mobile Apps
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Custom mobile and web applications tailored to your specific needs. We develop intuitive, powerful
-                apps that solve real business problems and delight your users.
+                Native and cross-platform mobile apps that feel incredible to use.
+                iOS, Android, or both — we deliver pixel-perfect experiences.
               </p>
-              <Link to="/services" style={{ color: '#50E3C2', textDecoration: 'none', fontSize: '0.95rem', marginTop: '0.5rem', display: 'inline-block' }}>
-                Learn more →
-              </Link>
+            </div>
+
+            <div>
+              <h3 style={{ fontSize: '1.3rem', color: '#50E3C2', marginBottom: '0.8rem' }}>
+                <i className="fa-solid fa-cloud" style={{ marginRight: '0.5rem' }}></i>
+                SaaS Products
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
+                Complete software-as-a-service solutions from the ground up. Authentication,
+                billing, dashboards — everything you need to launch and scale.
+              </p>
             </div>
           </div>
         </section>
@@ -151,14 +144,14 @@ function Home() {
         <section className="product-section reveal">
           <div className="image-showcase-grid">
             <div className="showcase-text">
-              <h2>Transform your business with AI</h2>
+              <h2>Built Different</h2>
               <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
-                From small automations that save hours each week, to complete systems that transform how you operate.
-                We build solutions that scale with your business.
+                We're not an agency. We're a studio. That means every project gets our full attention,
+                our best thinking, and our relentless drive to build something exceptional.
               </p>
             </div>
             <div className="showcase-image">
-              <img src="/services2.jpg" alt="AI and automation solutions" />
+              <img src="/services2.jpg" alt="Custom software development" />
             </div>
           </div>
         </section>
@@ -168,21 +161,21 @@ function Home() {
           <h2>Why Dizzy Otter</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
             <div>
-              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Diagnose first, build second</h3>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Unmatched Speed</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
-                Most agencies jump straight to building. We start with a free audit to identify the right problems to solve.
+                We deliver in weeks what others take months to build. No bloat, no bureaucracy — just beautiful software, fast.
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>No code, no complexity</h3>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Obsessive Craft</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
-                We build systems that are simple to use, easy to understand and don't require technical knowledge.
+                Every pixel matters. Every interaction counts. We sweat the details so your users don't have to.
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Ongoing support</h3>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>True Partnership</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
-                We don't build and disappear. We provide ongoing optimization, new automations and support as you grow.
+                We don't just build and disappear. We're in it with you — from first concept to launch and beyond.
               </p>
             </div>
           </div>
@@ -192,7 +185,7 @@ function Home() {
         <section className="product-section reveal">
           <h2>
             <i className="fa-solid fa-quote-left" style={{ marginRight: '0.8rem', color: '#50E3C2' }}></i>
-            What our clients say
+            What Our Clients Say
           </h2>
           <div className="testimonials-grid">
             <div className="testimonial-card">
@@ -247,10 +240,9 @@ function Home() {
 
         {/* CTA Section */}
         <section className="product-cta reveal">
-          <h3>Ready to transform your business?</h3>
+          <h3>Ready to build something incredible?</h3>
           <p>
-            Book a free 30-minute AI audit. We'll identify opportunities, provide actionable recommendations
-            and show you exactly what's possible.
+            Book a free consultation. We'll talk about your vision and show you what's possible.
           </p>
           <a
             href="https://calendly.com/studio-dizzyotter/30min"
@@ -258,7 +250,7 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book your free audit
+            Book a free consultation
             <i className="fa-solid fa-arrow-right" style={{ marginLeft: '0.8rem' }}></i>
           </a>
         </section>
