@@ -76,10 +76,18 @@ header.header.header-scrolled {
   cursor: pointer;
 }
 .logo img {
-  height: 96px !important;
+  height: 80px !important;
   width: auto;
-  max-width: 320px;
+  max-width: 280px;
   display: block;
+}
+
+/* Mobile logo sizing */
+@media (max-width: 900px) {
+  .logo img {
+    height: 50px !important;
+    max-width: 180px;
+  }
 }
 .hamburger {
   display: none;
@@ -193,7 +201,13 @@ header.header.header-scrolled {
 }
 @media (max-width: 900px) {
   .navbar {
-    padding: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.6rem 1rem;
   }
 }
 @media (max-width: 700px) {
@@ -372,17 +386,13 @@ header.header.header-scrolled {
 .mobile-nav-close {
   background: none;
   border: none;
-  font-size: 1.5rem;
-@media (max-width: 700px) {
-  .mobile-nav-social i,
-  .mobile-nav-social a {
-    font-size: 1.3rem !important;
-  }
-}
+  font-size: 2.5rem;
+  font-weight: 300;
   color: #fff;
   cursor: pointer;
   margin-left: 1rem;
   line-height: 1;
+  padding: 0.5rem;
   transition: transform 0.18s cubic-bezier(.4,0,.2,1), color 0.18s;
 }
 .mobile-nav-close:hover, .mobile-nav-close:focus {
@@ -429,37 +439,38 @@ header.header.header-scrolled {
   flex-direction: row !important;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
-  margin: 1.2rem 0 2.2rem 0;
+  gap: 0.8rem;
+  margin: 1.5rem 0 2rem 0;
+  padding: 0 1rem;
 }
-/* Remove stray closing brace and unnecessary media query */
 .mobile-nav-social a {
   color: #2979FF;
-  font-size: 2.2rem;
-  background: none;
-  border-radius: 12px;
-  width: auto;
-  height: auto;
-  padding: 0.2rem 0.5rem;
+  font-size: 1.4rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   box-shadow: none;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.1);
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s, background 0.2s, transform 0.2s;
+  transition: color 0.2s, background 0.2s, transform 0.2s, border-color 0.2s;
   cursor: pointer;
 }
 .mobile-nav-social a:hover, .mobile-nav-social a:focus {
   color: #50E3C2;
-  background: #f4f8fa;
-  transform: scale(1.18) translateY(-2px);
+  background: rgba(80, 227, 194, 0.1);
+  border-color: #50E3C2;
+  transform: scale(1.1);
   outline: none;
   text-decoration: none;
-  box-shadow: 0 4px 18px #2979ff22;
 }
 .mobile-nav-social i {
-  color: #2979FF;
+  color: inherit;
+  font-size: 1.2rem;
   transition: color 0.2s;
 }
 p {
