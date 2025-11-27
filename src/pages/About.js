@@ -25,53 +25,52 @@ function About() {
       {/* Hero Section */}
       <section className="product-hero">
         <div className="icon-wrapper">
-          <i className="fa-solid fa-users"></i>
+          <i className="fa-solid fa-bolt"></i>
         </div>
         <h1>About Dizzy Otter</h1>
         <p className="subtitle">
-          An Exeter-based software and automation company helping growing businesses save time, reduce costs,
-          and scale efficiently through custom software, AI solutions, and intelligent automation.
+          We're a software studio based in Exeter, UK. We build impossible tech at unthinkable speed —
+          beautiful software that works flawlessly and ships fast.
         </p>
       </section>
 
       {/* Main Content */}
       <div className="product-content">
 
-        {/* What we do */}
+        {/* Who we are */}
         <section className="product-section reveal">
-          <h2>What we do</h2>
+          <h2>Who We Are</h2>
           <p>
-            As a software and automation company in Exeter, we specialize in creating bespoke SaaS products, custom
-            websites with SEO optimization, and mobile app development. Most agencies jump straight to building.
-            We diagnose first. Our free AI audits identify the right problems to solve, and our custom software
-            solutions deliver real results that save time and money.
+            Dizzy Otter is a premier software studio. We don't do templates. We don't do "good enough."
+            We build custom software that's beautiful, powerful, and built to last.
           </p>
           <p style={{ marginTop: '1.5rem' }}>
-            We work with solo founders, local service businesses and growing teams who want to automate the
-            repetitive work, streamline operations and focus on what actually drives growth.
+            Our team lives at the intersection of design and engineering. We believe software should feel
+            like magic — intuitive, fast, and delightful to use. And we believe it shouldn't take forever
+            to build.
           </p>
         </section>
 
-        {/* How we're different */}
+        {/* What drives us */}
         <section className="product-section reveal">
-          <h2>How we're different</h2>
+          <h2>What Drives Us</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div>
-              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Diagnose first, build second</h3>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Craft Without Compromise</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)' }}>
-                We start with a free audit to understand your business and identify opportunities. No guesswork, no generic solutions.
+                Every line of code matters. Every pixel is intentional. We build software that we're proud of — and that our clients love to show off.
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>No code, no complexity</h3>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Speed as a Superpower</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)' }}>
-                We build systems that are simple to use and easy to understand. No technical knowledge required.
+                We've mastered the art of moving fast without breaking things. What takes others months, we deliver in weeks.
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Ongoing support</h3>
+              <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Partnership Over Projects</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)' }}>
-                We don't build and disappear. We provide ongoing optimization, new automations and support as you grow.
+                We're not vendors. We're partners. We care about your success as much as you do, and we're here for the long haul.
               </p>
             </div>
           </div>
@@ -81,34 +80,49 @@ function About() {
         <section className="product-section reveal">
           <div className="image-showcase-grid">
             <div className="showcase-text">
-              <h2>Real solutions, real results</h2>
+              <h2>Built for Impact</h2>
               <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
-                From automating quote requests to building complete client management systems, we deliver solutions
-                that make a measurable difference to your bottom line.
+                We've shipped software for startups, scale-ups, and established businesses. Every project
+                pushes us to do our best work — because we know it matters.
               </p>
             </div>
             <div className="showcase-image">
-              <img src="/about-hero.jpg" alt="AI solutions for growing businesses" />
+              <img src="/about-hero.jpg" alt="Software studio team" />
             </div>
           </div>
         </section>
 
-        {/* Who we work with */}
+        {/* Our Approach */}
         <section className="product-section reveal">
-          <h2>Who we work with</h2>
+          <h2>Our Approach</h2>
           <ul className="feature-list">
-            <li>Solo founders wearing too many hats and drowning in admin work</li>
-            <li>Local service businesses managing bookings, invoices and customers manually</li>
-            <li>Growing teams whose processes are breaking down as they scale</li>
-            <li>Businesses tired of scattered tools, manual data entry and things slipping through the cracks</li>
+            <li>We start by understanding your vision — not just the features, but the feeling you want to create</li>
+            <li>We design and prototype rapidly, so you can see and feel the product before it's built</li>
+            <li>We build with modern tools and clean architecture that scales</li>
+            <li>We ship iteratively, so you're never waiting months to see progress</li>
+            <li>We stay engaged after launch — because software is never really "done"</li>
           </ul>
+        </section>
+
+        {/* Location */}
+        <section className="product-section reveal">
+          <h2>
+            <i className="fa-solid fa-location-dot" style={{ marginRight: '0.8rem', color: '#50E3C2' }}></i>
+            Based in Exeter, UK
+          </h2>
+          <p>
+            We're proud to call Exeter home. From our base in Devon, we work with clients across the UK
+            and beyond. Whether you're local or remote, we bring the same energy, craft, and commitment
+            to every project.
+          </p>
         </section>
 
         {/* CTA Section */}
         <section className="product-cta reveal">
-          <h3>Ready to get started?</h3>
+          <h3>Let's Build Something Incredible</h3>
           <p>
-            Book a free 30-minute AI audit. We'll identify opportunities and show you exactly what's possible.
+            Got a project in mind? We'd love to hear about it. Book a free consultation and let's explore
+            what's possible.
           </p>
           <a
             href="https://calendly.com/studio-dizzyotter/30min"
@@ -116,7 +130,7 @@ function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book your free audit
+            Book a free consultation
             <i className="fa-solid fa-arrow-right" style={{ marginLeft: '0.8rem' }}></i>
           </a>
         </section>

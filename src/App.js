@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/global.css';
@@ -7,15 +7,12 @@ import CookieBanner from './components/CookieBanner';
 
 // Lazy load page components for better performance
 const Home = React.lazy(() => import('./pages/Home'));
-const Services = React.lazy(() => import('./pages/Services'));
+const Projects = React.lazy(() => import('./pages/Projects'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
-const AiAudit = React.lazy(() => import('./pages/ai-audit'));
-const ClientOS = React.lazy(() => import('./pages/ClientOS'));
-const CallFlowAI = React.lazy(() => import('./pages/CallFlowAI'));
 
 function App() {
   // Polyfill for smooth scroll in Safari
@@ -56,15 +53,19 @@ function App() {
         Routes,
         null,
         React.createElement(Route, { path: '/', element: React.createElement(Home) }),
-        React.createElement(Route, { path: '/services', element: React.createElement(Services) }),
-        React.createElement(Route, { path: '/clientos', element: React.createElement(ClientOS) }),
-        React.createElement(Route, { path: '/callflow-ai', element: React.createElement(CallFlowAI) }),
+        React.createElement(Route, { path: '/projects', element: React.createElement(Projects) }),
         React.createElement(Route, { path: '/about', element: React.createElement(About) }),
         React.createElement(Route, { path: '/contact', element: React.createElement(Contact) }),
         React.createElement(Route, { path: '/privacy-policy', element: React.createElement(PrivacyPolicy) }),
         React.createElement(Route, { path: '/terms-of-service', element: React.createElement(TermsOfService) }),
         React.createElement(Route, { path: '/cookies', element: React.createElement(Cookies) }),
-        React.createElement(Route, { path: '/ai-audit', element: React.createElement(AiAudit) })
+        // Redirects for old pages
+        React.createElement(Route, { path: '/clientos', element: React.createElement(Navigate, { to: '/', replace: true }) }),
+        React.createElement(Route, { path: '/services', element: React.createElement(Navigate, { to: '/', replace: true }) }),
+        React.createElement(Route, { path: '/ai-audit', element: React.createElement(Navigate, { to: '/', replace: true }) }),
+        React.createElement(Route, { path: '/callflow-ai', element: React.createElement(Navigate, { to: '/', replace: true }) }),
+        // Catch all - redirect to home
+        React.createElement(Route, { path: '*', element: React.createElement(Navigate, { to: '/', replace: true }) })
       )
     ),
     React.createElement(Footer)

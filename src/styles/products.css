@@ -1052,3 +1052,206 @@ html {
     word-break: break-word;
   }
 }
+
+/* ============================================
+   DIZZY OTTER SOFTWARE STUDIO - ENHANCED STYLES
+   ============================================ */
+
+/* Home Hero Special Styles */
+.hero-home {
+  min-height: 80vh;
+  padding-top: 10rem;
+}
+
+.hero-home h1 {
+  font-size: 5.5rem;
+  letter-spacing: -3px;
+  margin-bottom: 0.5rem;
+}
+
+/* Tagline Styling */
+.product-hero .tagline {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #50E3C2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+}
+
+.product-hero .tagline::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #50E3C2, transparent);
+}
+
+/* Projects Showcase Grid */
+.projects-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* Project Showcase Card */
+.project-showcase-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card-glow {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, var(--glow-color, #50E3C2) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.project-showcase-card:hover .project-card-glow {
+  opacity: 0.15;
+}
+
+.project-showcase-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: rgba(80, 227, 194, 0.5);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(80, 227, 194, 0.2);
+}
+
+.project-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.project-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-showcase-card:hover .project-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.project-showcase-card h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-showcase-card:hover h3 {
+  color: #50E3C2;
+}
+
+.project-showcase-card p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  color: #50E3C2;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.project-showcase-card:hover .project-link {
+  transform: translateX(10px);
+}
+
+/* Enhanced product-card for external links */
+a.product-card {
+  cursor: pointer;
+}
+
+a.product-card:hover {
+  transform: translateY(-12px);
+  border-color: #50E3C2;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(80, 227, 194, 0.2);
+}
+
+/* Mobile Responsive for New Styles */
+@media (max-width: 900px) {
+  .hero-home h1 {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+
+  .product-hero .tagline {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .projects-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-showcase-card {
+    padding: 2rem;
+  }
+
+  .project-showcase-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-home {
+    min-height: 70vh;
+    padding-top: 8rem;
+  }
+
+  .hero-home h1 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+  }
+
+  .product-hero .tagline {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .project-showcase-card {
+    padding: 1.5rem;
+  }
+
+  .project-icon {
+    font-size: 2.5rem;
+  }
+
+  .project-showcase-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-showcase-card p {
+    font-size: 1rem;
+  }
+}

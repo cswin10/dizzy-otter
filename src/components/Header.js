@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -75,67 +74,17 @@ function Header() {
         ),
         React.createElement(
           'li',
-          {
-            className: 'nav-dropdown',
-            onMouseEnter: () => setDropdownOpen(true),
-            onMouseLeave: () => setDropdownOpen(false)
-          },
-          React.createElement(
-            'span',
-            {
-              className: 'nav-link dropdown-trigger',
-              tabIndex: 0,
-              'aria-label': 'Our Products menu',
-              'aria-expanded': dropdownOpen
-            },
-            'Our Products',
-            React.createElement('i', { className: 'fa-solid fa-chevron-down', style: { marginLeft: '0.5rem', fontSize: '0.8rem' } })
-          ),
-          React.createElement(
-            'div',
-            { className: dropdownOpen ? 'dropdown-menu show' : 'dropdown-menu' },
-            React.createElement(
-              Link,
-              {
-                to: '/ai-audit',
-                className: 'dropdown-item',
-                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
-              },
-              'AI Audit'
-            ),
-            React.createElement(
-              Link,
-              {
-                to: '/clientos',
-                className: 'dropdown-item',
-                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
-              },
-              'ClientOS'
-            ),
-            React.createElement(
-              Link,
-              {
-                to: '/callflow-ai',
-                className: 'dropdown-item',
-                onClick: () => { setDropdownOpen(false); setMenuOpen(false); }
-              },
-              'CallFlow AI'
-            )
-          )
-        ),
-        React.createElement(
-          'li',
           null,
           React.createElement(
             Link,
             {
-              to: '/services',
+              to: '/projects',
               className: 'nav-link',
               tabIndex: 0,
               onClick: () => setMenuOpen(false),
-              'aria-label': 'Go to Services page',
+              'aria-label': 'Go to Projects page',
             },
-            'Services'
+            'Projects'
           )
         ),
         React.createElement(
@@ -201,15 +150,7 @@ function Header() {
         ),
         React.createElement('ul', { className: 'mobile-nav-links' },
           React.createElement('li', null, React.createElement(Link, { to: '/', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Home')),
-          React.createElement('li', { className: 'mobile-dropdown' },
-            React.createElement('div', { className: 'mobile-dropdown-header' }, 'Our Products'),
-            React.createElement('div', { className: 'mobile-dropdown-items' },
-              React.createElement(Link, { to: '/ai-audit', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'AI Audit'),
-              React.createElement(Link, { to: '/clientos', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'ClientOS'),
-              React.createElement(Link, { to: '/callflow-ai', className: 'nav-link mobile-dropdown-item', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'CallFlow AI')
-            )
-          ),
-          React.createElement('li', null, React.createElement(Link, { to: '/services', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Services')),
+          React.createElement('li', null, React.createElement(Link, { to: '/projects', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Projects')),
           React.createElement('li', null, React.createElement(Link, { to: '/about', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'About')),
           React.createElement('li', null, React.createElement(Link, { to: '/contact', className: 'nav-link', tabIndex: 0, onClick: () => setMenuOpen(false) }, 'Contact'))
         ),
