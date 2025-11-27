@@ -1184,6 +1184,41 @@ html {
   transform: translateX(10px);
 }
 
+/* Project Screenshot Hover Effect */
+.project-screenshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  border-radius: 22px;
+}
+
+.project-screenshot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 31, 54, 0.7) 0%,
+    rgba(26, 31, 54, 0.85) 50%,
+    rgba(26, 31, 54, 0.95) 100%
+  );
+  border-radius: 22px;
+}
+
+.project-showcase-card:hover .project-screenshot {
+  opacity: 1;
+}
+
 /* Enhanced product-card for external links */
 a.product-card {
   cursor: pointer;
