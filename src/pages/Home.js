@@ -63,31 +63,40 @@ function Home() {
             Recent Work
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-            <a href="https://www.hellonavi.io/" target="_blank" rel="noopener noreferrer" className="product-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#50E3C2' }}>
-                <i className="fa-solid fa-microphone"></i>
+            <a href="https://www.hellonavi.io/" target="_blank" rel="noopener noreferrer" className="home-project-card">
+              <div className="home-project-screenshot" style={{ backgroundImage: 'url(/navi.png)' }}></div>
+              <div className="home-project-content">
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#50E3C2' }}>
+                  <i className="fa-solid fa-microphone"></i>
+                </div>
+                <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Navi AI</h3>
+                <p>The world's first fully functional voice activated AI assistant. Your personal AI that actually works.</p>
+                <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Navi AI</h3>
-              <p>The world's first fully functional voice activated AI assistant. Your personal AI that actually works.</p>
-              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
 
-            <a href="https://gosynq.io/" target="_blank" rel="noopener noreferrer" className="product-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#2979FF' }}>
-                <i className="fa-solid fa-ticket"></i>
+            <a href="https://gosynq.io/" target="_blank" rel="noopener noreferrer" className="home-project-card">
+              <div className="home-project-screenshot" style={{ backgroundImage: 'url(/gosynq.png)' }}></div>
+              <div className="home-project-content">
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#2979FF' }}>
+                  <i className="fa-solid fa-ticket"></i>
+                </div>
+                <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>GoSYNQ</h3>
+                <p>Event ticketing software that puts promoters and venues in control. Own your audience.</p>
+                <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>GoSYNQ</h3>
-              <p>Event ticketing software that puts promoters and venues in control. Own your audience.</p>
-              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
 
-            <a href="https://brickie-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="product-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#FF6B6B' }}>
-                <i className="fa-solid fa-camera"></i>
+            <a href="https://brickie-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="home-project-card">
+              <div className="home-project-screenshot" style={{ backgroundImage: 'url(/brickie.png)' }}></div>
+              <div className="home-project-content">
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#FF6B6B' }}>
+                  <i className="fa-solid fa-camera"></i>
+                </div>
+                <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Brickie</h3>
+                <p>Revolutionary image analysis for construction. Snap a photo, generate professional job specs in seconds.</p>
+                <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Brickie</h3>
-              <p>Revolutionary image analysis for construction. Snap a photo, generate professional job specs in seconds.</p>
-              <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
           </div>
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
