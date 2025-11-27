@@ -29,8 +29,8 @@ function About() {
         </div>
         <h1>About Dizzy Otter</h1>
         <p className="subtitle">
-          We're a software studio based in Exeter, UK. We build impossible tech at unthinkable speed —
-          beautiful software that works flawlessly and ships fast.
+          We're a software studio based in Exeter, UK. We build impossible tech at unthinkable speed.
+          Beautiful software that works flawlessly and ships fast.
         </p>
       </section>
 
@@ -46,7 +46,7 @@ function About() {
           </p>
           <p style={{ marginTop: '1.5rem' }}>
             Our team lives at the intersection of design and engineering. We believe software should feel
-            like magic — intuitive, fast, and delightful to use. And we believe it shouldn't take forever
+            like magic. Intuitive, fast, and delightful to use. And we believe it shouldn't take forever
             to build.
           </p>
         </section>
@@ -58,7 +58,7 @@ function About() {
             <div>
               <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Craft Without Compromise</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)' }}>
-                Every line of code matters. Every pixel is intentional. We build software that we're proud of — and that our clients love to show off.
+                Every line of code matters. Every pixel is intentional. We build software that we're proud of, and that our clients love to show off.
               </p>
             </div>
             <div>
@@ -82,8 +82,8 @@ function About() {
             <div className="showcase-text">
               <h2>Built for Impact</h2>
               <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8' }}>
-                We've shipped software for startups, scale-ups, and established businesses. Every project
-                pushes us to do our best work — because we know it matters.
+                We've shipped software for startups, scale ups, and established businesses. Every project
+                pushes us to do our best work, because we know it matters.
               </p>
             </div>
             <div className="showcase-image">
@@ -96,11 +96,11 @@ function About() {
         <section className="product-section reveal">
           <h2>Our Approach</h2>
           <ul className="feature-list">
-            <li>We start by understanding your vision — not just the features, but the feeling you want to create</li>
+            <li>We start by understanding your vision. Not just the features, but the feeling you want to create</li>
             <li>We design and prototype rapidly, so you can see and feel the product before it's built</li>
             <li>We build with modern tools and clean architecture that scales</li>
             <li>We ship iteratively, so you're never waiting months to see progress</li>
-            <li>We stay engaged after launch — because software is never really "done"</li>
+            <li>We stay engaged after launch, because software is never really "done"</li>
           </ul>
         </section>
 

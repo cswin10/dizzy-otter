@@ -234,7 +234,7 @@ function Contact() {
                 <div className="faq-answer">
                   <p>
                     We're based in Exeter, UK, but we work with clients across the UK and internationally.
-                    Remote collaboration is second nature to us — we're just as effective working across
+                    Remote collaboration is second nature to us. We're just as effective working across
                     time zones as we are face-to-face.
                   </p>
                 </div>
