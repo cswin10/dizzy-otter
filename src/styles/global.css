@@ -57,6 +57,8 @@ header.header {
   box-shadow: none;
   transition: background 0.3s, box-shadow 0.3s;
   min-height: 70px;
+  display: flex;
+  align-items: center;
 }
 header.header.header-scrolled {
   background: var(--color-primary);
@@ -203,21 +205,31 @@ header.header.header-scrolled {
 }
 @media (max-width: 900px) {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    min-height: 60px;
   }
 
   header.header {
     min-height: 60px;
   }
+
+  .logo img {
+    height: 40px !important;
+  }
 }
 
 @media (max-width: 600px) {
   .navbar {
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;
+    min-height: 56px;
   }
 
   header.header {
-    min-height: 55px;
+    min-height: 56px;
+  }
+
+  .logo img {
+    height: 36px !important;
   }
 }
 @media (max-width: 700px) {
