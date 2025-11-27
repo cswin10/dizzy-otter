@@ -24,30 +24,34 @@ function Projects() {
     {
       name: 'Navi AI',
       url: 'https://www.hellonavi.io/',
-      description: 'A revolutionary navigation platform delivering seamless user experiences through intuitive design and cutting edge technology.',
-      icon: 'fa-solid fa-compass',
-      color: '#50E3C2'
+      description: 'The world\'s first fully functional voice activated AI assistant. It talks, listens, and carries out tasks for you. Your personal AI that actually works.',
+      icon: 'fa-solid fa-microphone',
+      color: '#50E3C2',
+      image: '/navi.png'
     },
     {
-      name: 'GoSynq',
+      name: 'GoSYNQ',
       url: 'https://gosynq.io/',
-      description: 'Powerful synchronization software that keeps your data connected across platforms with lightning fast performance.',
-      icon: 'fa-solid fa-arrows-rotate',
-      color: '#2979FF'
+      description: 'Event ticketing software that puts promoters and venues in control. Own your audience, eliminate unnecessary fees, and sell tickets your way.',
+      icon: 'fa-solid fa-ticket',
+      color: '#2979FF',
+      image: '/gosynq.png'
     },
     {
       name: 'Brickie',
       url: 'https://brickie-web.vercel.app/',
-      description: 'A modern web application built with precision, showcasing beautiful interfaces and robust functionality.',
-      icon: 'fa-solid fa-cubes',
-      color: '#FF6B6B'
+      description: 'Revolutionary image analysis technology for construction. Snap a photo, generate professional job specs, and send quotes to clients in seconds.',
+      icon: 'fa-solid fa-camera',
+      color: '#FF6B6B',
+      image: '/brickie.png'
     },
     {
       name: 'The AI Academy',
       url: 'https://the-ai-academy.netlify.app/',
-      description: 'An interactive learning platform designed to make AI education accessible, engaging and practical for everyone.',
+      description: 'A comprehensive learning roadmap for the AI era. Everything you need to build a career in artificial intelligence, from fundamentals to advanced applications.',
       icon: 'fa-solid fa-graduation-cap',
-      color: '#9C27B0'
+      color: '#9C27B0',
+      image: '/roadmap.png'
     }
   ];
 
@@ -84,6 +88,7 @@ function Projects() {
                 className="project-showcase-card"
               >
                 <div className="project-card-glow" style={{ '--glow-color': project.color }}></div>
+                <div className="project-screenshot" style={{ backgroundImage: `url(${project.image})` }}></div>
                 <div className="project-card-content">
                   <div className="project-icon" style={{ color: project.color }}>
                     <i className={project.icon}></i>

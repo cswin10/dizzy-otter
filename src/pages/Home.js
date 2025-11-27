@@ -65,28 +65,28 @@ function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
             <a href="https://www.hellonavi.io/" target="_blank" rel="noopener noreferrer" className="product-card">
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#50E3C2' }}>
-                <i className="fa-solid fa-compass"></i>
+                <i className="fa-solid fa-microphone"></i>
               </div>
               <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Navi AI</h3>
-              <p>A revolutionary navigation platform with intuitive design and seamless user experience.</p>
+              <p>The world's first fully functional voice activated AI assistant. Your personal AI that actually works.</p>
               <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
 
             <a href="https://gosynq.io/" target="_blank" rel="noopener noreferrer" className="product-card">
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#2979FF' }}>
-                <i className="fa-solid fa-arrows-rotate"></i>
+                <i className="fa-solid fa-ticket"></i>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>GoSynq</h3>
-              <p>Powerful synchronization software that keeps your data connected across platforms.</p>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>GoSYNQ</h3>
+              <p>Event ticketing software that puts promoters and venues in control. Own your audience.</p>
               <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
 
             <a href="https://brickie-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="product-card">
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#FF6B6B' }}>
-                <i className="fa-solid fa-cubes"></i>
+                <i className="fa-solid fa-camera"></i>
               </div>
               <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Brickie</h3>
-              <p>A modern web application showcasing beautiful interfaces and robust functionality.</p>
+              <p>Revolutionary image analysis for construction. Snap a photo, generate professional job specs in seconds.</p>
               <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
           </div>
