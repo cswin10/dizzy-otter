@@ -51,7 +51,7 @@ function Home() {
           <h2>What We Build</h2>
           <p>
             We're the studio you call when you need software that doesn't exist yet.
-            Web apps, mobile apps, SaaS products — if you can dream it, we can build it.
+            Web apps, mobile apps, SaaS products. If you can dream it, we can build it.
             And we'll do it faster than you thought possible.
           </p>
         </section>
@@ -67,7 +67,7 @@ function Home() {
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#50E3C2' }}>
                 <i className="fa-solid fa-compass"></i>
               </div>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>HelloNavi</h3>
+              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem' }}>Navi AI</h3>
               <p>A revolutionary navigation platform with intuitive design and seamless user experience.</p>
               <div style={{ marginTop: '1.5rem', color: '#50E3C2', fontWeight: '600' }}>View project →</div>
             </a>
@@ -111,8 +111,8 @@ function Home() {
                 Web Applications
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Full-stack web applications with stunning interfaces and seamless performance.
-                React, Node, Python — whatever the tech, we've mastered it.
+                Full stack web applications with stunning interfaces and seamless performance.
+                React, Node, Python, whatever the tech, we've mastered it.
               </p>
             </div>
 
@@ -122,8 +122,8 @@ function Home() {
                 Mobile Apps
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Native and cross-platform mobile apps that feel incredible to use.
-                iOS, Android, or both — we deliver pixel-perfect experiences.
+                Native and cross platform mobile apps that feel incredible to use.
+                iOS, Android, or both. We deliver pixel perfect experiences.
               </p>
             </div>
 
@@ -133,8 +133,8 @@ function Home() {
                 SaaS Products
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Complete software-as-a-service solutions from the ground up. Authentication,
-                billing, dashboards — everything you need to launch and scale.
+                Complete software as a service solutions from the ground up. Authentication,
+                billing, dashboards, everything you need to launch and scale.
               </p>
             </div>
           </div>
@@ -163,7 +163,7 @@ function Home() {
             <div>
               <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>Unmatched Speed</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
-                We deliver in weeks what others take months to build. No bloat, no bureaucracy — just beautiful software, fast.
+                We deliver in weeks what others take months to build. No bloat, no bureaucracy. Just beautiful software, fast.
               </p>
             </div>
             <div>
@@ -175,7 +175,7 @@ function Home() {
             <div>
               <h3 style={{ fontSize: '1.2rem', color: '#50E3C2', marginBottom: '0.8rem' }}>True Partnership</h3>
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem' }}>
-                We don't just build and disappear. We're in it with you — from first concept to launch and beyond.
+                We don't just build and disappear. We're in it with you, from first concept to launch and beyond.
               </p>
             </div>
           </div>

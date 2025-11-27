@@ -22,16 +22,16 @@ function Projects() {
 
   const projects = [
     {
-      name: 'HelloNavi',
+      name: 'Navi AI',
       url: 'https://www.hellonavi.io/',
-      description: 'A revolutionary navigation platform delivering seamless user experiences through intuitive design and cutting-edge technology.',
+      description: 'A revolutionary navigation platform delivering seamless user experiences through intuitive design and cutting edge technology.',
       icon: 'fa-solid fa-compass',
       color: '#50E3C2'
     },
     {
       name: 'GoSynq',
       url: 'https://gosynq.io/',
-      description: 'Powerful synchronization software that keeps your data connected across platforms with lightning-fast performance.',
+      description: 'Powerful synchronization software that keeps your data connected across platforms with lightning fast performance.',
       icon: 'fa-solid fa-arrows-rotate',
       color: '#2979FF'
     },
@@ -41,6 +41,13 @@ function Projects() {
       description: 'A modern web application built with precision, showcasing beautiful interfaces and robust functionality.',
       icon: 'fa-solid fa-cubes',
       color: '#FF6B6B'
+    },
+    {
+      name: 'The AI Academy',
+      url: 'https://the-ai-academy.netlify.app/',
+      description: 'An interactive learning platform designed to make AI education accessible, engaging and practical for everyone.',
+      icon: 'fa-solid fa-graduation-cap',
+      color: '#9C27B0'
     }
   ];
 
@@ -102,7 +109,7 @@ function Projects() {
                 Web Applications
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Full-stack web applications with stunning interfaces, seamless performance,
+                Full stack web applications with stunning interfaces, seamless performance,
                 and scalable architecture. From startups to enterprise.
               </p>
             </div>
@@ -113,7 +120,7 @@ function Projects() {
                 Mobile Apps
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Native and cross-platform mobile applications that feel incredible
+                Native and cross platform mobile applications that feel incredible
                 to use. iOS, Android, or both.
               </p>
             </div>
@@ -124,7 +131,7 @@ function Projects() {
                 SaaS Products
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', lineHeight: '1.6' }}>
-                Complete software-as-a-service solutions built from the ground up.
+                Complete software as a service solutions built from the ground up.
                 Authentication, billing, dashboards, and everything in between.
               </p>
             </div>
