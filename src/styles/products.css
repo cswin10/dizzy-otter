@@ -13,18 +13,15 @@
   height: auto;
 }
 
-/* Animated Background Elements */
+/* Static Background Elements - no animation for better performance */
 .product-page::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(80, 227, 194, 0.1) 0%, transparent 50%);
-  animation: rotate 30s linear infinite;
-  will-change: transform;
-  transform: translateZ(0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(80, 227, 194, 0.08) 0%, transparent 50%);
   z-index: 0;
   pointer-events: none;
 }
@@ -32,36 +29,13 @@
 .product-page::after {
   content: '';
   position: absolute;
-  bottom: -30%;
-  right: -30%;
+  bottom: 0;
+  right: 0;
   width: 60%;
   height: 60%;
-  background: radial-gradient(circle, rgba(41, 121, 255, 0.15) 0%, transparent 70%);
-  animation: pulse 8s ease-in-out infinite;
-  will-change: transform, opacity;
-  transform: translateZ(0);
+  background: radial-gradient(circle, rgba(41, 121, 255, 0.1) 0%, transparent 70%);
   z-index: 0;
   pointer-events: none;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.3; }
-  50% { transform: scale(1.1); opacity: 0.5; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
 }
 
 /* Hero Section */
@@ -86,9 +60,6 @@
   background-clip: text;
   margin-bottom: 1.5rem;
   letter-spacing: -2px;
-  animation: float 3s ease-in-out infinite;
-  will-change: transform;
-  transform: translateZ(0);
 }
 
 .product-hero .subtitle {
@@ -132,7 +103,6 @@
 /* Section Cards */
 .product-section {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 3rem;
   margin-bottom: 3rem;
@@ -293,7 +263,6 @@
 /* View Other Products Section */
 .view-other-products {
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 2rem;
   margin: 3rem 0;
@@ -395,15 +364,12 @@
   line-height: 1.8;
 }
 
-/* Icon Animations */
+/* Icon Styling */
 .icon-wrapper {
   display: inline-block;
   font-size: 3rem;
   color: #50E3C2;
   margin-bottom: 1rem;
-  animation: float 3s ease-in-out infinite;
-  will-change: transform;
-  transform: translateZ(0);
 }
 
 /* Responsive Design */
@@ -492,7 +458,6 @@
 
 .testimonial-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
   border: 2px solid rgba(80, 227, 194, 0.2);
   border-radius: 20px;
   padding: 2rem;
@@ -696,34 +661,14 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Button pulse animation */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 10px 30px rgba(80, 227, 194, 0.3);
-  }
-  50% {
-    box-shadow: 0 10px 50px rgba(80, 227, 194, 0.6);
-  }
-}
-
+/* CTA button styling */
 .cta-button {
-  animation: pulse-glow 2s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(80, 227, 194, 0.3);
 }
 
-/* Gradient text animation */
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
+/* Gradient text styling */
 .product-hero h1 {
-  background: linear-gradient(135deg, #fff 0%, #50E3C2 50%, #2979FF 100%);
-  background-size: 200% 200%;
-  animation: float 3s ease-in-out infinite, gradient-shift 5s ease infinite;
+  background: linear-gradient(135deg, #fff 0%, #50E3C2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -751,15 +696,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Icon wrapper enhanced animation */
+/* Icon wrapper hover effect */
 .icon-wrapper {
-  animation: float 3s ease-in-out infinite;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icon-wrapper:hover {
-  animation-play-state: paused;
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.1);
   color: #2979FF;
 }
 
@@ -785,11 +728,6 @@ html {
     transform: none;
   }
 
-  /* Optimize animations for mobile performance */
-  .product-page::before,
-  .product-page::after {
-    animation: none;
-  }
 
   /* Better touch targets */
   .cta-button {
@@ -925,14 +863,6 @@ html {
     padding: 1.5rem 1rem;
   }
 
-  /* Reduce animation intensity on small devices */
-  .product-hero h1 {
-    animation: none;
-  }
-
-  .icon-wrapper {
-    animation: float 4s ease-in-out infinite;
-  }
 
   /* Product cards on mobile */
   .product-card {
